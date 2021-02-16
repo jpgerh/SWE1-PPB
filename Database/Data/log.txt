@@ -1,0 +1,256 @@
+2021-02-16 18:17:14.870 CET [12968] LOG:  listening on IPv6 address "::1", port 5432
+2021-02-16 18:17:14.871 CET [12968] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-02-16 18:17:14.931 CET [11492] LOG:  database system was shut down at 2021-02-16 18:17:04 CET
+2021-02-16 18:17:14.964 CET [12968] LOG:  database system is ready to accept connections
+2021-02-16 18:26:23.460 CET [12968] LOG:  received fast shutdown request
+2021-02-16 18:26:23.460 CET [8804] ERROR:  canceling statement due to user request
+2021-02-16 18:26:23.472 CET [12968] LOG:  aborting any active transactions
+2021-02-16 18:26:23.472 CET [15448] FATAL:  terminating connection due to administrator command
+2021-02-16 18:26:23.472 CET [12968] LOG:  worker process: logical replication launcher (PID 8804) exited with exit code 1
+2021-02-16 18:26:23.503 CET [18468] LOG:  shutting down
+2021-02-16 18:26:23.670 CET [12968] LOG:  database system is shut down
+2021-02-16 18:26:41.237 CET [27320] LOG:  listening on IPv6 address "::1", port 5432
+2021-02-16 18:26:41.237 CET [27320] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-02-16 18:26:41.276 CET [19712] LOG:  database system was shut down at 2021-02-16 18:26:23 CET
+2021-02-16 18:26:41.296 CET [27320] LOG:  database system is ready to accept connections
+2021-02-16 18:33:19.623 CET [22504] FATAL:  database "ppbuser" does not exist
+2021-02-16 18:36:32.439 CET [22608] FATAL:  database "ppbuser" does not exist
+2021-02-16 18:37:48.114 CET [27756] FATAL:  database "ppbuser" does not exist
+2021-02-16 18:38:48.047 CET [18792] FATAL:  database "ppbuser" does not exist
+2021-02-16 18:42:44.079 CET [5792] FATAL:  database "ppbuser" does not exist
+2021-02-16 18:44:06.056 CET [30208] FATAL:  database "ppbuser" does not exist
+2021-02-16 18:44:12.706 CET [27320] LOG:  server process (PID 11304) was terminated by exception 0xC000013A
+2021-02-16 18:44:12.706 CET [27320] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2021-02-16 18:44:12.706 CET [27320] LOG:  terminating any other active server processes
+2021-02-16 18:44:12.707 CET [10324] WARNING:  terminating connection because of crash of another server process
+2021-02-16 18:44:12.707 CET [10324] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2021-02-16 18:44:12.707 CET [10324] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2021-02-16 18:44:12.717 CET [27320] LOG:  all server processes terminated; reinitializing
+2021-02-16 18:44:12.739 CET [25652] LOG:  database system was interrupted; last known up at 2021-02-16 18:31:41 CET
+2021-02-16 18:44:13.128 CET [25652] LOG:  database system was not properly shut down; automatic recovery in progress
+2021-02-16 18:44:13.137 CET [25652] LOG:  redo starts at 0/1629AC0
+2021-02-16 18:44:13.137 CET [25652] LOG:  invalid record length at 0/1629BA0: wanted 24, got 0
+2021-02-16 18:44:13.137 CET [25652] LOG:  redo done at 0/1629B68
+2021-02-16 18:44:13.194 CET [27320] LOG:  database system is ready to accept connections
+2021-02-16 18:44:24.812 CET [27320] LOG:  worker process: logical replication launcher (PID 28316) was terminated by exception 0xC000013A
+2021-02-16 18:44:24.812 CET [27320] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2021-02-16 18:44:24.812 CET [27320] LOG:  terminating any other active server processes
+2021-02-16 18:44:24.813 CET [8572] WARNING:  terminating connection because of crash of another server process
+2021-02-16 18:44:24.813 CET [8572] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2021-02-16 18:44:24.813 CET [8572] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2021-02-16 18:44:24.814 CET [27320] LOG:  statistics collector process (PID 27832) was terminated by exception 0xC000013A
+2021-02-16 18:44:24.814 CET [27320] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2021-02-16 18:44:24.815 CET [27320] LOG:  all server processes terminated; reinitializing
+2021-02-16 18:44:24.839 CET [8200] LOG:  database system was interrupted; last known up at 2021-02-16 18:44:13 CET
+2021-02-16 18:44:25.079 CET [8200] LOG:  database system was not properly shut down; automatic recovery in progress
+2021-02-16 18:44:25.089 CET [8200] LOG:  invalid record length at 0/1629C10: wanted 24, got 0
+2021-02-16 18:44:25.089 CET [8200] LOG:  redo is not required
+2021-02-16 18:44:25.151 CET [27320] LOG:  database system is ready to accept connections
+2021-02-16 18:44:27.134 CET [16212] ERROR:  canceling statement due to user request
+2021-02-16 18:44:27.134 CET [26880] ERROR:  canceling statement due to user request
+2021-02-16 18:44:27.134 CET [27320] LOG:  received fast shutdown request
+2021-02-16 18:44:27.141 CET [27320] LOG:  aborting any active transactions
+2021-02-16 18:44:27.141 CET [27320] LOG:  worker process: logical replication launcher (PID 16212) exited with exit code 1
+2021-02-16 18:44:27.166 CET [26672] LOG:  shutting down
+2021-02-16 18:44:27.236 CET [27320] LOG:  database system is shut down
+2021-02-16 18:52:11.914 CET [24584] LOG:  listening on IPv6 address "::1", port 5432
+2021-02-16 18:52:11.915 CET [24584] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-02-16 18:52:11.947 CET [30144] LOG:  database system was shut down at 2021-02-16 18:44:27 CET
+2021-02-16 18:52:11.969 CET [24584] LOG:  database system is ready to accept connections
+2021-02-16 18:52:17.624 CET [29192] FATAL:  database "ppbuser" does not exist
+2021-02-16 18:52:37.952 CET [30196] FATAL:  database "ppbuser" does not exist
+2021-02-16 18:52:44.250 CET [24584] LOG:  server process (PID 19700) was terminated by exception 0xC000013A
+2021-02-16 18:52:44.250 CET [24584] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2021-02-16 18:52:44.250 CET [24584] LOG:  terminating any other active server processes
+2021-02-16 18:52:44.251 CET [26452] WARNING:  terminating connection because of crash of another server process
+2021-02-16 18:52:44.251 CET [26452] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2021-02-16 18:52:44.251 CET [26452] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2021-02-16 18:52:44.259 CET [24584] LOG:  all server processes terminated; reinitializing
+2021-02-16 18:52:44.289 CET [29084] LOG:  database system was interrupted; last known up at 2021-02-16 18:52:11 CET
+2021-02-16 18:52:44.744 CET [29084] LOG:  database system was not properly shut down; automatic recovery in progress
+2021-02-16 18:52:44.748 CET [29084] LOG:  redo starts at 0/1629CF0
+2021-02-16 18:52:44.748 CET [29084] LOG:  invalid record length at 0/1629D28: wanted 24, got 0
+2021-02-16 18:52:44.748 CET [29084] LOG:  redo done at 0/1629CF0
+2021-02-16 18:52:44.779 CET [24584] LOG:  database system is ready to accept connections
+2021-02-16 18:52:47.868 CET [24584] LOG:  worker process: logical replication launcher (PID 30120) was terminated by exception 0xC000013A
+2021-02-16 18:52:47.868 CET [24584] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2021-02-16 18:52:47.868 CET [24584] LOG:  terminating any other active server processes
+2021-02-16 18:52:47.869 CET [24192] WARNING:  terminating connection because of crash of another server process
+2021-02-16 18:52:47.869 CET [24192] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2021-02-16 18:52:47.869 CET [24192] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2021-02-16 18:52:47.870 CET [24584] LOG:  statistics collector process (PID 30032) was terminated by exception 0xC000013A
+2021-02-16 18:52:47.870 CET [24584] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2021-02-16 18:52:47.871 CET [24584] LOG:  all server processes terminated; reinitializing
+2021-02-16 18:52:47.899 CET [18280] LOG:  database system was interrupted; last known up at 2021-02-16 18:52:44 CET
+2021-02-16 18:52:48.234 CET [24584] LOG:  startup process (PID 18280) was terminated by exception 0xC000013A
+2021-02-16 18:52:48.234 CET [24584] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2021-02-16 18:52:48.234 CET [24584] LOG:  aborting startup due to startup process failure
+^C2021-02-16 18:53:05.588 CET [27972] LOG:  listening on IPv6 address "::1", port 5432
+2021-02-16 18:53:05.588 CET [27972] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-02-16 18:53:05.622 CET [29788] LOG:  database system was interrupted; last known up at 2021-02-16 18:52:44 CET
+2021-02-16 18:53:06.068 CET [29788] LOG:  database system was not properly shut down; automatic recovery in progress
+2021-02-16 18:53:06.070 CET [29788] LOG:  invalid record length at 0/1629D98: wanted 24, got 0
+2021-02-16 18:53:06.070 CET [29788] LOG:  redo is not required
+2021-02-16 18:53:06.104 CET [27972] LOG:  database system is ready to accept connections
+2021-02-16 18:54:55.615 CET [7260] ERROR:  relation "pg_users" does not exist at character 15
+2021-02-16 18:54:55.615 CET [7260] STATEMENT:  select * from pg_users;
+2021-02-16 18:57:01.737 CET [25988] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-16 18:58:30.758 CET [27972] LOG:  server process (PID 7260) was terminated by exception 0xC000013A
+2021-02-16 18:58:30.758 CET [27972] DETAIL:  Failed process was running: alter user postgres password 'postgres';
+2021-02-16 18:58:30.758 CET [27972] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2021-02-16 18:58:30.758 CET [27972] LOG:  terminating any other active server processes
+2021-02-16 18:58:30.759 CET [27292] WARNING:  terminating connection because of crash of another server process
+2021-02-16 18:58:30.759 CET [27292] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2021-02-16 18:58:30.759 CET [27292] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2021-02-16 18:58:30.767 CET [27972] LOG:  all server processes terminated; reinitializing
+2021-02-16 18:58:30.793 CET [11652] LOG:  database system was interrupted; last known up at 2021-02-16 18:53:06 CET
+2021-02-16 18:58:31.302 CET [11652] LOG:  database system was not properly shut down; automatic recovery in progress
+2021-02-16 18:58:31.309 CET [11652] LOG:  redo starts at 0/1629E08
+2021-02-16 18:58:31.310 CET [11652] LOG:  invalid record length at 0/162A2F0: wanted 24, got 0
+2021-02-16 18:58:31.311 CET [11652] LOG:  redo done at 0/162A298
+2021-02-16 18:58:31.311 CET [11652] LOG:  last completed transaction was at log time 2021-02-16 18:58:28.107095+01
+2021-02-16 18:58:31.376 CET [27972] LOG:  database system is ready to accept connections
+2021-02-16 19:00:19.246 CET [27972] LOG:  received fast shutdown request
+2021-02-16 19:00:19.254 CET [27972] LOG:  aborting any active transactions
+2021-02-16 19:00:19.257 CET [27972] LOG:  worker process: logical replication launcher (PID 28428) exited with exit code 1
+2021-02-16 19:00:19.258 CET [29252] LOG:  shutting down
+2021-02-16 19:00:19.318 CET [27972] LOG:  database system is shut down
+2021-02-16 19:00:24.064 CET [27104] LOG:  listening on IPv6 address "::1", port 5432
+2021-02-16 19:00:24.065 CET [27104] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-02-16 19:00:24.114 CET [22272] LOG:  database system was shut down at 2021-02-16 19:00:19 CET
+2021-02-16 19:00:24.140 CET [27104] LOG:  database system is ready to accept connections
+2021-02-16 19:00:25.609 CET [27104] LOG:  server process (PID 15372) was terminated by exception 0xC000013A
+2021-02-16 19:00:25.609 CET [27104] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2021-02-16 19:00:25.609 CET [27104] LOG:  terminating any other active server processes
+2021-02-16 19:00:25.610 CET [11816] WARNING:  terminating connection because of crash of another server process
+2021-02-16 19:00:25.610 CET [11816] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2021-02-16 19:00:25.610 CET [11816] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2021-02-16 19:00:25.617 CET [27104] LOG:  all server processes terminated; reinitializing
+2021-02-16 19:00:25.643 CET [25544] LOG:  database system was interrupted; last known up at 2021-02-16 19:00:24 CET
+2021-02-16 19:00:26.277 CET [25544] LOG:  database system was not properly shut down; automatic recovery in progress
+2021-02-16 19:00:26.286 CET [25544] LOG:  invalid record length at 0/162A408: wanted 24, got 0
+2021-02-16 19:00:26.286 CET [25544] LOG:  redo is not required
+2021-02-16 19:00:26.342 CET [27104] LOG:  database system is ready to accept connections
+2021-02-16 19:00:31.256 CET [27104] LOG:  worker process: logical replication launcher (PID 15288) was terminated by exception 0xC000013A
+2021-02-16 19:00:31.256 CET [27104] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2021-02-16 19:00:31.256 CET [27104] LOG:  terminating any other active server processes
+2021-02-16 19:00:31.257 CET [27844] WARNING:  terminating connection because of crash of another server process
+2021-02-16 19:00:31.257 CET [27844] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2021-02-16 19:00:31.257 CET [27844] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2021-02-16 19:00:31.258 CET [27104] LOG:  statistics collector process (PID 28208) was terminated by exception 0xC000013A
+2021-02-16 19:00:31.258 CET [27104] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2021-02-16 19:00:31.259 CET [27104] LOG:  all server processes terminated; reinitializing
+2021-02-16 19:00:31.286 CET [6272] LOG:  database system was interrupted; last known up at 2021-02-16 19:00:26 CET
+2021-02-16 19:00:31.929 CET [6272] LOG:  database system was not properly shut down; automatic recovery in progress
+2021-02-16 19:00:31.941 CET [6272] LOG:  invalid record length at 0/162A478: wanted 24, got 0
+2021-02-16 19:00:31.941 CET [6272] LOG:  redo is not required
+2021-02-16 19:00:31.999 CET [27104] LOG:  database system is ready to accept connections
+2021-02-16 19:00:38.602 CET [27104] LOG:  worker process: logical replication launcher (PID 29116) was terminated by exception 0xC000013A
+2021-02-16 19:00:38.602 CET [27104] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2021-02-16 19:00:38.602 CET [27104] LOG:  terminating any other active server processes
+2021-02-16 19:00:38.603 CET [12040] WARNING:  terminating connection because of crash of another server process
+2021-02-16 19:00:38.603 CET [12040] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2021-02-16 19:00:38.603 CET [12040] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2021-02-16 19:00:38.604 CET [27104] LOG:  statistics collector process (PID 27132) was terminated by exception 0xC000013A
+2021-02-16 19:00:38.604 CET [27104] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2021-02-16 19:00:38.605 CET [27104] LOG:  all server processes terminated; reinitializing
+2021-02-16 19:00:38.633 CET [5200] LOG:  database system was interrupted; last known up at 2021-02-16 19:00:31 CET
+2021-02-16 19:00:39.106 CET [5200] LOG:  database system was not properly shut down; automatic recovery in progress
+2021-02-16 19:00:39.113 CET [5200] LOG:  invalid record length at 0/162A4E8: wanted 24, got 0
+2021-02-16 19:00:39.113 CET [5200] LOG:  redo is not required
+2021-02-16 19:00:39.171 CET [27104] LOG:  database system is ready to accept connections
+2021-02-16 19:00:43.437 CET [27104] LOG:  worker process: logical replication launcher (PID 22984) was terminated by exception 0xC000013A
+2021-02-16 19:00:43.437 CET [27104] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2021-02-16 19:00:43.437 CET [27104] LOG:  terminating any other active server processes
+2021-02-16 19:00:43.438 CET [26212] WARNING:  terminating connection because of crash of another server process
+2021-02-16 19:00:43.438 CET [26212] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2021-02-16 19:00:43.438 CET [26212] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2021-02-16 19:00:43.439 CET [27104] LOG:  statistics collector process (PID 24624) was terminated by exception 0xC000013A
+2021-02-16 19:00:43.439 CET [27104] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2021-02-16 19:00:43.440 CET [27104] LOG:  all server processes terminated; reinitializing
+2021-02-16 19:00:43.465 CET [26008] LOG:  database system was interrupted; last known up at 2021-02-16 19:00:39 CET
+2021-02-16 19:00:43.774 CET [27104] LOG:  startup process (PID 26008) was terminated by exception 0xC000013A
+2021-02-16 19:00:43.774 CET [27104] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2021-02-16 19:00:43.774 CET [27104] LOG:  aborting startup due to startup process failure
+^C2021-02-16 19:06:49.273 CET [7160] LOG:  listening on IPv6 address "::1", port 5432
+2021-02-16 19:06:49.273 CET [7160] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-02-16 19:06:49.327 CET [28512] LOG:  database system was interrupted; last known up at 2021-02-16 19:00:39 CET
+2021-02-16 19:06:49.836 CET [28512] LOG:  database system was not properly shut down; automatic recovery in progress
+2021-02-16 19:06:49.842 CET [28512] LOG:  invalid record length at 0/162A558: wanted 24, got 0
+2021-02-16 19:06:49.842 CET [28512] LOG:  redo is not required
+2021-02-16 19:06:49.913 CET [7160] LOG:  database system is ready to accept connections
+2021-02-16 19:18:43.039 CET [7160] LOG:  server process (PID 18712) was terminated by exception 0xC000013A
+2021-02-16 19:18:43.039 CET [7160] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2021-02-16 19:18:43.039 CET [7160] LOG:  terminating any other active server processes
+2021-02-16 19:18:43.040 CET [3944] WARNING:  terminating connection because of crash of another server process
+2021-02-16 19:18:43.040 CET [3944] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2021-02-16 19:18:43.040 CET [3944] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2021-02-16 19:18:43.048 CET [7160] LOG:  all server processes terminated; reinitializing
+2021-02-16 19:18:43.074 CET [10252] LOG:  database system was interrupted; last known up at 2021-02-16 19:06:49 CET
+2021-02-16 19:18:43.528 CET [10252] LOG:  database system was not properly shut down; automatic recovery in progress
+2021-02-16 19:18:43.532 CET [10252] LOG:  redo starts at 0/162A5C8
+2021-02-16 19:18:43.532 CET [10252] LOG:  invalid record length at 0/162A600: wanted 24, got 0
+2021-02-16 19:18:43.532 CET [10252] LOG:  redo done at 0/162A5C8
+2021-02-16 19:18:43.562 CET [7160] LOG:  database system is ready to accept connections
+2021-02-16 19:26:15.418 CET [29688] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-16 19:38:59.916 CET [17756] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-16 19:45:47.972 CET [7160] LOG:  worker process: logical replication launcher (PID 25172) was terminated by exception 0xC000013A
+2021-02-16 19:45:47.972 CET [7160] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2021-02-16 19:45:47.972 CET [7160] LOG:  terminating any other active server processes
+2021-02-16 19:45:47.973 CET [25048] WARNING:  terminating connection because of crash of another server process
+2021-02-16 19:45:47.973 CET [25048] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2021-02-16 19:45:47.973 CET [25048] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2021-02-16 19:45:47.974 CET [7160] LOG:  statistics collector process (PID 12144) was terminated by exception 0xC000013A
+2021-02-16 19:45:47.974 CET [7160] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2021-02-16 19:45:47.975 CET [7160] LOG:  all server processes terminated; reinitializing
+2021-02-16 19:45:48.001 CET [9992] LOG:  database system was interrupted; last known up at 2021-02-16 19:18:43 CET
+2021-02-16 19:45:48.473 CET [9992] LOG:  database system was not properly shut down; automatic recovery in progress
+2021-02-16 19:45:48.480 CET [9992] LOG:  redo starts at 0/162A670
+2021-02-16 19:45:48.480 CET [9992] LOG:  invalid record length at 0/162A6A8: wanted 24, got 0
+2021-02-16 19:45:48.480 CET [9992] LOG:  redo done at 0/162A670
+2021-02-16 19:45:48.544 CET [7160] LOG:  database system is ready to accept connections
+2021-02-16 19:45:49.550 CET [7160] LOG:  worker process: logical replication launcher (PID 10280) was terminated by exception 0xC000013A
+2021-02-16 19:45:49.550 CET [7160] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2021-02-16 19:45:49.550 CET [7160] LOG:  terminating any other active server processes
+2021-02-16 19:45:49.551 CET [2592] WARNING:  terminating connection because of crash of another server process
+2021-02-16 19:45:49.551 CET [2592] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2021-02-16 19:45:49.551 CET [2592] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2021-02-16 19:45:49.552 CET [7160] LOG:  statistics collector process (PID 25604) was terminated by exception 0xC000013A
+2021-02-16 19:45:49.552 CET [7160] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2021-02-16 19:45:49.552 CET [7160] LOG:  all server processes terminated; reinitializing
+2021-02-16 19:45:49.579 CET [25384] LOG:  database system was interrupted; last known up at 2021-02-16 19:45:48 CET
+2021-02-16 19:45:50.012 CET [25384] LOG:  database system was not properly shut down; automatic recovery in progress
+2021-02-16 19:45:50.017 CET [25384] LOG:  invalid record length at 0/162A718: wanted 24, got 0
+2021-02-16 19:45:50.017 CET [25384] LOG:  redo is not required
+2021-02-16 19:45:50.071 CET [7160] LOG:  database system is ready to accept connections
+2021-02-16 19:45:52.958 CET [7160] LOG:  worker process: logical replication launcher (PID 2392) was terminated by exception 0xC000013A
+2021-02-16 19:45:52.958 CET [7160] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2021-02-16 19:45:52.958 CET [7160] LOG:  terminating any other active server processes
+2021-02-16 19:45:52.959 CET [23216] WARNING:  terminating connection because of crash of another server process
+2021-02-16 19:45:52.959 CET [23216] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2021-02-16 19:45:52.959 CET [23216] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2021-02-16 19:45:52.960 CET [7160] LOG:  statistics collector process (PID 14828) was terminated by exception 0xC000013A
+2021-02-16 19:45:52.960 CET [7160] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2021-02-16 19:45:52.961 CET [7160] LOG:  all server processes terminated; reinitializing
+2021-02-16 19:45:52.986 CET [24004] LOG:  database system was interrupted; last known up at 2021-02-16 19:45:50 CET
+2021-02-16 19:45:53.647 CET [24004] LOG:  database system was not properly shut down; automatic recovery in progress
+2021-02-16 19:45:53.652 CET [24004] LOG:  invalid record length at 0/162A788: wanted 24, got 0
+2021-02-16 19:45:53.652 CET [24004] LOG:  redo is not required
+2021-02-16 19:45:53.725 CET [7160] LOG:  database system is ready to accept connections
+2021-02-16 19:46:00.942 CET [7160] LOG:  worker process: logical replication launcher (PID 21856) was terminated by exception 0xC000013A
+2021-02-16 19:46:00.942 CET [7160] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2021-02-16 19:46:00.942 CET [7160] LOG:  terminating any other active server processes
+2021-02-16 19:46:00.943 CET [11288] WARNING:  terminating connection because of crash of another server process
+2021-02-16 19:46:00.943 CET [11288] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2021-02-16 19:46:00.943 CET [11288] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2021-02-16 19:46:00.944 CET [7160] LOG:  statistics collector process (PID 12028) was terminated by exception 0xC000013A
+2021-02-16 19:46:00.944 CET [7160] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2021-02-16 19:46:00.945 CET [7160] LOG:  all server processes terminated; reinitializing
+2021-02-16 19:46:00.971 CET [25200] LOG:  database system was interrupted; last known up at 2021-02-16 19:45:53 CET
+2021-02-16 19:46:01.294 CET [7160] LOG:  startup process (PID 25200) was terminated by exception 0xC000013A
+2021-02-16 19:46:01.294 CET [7160] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2021-02-16 19:46:01.295 CET [7160] LOG:  aborting startup due to startup process failure
+^C
