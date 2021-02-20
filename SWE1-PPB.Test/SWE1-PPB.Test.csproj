@@ -15,4 +15,8 @@
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.8.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SWE1-PPB\SWE1-PPB.csproj" />
+  </ItemGroup>
+
 </Project>

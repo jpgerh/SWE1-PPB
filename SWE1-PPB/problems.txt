@@ -1,0 +1,1 @@
+﻿Bytestream abgebrochen weil Länge zu gering --> Länge auf 1024 erhöht;

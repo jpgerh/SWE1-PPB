@@ -7,6 +7,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace SWE1_PPB
 {
@@ -14,8 +15,9 @@ namespace SWE1_PPB
     {
         private TcpListener tcpListener = null;
         private int clientCount = 0;
+        DBHandler dBHandler = new DBHandler();
 
-        public Server(IPAddress iPAddress, int port, NpgsqlConnection conn)
+        public Server(IPAddress iPAddress, int port)
         {
             tcpListener = new TcpListener(iPAddress, port);
             tcpListener.Start();
@@ -48,13 +50,95 @@ namespace SWE1_PPB
             }
         }
 
-        public void ClientHandler(Object obj)
+        public async Task<string> POSTHandler(RequestContext requestContext)
+        {
+            User user = new User();
+            string ressource = requestContext.Ressource;
+
+            switch (ressource)
+            {
+                case "/users":
+                    {
+                        dynamic payloadJson = JObject.Parse(requestContext.Payload);
+                        string username = (string)payloadJson.Username;
+                        string password = (string)payloadJson.Password;
+
+                        bool success = await user.Register(username, password);
+
+                        if (success)
+                        {
+                            return "User registered.";
+                        }
+                        else
+                        {
+                            return "User already registered.";
+                        }
+                        break;
+                    }
+                case "/sessions":
+                    {
+                        dynamic payloadJson = JObject.Parse(requestContext.Payload);
+                        string username = (string)payloadJson.Username;
+                        string password = (string)payloadJson.Password;
+
+                        string token = await user.Login(username, password);
+
+                        if (token.Equals(""))
+                        {
+                            return "Login failed.";
+                        } else
+                        {
+                            return $"Token: {token}";
+                        }
+
+                        break;
+                    }
+                case "/lib":
+                    {
+                        dynamic payloadJson = JObject.Parse(requestContext.Payload);
+                        MMC mmc = new MMC((string)payloadJson.Name, (string)payloadJson.Url, );
+
+                        bool success = true;
+                        string authorization;
+                        try
+                        {
+                            authorization = requestContext.HeaderValues["Authorization"];
+
+                            if (success)
+                            {
+                                if (await user.verifyToken(authorization))
+                                {
+                                    return $"{authorization}: Authorization successful.";
+
+
+                                }
+                                else
+                                {
+                                    return $"{authorization}: Authorization failed.";
+                                }
+                            }
+                        }
+                        catch (Exception e)
+                        {
+                            success = false;
+                        }
+
+                        return "Could not get token.";
+
+                        break;
+                    }
+            }
+
+            return "";
+        }
+
+        public async void ClientHandler(Object obj)
         {
             Console.WriteLine(String.Format("{0} active connection/s.\n", ++clientCount));
 
             TcpClient client = (TcpClient)obj;
             // Buffer for reading data
-            Byte[] bytes = new Byte[256];
+            Byte[] bytes = new Byte[1024];
             String data = null;
 
             data = null;
@@ -62,8 +146,9 @@ namespace SWE1_PPB
             // Get a stream object for reading and writing
             NetworkStream stream = client.GetStream();
 
+            
             int i;
-            /*try
+            try
             {
                 // Loop to receive all the data sent by the client.
                 while ((i = stream.Read(bytes, 0, bytes.Length)) != 0)
@@ -76,7 +161,7 @@ namespace SWE1_PPB
                     string ressource = requestContext.Ressource;
                     string requestAnswer = "";
 
-                    dynamic payloadJson = JObject.Parse(requestContext.Payload);
+                    //dynamic payloadJson = JObject.Parse(requestContext.Payload);
 
                     // print Request context
                     requestContext.printRequest();
@@ -84,7 +169,7 @@ namespace SWE1_PPB
                     switch (requestContext.HttpVerb)
                     {
                         case "GET":
-                            //Console.WriteLine("switch: GET\n");
+                            /*//Console.WriteLine("switch: GET\n");
                             if (Regex.Matches(ressource, "/").Count == 2)
                             {
                                 try
@@ -102,15 +187,16 @@ namespace SWE1_PPB
                             }
 
                             if (requestAnswer.Equals("")) requestAnswer = "No messages found.\n";
+                            */
                             break;
                         case "POST":
                             //Console.WriteLine("switch: POST\n");
 
-                            //requestAnswer = POSTHandler(requestContext);
+                            requestAnswer = await POSTHandler(requestContext);
                             break;
 
                         case "PUT":
-                            //Console.WriteLine("switch: PUT\n");
+                            /*//Console.WriteLine("switch: PUT\n");
 
                             try
                             {
@@ -123,10 +209,10 @@ namespace SWE1_PPB
                             {
                                 requestAnswer = "Requested ressource does not exist.\n";
                             }
-
+                            */
                             break;
                         case "DELETE":
-                            //Console.WriteLine("switch: DELETE\n");
+                            /*//Console.WriteLine("switch: DELETE\n");
 
                             try
                             {
@@ -139,7 +225,7 @@ namespace SWE1_PPB
                             {
                                 requestAnswer = "Requested ressource does not exist.\n";
                             }
-
+                            */
                             break;
                     }
 
@@ -158,7 +244,8 @@ namespace SWE1_PPB
                 Console.WriteLine(String.Format("{0} active connection/s.\n", --clientCount));
                 client.Close();
             }
-            */
+            
+            
         }
     }
 }

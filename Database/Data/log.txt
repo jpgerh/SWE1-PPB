@@ -253,4 +253,391 @@
 2021-02-16 19:46:01.294 CET [7160] LOG:  startup process (PID 25200) was terminated by exception 0xC000013A
 2021-02-16 19:46:01.294 CET [7160] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
 2021-02-16 19:46:01.295 CET [7160] LOG:  aborting startup due to startup process failure
+^C2021-02-19 19:10:32.404 CET [1876] LOG:  listening on IPv6 address "::1", port 5432
+2021-02-19 19:10:32.404 CET [1876] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-02-19 19:10:32.581 CET [16612] LOG:  database system was interrupted; last known up at 2021-02-16 19:45:53 CET
+2021-02-19 19:10:33.115 CET [16612] LOG:  database system was not properly shut down; automatic recovery in progress
+2021-02-19 19:10:33.134 CET [16612] LOG:  invalid record length at 0/162A7F8: wanted 24, got 0
+2021-02-19 19:10:33.134 CET [16612] LOG:  redo is not required
+2021-02-19 19:10:33.359 CET [1876] LOG:  database system is ready to accept connections
+2021-02-19 19:14:44.039 CET [17804] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-19 19:20:15.959 CET [1876] LOG:  server process (PID 8040) was terminated by exception 0xC000013A
+2021-02-19 19:20:15.959 CET [1876] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2021-02-19 19:20:15.959 CET [1876] LOG:  terminating any other active server processes
+2021-02-19 19:20:15.961 CET [9128] WARNING:  terminating connection because of crash of another server process
+2021-02-19 19:20:15.961 CET [9128] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2021-02-19 19:20:15.961 CET [9128] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2021-02-19 19:20:15.962 CET [1876] LOG:  statistics collector process (PID 7360) was terminated by exception 0xC000013A
+2021-02-19 19:20:15.962 CET [1876] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2021-02-19 19:20:15.976 CET [1876] LOG:  all server processes terminated; reinitializing
+2021-02-19 19:20:16.013 CET [2608] LOG:  database system was interrupted; last known up at 2021-02-19 19:10:33 CET
+2021-02-19 19:20:16.587 CET [2608] LOG:  database system was not properly shut down; automatic recovery in progress
+2021-02-19 19:20:16.608 CET [2608] LOG:  redo starts at 0/162A868
+2021-02-19 19:20:16.608 CET [2608] LOG:  invalid record length at 0/162A8A0: wanted 24, got 0
+2021-02-19 19:20:16.608 CET [2608] LOG:  redo done at 0/162A868
+2021-02-19 19:20:16.804 CET [1876] LOG:  database system is ready to accept connections
+2021-02-19 19:20:18.319 CET [1876] LOG:  worker process: logical replication launcher (PID 19044) was terminated by exception 0xC000013A
+2021-02-19 19:20:18.319 CET [1876] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2021-02-19 19:20:18.320 CET [1876] LOG:  terminating any other active server processes
+2021-02-19 19:20:18.320 CET [17492] WARNING:  terminating connection because of crash of another server process
+2021-02-19 19:20:18.320 CET [17492] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2021-02-19 19:20:18.320 CET [17492] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2021-02-19 19:20:18.321 CET [1876] LOG:  statistics collector process (PID 7448) was terminated by exception 0xC000013A
+2021-02-19 19:20:18.321 CET [1876] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+^C2021-02-20 11:25:51.223 CET [7272] LOG:  listening on IPv6 address "::1", port 5432
+2021-02-20 11:25:51.223 CET [7272] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-02-20 11:25:51.410 CET [14172] LOG:  database system was interrupted; last known up at 2021-02-19 19:20:16 CET
+2021-02-20 11:25:51.924 CET [14172] LOG:  database system was not properly shut down; automatic recovery in progress
+2021-02-20 11:25:51.965 CET [14172] LOG:  invalid record length at 0/162A910: wanted 24, got 0
+2021-02-20 11:25:51.965 CET [14172] LOG:  redo is not required
+2021-02-20 11:25:52.216 CET [7272] LOG:  database system is ready to accept connections
+2021-02-20 11:29:44.387 CET [7272] LOG:  server process (PID 11368) was terminated by exception 0xC000013A
+2021-02-20 11:29:44.387 CET [7272] DETAIL:  Failed process was running: SELECT d.datname as "Name",
+	       pg_catalog.pg_get_userbyid(d.datdba) as "Owner",
+	       pg_catalog.pg_encoding_to_char(d.encoding) as "Encoding",
+	       d.datcollate as "Collate",
+	       d.datctype as "Ctype",
+	       pg_catalog.array_to_string(d.datacl, E'\n') AS "Access privileges"
+	FROM pg_catalog.pg_database d
+	ORDER BY 1;
+2021-02-20 11:29:44.387 CET [7272] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2021-02-20 11:29:44.387 CET [7272] LOG:  terminating any other active server processes
+2021-02-20 11:29:44.419 CET [7272] LOG:  all server processes terminated; reinitializing
+2021-02-20 11:29:44.458 CET [6356] LOG:  database system was interrupted; last known up at 2021-02-20 11:25:52 CET
+2021-02-20 11:29:45.083 CET [6356] LOG:  database system was not properly shut down; automatic recovery in progress
+2021-02-20 11:29:45.123 CET [6356] LOG:  redo starts at 0/162A980
+2021-02-20 11:29:45.123 CET [6356] LOG:  invalid record length at 0/162A9B8: wanted 24, got 0
+2021-02-20 11:29:45.137 CET [6356] LOG:  redo done at 0/162A980
+2021-02-20 11:29:45.394 CET [7272] LOG:  database system is ready to accept connections
+2021-02-20 11:29:51.161 CET [7272] LOG:  worker process: logical replication launcher (PID 18660) was terminated by exception 0xC000013A
+2021-02-20 11:29:51.161 CET [7272] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2021-02-20 11:29:51.161 CET [7272] LOG:  terminating any other active server processes
+2021-02-20 11:29:51.162 CET [1968] WARNING:  terminating connection because of crash of another server process
+2021-02-20 11:29:51.162 CET [1968] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2021-02-20 11:29:51.162 CET [1968] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2021-02-20 11:29:51.163 CET [7272] LOG:  statistics collector process (PID 2196) was terminated by exception 0xC000013A
+2021-02-20 11:29:51.163 CET [7272] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2021-02-20 11:29:51.175 CET [7272] LOG:  all server processes terminated; reinitializing
+2021-02-20 11:29:51.214 CET [16512] LOG:  database system was interrupted; last known up at 2021-02-20 11:29:45 CET
+2021-02-20 11:29:51.731 CET [16512] LOG:  database system was not properly shut down; automatic recovery in progress
+2021-02-20 11:29:51.757 CET [16512] LOG:  invalid record length at 0/162AA28: wanted 24, got 0
+2021-02-20 11:29:51.757 CET [16512] LOG:  redo is not required
+2021-02-20 11:29:51.966 CET [7272] LOG:  database system is ready to accept connections
+2021-02-20 11:29:53.791 CET [7272] LOG:  worker process: logical replication launcher (PID 11972) was terminated by exception 0xC000013A
+2021-02-20 11:29:53.791 CET [7272] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2021-02-20 11:29:53.791 CET [7272] LOG:  terminating any other active server processes
+2021-02-20 11:29:53.791 CET [17992] WARNING:  terminating connection because of crash of another server process
+2021-02-20 11:29:53.791 CET [17992] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2021-02-20 11:29:53.791 CET [17992] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2021-02-20 11:29:53.812 CET [7272] LOG:  statistics collector process (PID 11744) was terminated by exception 0xC000013A
+2021-02-20 11:29:53.812 CET [7272] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2021-02-20 11:29:53.812 CET [7272] LOG:  all server processes terminated; reinitializing
+2021-02-20 11:29:53.841 CET [3208] LOG:  database system was interrupted; last known up at 2021-02-20 11:29:51 CET
+2021-02-20 11:29:54.312 CET [3208] LOG:  database system was not properly shut down; automatic recovery in progress
+2021-02-20 11:29:54.349 CET [3208] LOG:  invalid record length at 0/162AA98: wanted 24, got 0
+2021-02-20 11:29:54.349 CET [3208] LOG:  redo is not required
+2021-02-20 11:29:54.593 CET [7272] LOG:  database system is ready to accept connections
+2021-02-20 11:30:29.547 CET [7272] LOG:  worker process: logical replication launcher (PID 16416) was terminated by exception 0xC000013A
+2021-02-20 11:30:29.547 CET [7272] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2021-02-20 11:30:29.547 CET [7272] LOG:  terminating any other active server processes
+2021-02-20 11:30:29.548 CET [10544] WARNING:  terminating connection because of crash of another server process
+2021-02-20 11:30:29.548 CET [10544] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2021-02-20 11:30:29.548 CET [10544] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2021-02-20 11:30:29.563 CET [7272] LOG:  statistics collector process (PID 16656) was terminated by exception 0xC000013A
+2021-02-20 11:30:29.563 CET [7272] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2021-02-20 11:30:29.565 CET [7272] LOG:  all server processes terminated; reinitializing
+2021-02-20 11:30:29.601 CET [3764] LOG:  database system was interrupted; last known up at 2021-02-20 11:29:54 CET
+2021-02-20 11:30:30.192 CET [3764] LOG:  database system was not properly shut down; automatic recovery in progress
+2021-02-20 11:30:30.215 CET [3764] LOG:  redo starts at 0/162AB08
+2021-02-20 11:30:30.215 CET [3764] LOG:  invalid record length at 0/162AB40: wanted 24, got 0
+2021-02-20 11:30:30.215 CET [3764] LOG:  redo done at 0/162AB08
+2021-02-20 11:30:30.434 CET [7272] LOG:  database system is ready to accept connections
+2021-02-20 11:30:31.465 CET [7272] LOG:  worker process: logical replication launcher (PID 17764) was terminated by exception 0xC000013A
+2021-02-20 11:30:31.465 CET [7272] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2021-02-20 11:30:31.466 CET [7272] LOG:  terminating any other active server processes
+2021-02-20 11:30:31.467 CET [18884] WARNING:  terminating connection because of crash of another server process
+2021-02-20 11:30:31.467 CET [18884] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2021-02-20 11:30:31.467 CET [18884] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2021-02-20 11:30:31.482 CET [7272] LOG:  statistics collector process (PID 15616) was terminated by exception 0xC000013A
+2021-02-20 11:30:31.482 CET [7272] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2021-02-20 11:30:31.482 CET [7272] LOG:  all server processes terminated; reinitializing
+2021-02-20 11:30:31.519 CET [12476] LOG:  database system was interrupted; last known up at 2021-02-20 11:30:30 CET
+2021-02-20 11:30:32.030 CET [12476] LOG:  database system was not properly shut down; automatic recovery in progress
+2021-02-20 11:30:32.057 CET [12476] LOG:  invalid record length at 0/162ABB0: wanted 24, got 0
+2021-02-20 11:30:32.057 CET [12476] LOG:  redo is not required
+2021-02-20 11:30:32.303 CET [7272] LOG:  database system is ready to accept connections
+2021-02-20 11:30:32.959 CET [7272] LOG:  worker process: logical replication launcher (PID 15236) was terminated by exception 0xC000013A
+2021-02-20 11:30:32.959 CET [7272] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2021-02-20 11:30:32.959 CET [7272] LOG:  terminating any other active server processes
+2021-02-20 11:30:32.960 CET [8624] WARNING:  terminating connection because of crash of another server process
+2021-02-20 11:30:32.960 CET [8624] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2021-02-20 11:30:32.960 CET [8624] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2021-02-20 11:30:32.975 CET [7272] LOG:  statistics collector process (PID 14432) was terminated by exception 0xC000013A
+2021-02-20 11:30:32.975 CET [7272] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2021-02-20 11:30:32.975 CET [7272] LOG:  all server processes terminated; reinitializing
+2021-02-20 11:30:33.008 CET [13572] LOG:  database system was interrupted; last known up at 2021-02-20 11:30:32 CET
+2021-02-20 11:30:33.274 CET [7272] LOG:  startup process (PID 13572) was terminated by exception 0xC000013A
+2021-02-20 11:30:33.274 CET [7272] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2021-02-20 11:30:33.274 CET [7272] LOG:  aborting startup due to startup process failure
+^C2021-02-20 11:30:37.883 CET [15668] LOG:  listening on IPv6 address "::1", port 5432
+2021-02-20 11:30:37.883 CET [15668] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-02-20 11:30:37.964 CET [6616] LOG:  database system was interrupted; last known up at 2021-02-20 11:30:32 CET
+2021-02-20 11:30:38.546 CET [6616] LOG:  database system was not properly shut down; automatic recovery in progress
+2021-02-20 11:30:38.582 CET [6616] LOG:  invalid record length at 0/162AC20: wanted 24, got 0
+2021-02-20 11:30:38.582 CET [6616] LOG:  redo is not required
+2021-02-20 11:30:38.798 CET [15668] LOG:  database system is ready to accept connections
+2021-02-20 11:33:43.228 CET [8996] ERROR:  canceling statement due to user request
+2021-02-20 11:33:43.228 CET [15668] LOG:  received fast shutdown request
+2021-02-20 11:33:43.253 CET [15668] LOG:  aborting any active transactions
+2021-02-20 11:33:43.253 CET [15668] LOG:  worker process: logical replication launcher (PID 8996) exited with exit code 1
+2021-02-20 11:33:43.271 CET [19272] LOG:  shutting down
+2021-02-20 11:33:43.534 CET [15668] LOG:  database system is shut down
+2021-02-20 11:33:47.740 CET [1520] LOG:  listening on IPv6 address "::1", port 5432
+2021-02-20 11:33:47.741 CET [1520] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-02-20 11:33:47.868 CET [8804] LOG:  database system was shut down at 2021-02-20 11:33:43 CET
+2021-02-20 11:33:47.946 CET [1520] LOG:  database system is ready to accept connections
+2021-02-20 11:34:55.792 CET [8084] ERROR:  canceling statement due to user request
+2021-02-20 11:34:55.792 CET [1520] LOG:  received fast shutdown request
+2021-02-20 11:34:55.878 CET [1520] LOG:  aborting any active transactions
+2021-02-20 11:34:55.878 CET [1520] LOG:  worker process: logical replication launcher (PID 8084) exited with exit code 1
+2021-02-20 11:34:56.054 CET [18884] LOG:  shutting down
+2021-02-20 11:34:56.320 CET [1520] LOG:  database system is shut down
+2021-02-20 11:35:29.998 CET [10272] LOG:  listening on IPv6 address "::1", port 5432
+2021-02-20 11:35:29.998 CET [10272] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-02-20 11:35:30.114 CET [7848] LOG:  database system was shut down at 2021-02-20 11:34:56 CET
+2021-02-20 11:35:30.171 CET [10272] LOG:  database system is ready to accept connections
+2021-02-20 11:35:46.863 CET [2188] ERROR:  syntax error at or near "pk_users" at character 82
+2021-02-20 11:35:46.863 CET [2188] STATEMENT:  CREATE TABLE users (
+	username VARCHAR2(255),
+	password VARCHAR2(255),
+	PRIMARY KEY pk_users(username, password)
+	);
+2021-02-20 11:36:23.436 CET [2188] ERROR:  syntax error at or near ")" at character 70
+2021-02-20 11:36:23.436 CET [2188] STATEMENT:  CREATE TABLE users (
+	username VARCHAR2(255),
+	password VARCHAR2(255),
+	);
+2021-02-20 11:36:31.184 CET [2188] ERROR:  type "varchar2" does not exist at character 31
+2021-02-20 11:36:31.184 CET [2188] STATEMENT:  CREATE TABLE users (
+	username VARCHAR2(255),
+	password VARCHAR2(255)
+	);
+2021-02-20 11:38:30.513 CET [2188] ERROR:  syntax error at or near "drop" at character 18
+2021-02-20 11:38:30.513 CET [2188] STATEMENT:  drop table users
+	drop table users;
+2021-02-20 12:13:36.358 CET [19736] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-20 12:17:12.738 CET [21636] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-20 12:27:02.579 CET [4552] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-20 12:28:03.439 CET [3244] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-20 12:28:37.482 CET [4616] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-20 12:29:09.049 CET [20772] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-20 12:32:33.086 CET [21688] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-20 12:35:16.963 CET [5284] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-20 12:36:04.034 CET [19752] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-20 12:37:44.903 CET [18956] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-20 12:38:29.083 CET [20812] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-20 12:46:16.733 CET [9604] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2021-02-20 12:46:47.032 CET [9604] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2021-02-20 16:07:38.309 CET [24032] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-20 16:08:18.308 CET [21140] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-20 16:10:46.951 CET [26180] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-20 16:36:54.233 CET [11724] ERROR:  column "testuser" does not exist at character 48
+2021-02-20 16:36:54.233 CET [11724] STATEMENT:  INSERT INTO users (username, password) VALUES (testuser, testpw)
+2021-02-20 16:38:04.547 CET [21524] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-20 16:38:04.547 CET [21524] DETAIL:  Key (username)=(kienboec) already exists.
+2021-02-20 16:38:04.547 CET [21524] STATEMENT:  INSERT INTO users (username, password) values ('kienboec', 'daniel')
+2021-02-20 16:39:16.991 CET [23432] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-20 16:39:24.666 CET [24132] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-20 16:39:24.666 CET [24132] DETAIL:  Key (username)=(testuser) already exists.
+2021-02-20 16:39:24.666 CET [24132] STATEMENT:  INSERT INTO users (username, password) VALUES ('testuser', 'testpw')
+2021-02-20 16:40:17.519 CET [21976] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-20 16:40:17.519 CET [21976] DETAIL:  Key (username)=(testuser) already exists.
+2021-02-20 16:40:17.519 CET [21976] STATEMENT:  INSERT INTO users (username, password) VALUES ('testuser', 'testpw')
+2021-02-20 16:42:53.280 CET [12316] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-20 16:42:53.280 CET [12316] DETAIL:  Key (username)=(testuser) already exists.
+2021-02-20 16:42:53.280 CET [12316] STATEMENT:  INSERT INTO users (username, password) VALUES ('testuser', 'testpw')
+2021-02-20 16:46:08.757 CET [5216] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-20 16:46:15.979 CET [20744] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-20 16:46:15.979 CET [20744] DETAIL:  Key (username)=(testuser) already exists.
+2021-02-20 16:46:15.979 CET [20744] STATEMENT:  INSERT INTO users (username, password) VALUES ('testuser', 'testpw')
+2021-02-20 16:48:10.012 CET [9128] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-20 16:48:10.012 CET [9128] DETAIL:  Key (username)=(tester) already exists.
+2021-02-20 16:48:10.012 CET [9128] STATEMENT:  INSERT INTO users (username, password) VALUES ('tester', 'testpw')
+2021-02-20 16:48:36.391 CET [9128] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-20 16:48:42.369 CET [24408] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-20 16:48:42.369 CET [24408] DETAIL:  Key (username)=(testuser) already exists.
+2021-02-20 16:48:42.369 CET [24408] STATEMENT:  INSERT INTO users (username, password) VALUES ('testuser', 'testpw')
+2021-02-20 16:50:06.353 CET [1356] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-20 16:50:06.353 CET [1356] DETAIL:  Key (username)=(tester) already exists.
+2021-02-20 16:50:06.353 CET [1356] STATEMENT:  INSERT INTO users (username, password) VALUES ('tester', 'testpw')
+2021-02-20 16:53:52.423 CET [1356] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-20 16:53:57.796 CET [3500] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-20 16:53:57.796 CET [3500] DETAIL:  Key (username)=(testuser) already exists.
+2021-02-20 16:53:57.796 CET [3500] STATEMENT:  INSERT INTO users (username, password) VALUES ('testuser', 'testpw')
+2021-02-20 16:55:16.069 CET [12364] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-20 16:55:16.069 CET [12364] DETAIL:  Key (username)=(testuser) already exists.
+2021-02-20 16:55:16.069 CET [12364] STATEMENT:  INSERT INTO users (username, password) VALUES ('testuser', 'testpw')
+2021-02-20 16:55:52.420 CET [12364] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-20 16:55:57.790 CET [3664] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-20 16:55:57.790 CET [3664] DETAIL:  Key (username)=(testuser) already exists.
+2021-02-20 16:55:57.790 CET [3664] STATEMENT:  INSERT INTO users (username, password) VALUES ('testuser', 'testpw')
+2021-02-20 16:58:00.282 CET [3664] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-20 16:58:56.098 CET [956] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-20 16:58:56.098 CET [956] DETAIL:  Key (username)=(tester) already exists.
+2021-02-20 16:58:56.098 CET [956] STATEMENT:  INSERT INTO users (username, password) VALUES ('tester', 'testpw')
+2021-02-20 16:59:03.146 CET [956] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-20 16:59:06.629 CET [19584] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-20 16:59:06.629 CET [19584] DETAIL:  Key (username)=(tester) already exists.
+2021-02-20 16:59:06.629 CET [19584] STATEMENT:  INSERT INTO users (username, password) VALUES ('tester', 'testpw')
+2021-02-20 16:59:14.435 CET [19584] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-20 16:59:18.991 CET [23208] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-20 16:59:18.991 CET [23208] DETAIL:  Key (username)=(tester) already exists.
+2021-02-20 16:59:18.991 CET [23208] STATEMENT:  INSERT INTO users (username, password) VALUES ('tester', 'testpw')
+2021-02-20 16:59:29.506 CET [23208] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-20 16:59:51.123 CET [18692] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-20 16:59:55.826 CET [21112] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-20 16:59:55.826 CET [21112] DETAIL:  Key (username)=(testuser) already exists.
+2021-02-20 16:59:55.826 CET [21112] STATEMENT:  INSERT INTO users (username, password) VALUES ('testuser', 'testpw')
+2021-02-20 17:00:23.824 CET [21112] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-20 17:16:44.616 CET [24168] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-20 17:16:44.616 CET [24168] DETAIL:  Key (username)=(testuser2) already exists.
+2021-02-20 17:16:44.616 CET [24168] STATEMENT:  INSERT INTO users (username, password) VALUES ('testuser2', 'testpw')
+2021-02-20 17:17:08.230 CET [23776] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-20 17:17:08.230 CET [23776] DETAIL:  Key (username)=(testuser2) already exists.
+2021-02-20 17:17:08.230 CET [23776] STATEMENT:  INSERT INTO users (username, password) VALUES ('testuser2', 'testpw')
+2021-02-20 17:17:44.466 CET [2188] ERROR:  relation "users" does not exist at character 15
+2021-02-20 17:17:44.466 CET [2188] STATEMENT:  select * from users;
+2021-02-20 17:22:04.975 CET [2188] ERROR:  column "testuser2" does not exist at character 36
+2021-02-20 17:22:04.975 CET [2188] STATEMENT:  delete from users where username = testuser2
+	;
+2021-02-20 17:22:54.948 CET [2188] ERROR:  column "testuser2" does not exist at character 36
+2021-02-20 17:22:54.948 CET [2188] STATEMENT:  delete from users where username = testuser2
+	;
+2021-02-20 17:41:43.472 CET [25580] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-20 17:41:43.472 CET [25580] DETAIL:  Key (username)=(altenhof) already exists.
+2021-02-20 17:41:43.472 CET [25580] STATEMENT:  INSERT INTO users (username, password) VALUES ('altenhof', 'markus')
+2021-02-20 17:42:41.836 CET [25580] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-20 17:43:22.262 CET [24264] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-20 17:43:29.056 CET [27248] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-20 17:43:29.056 CET [27248] DETAIL:  Key (username)=(kienboec) already exists.
+2021-02-20 17:43:29.056 CET [27248] STATEMENT:  INSERT INTO users (username, password) VALUES ('kienboec', 'daniel')
+2021-02-20 17:43:47.365 CET [27248] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-20 17:43:47.365 CET [27248] DETAIL:  Key (username)=(kienboec) already exists.
+2021-02-20 17:43:47.365 CET [27248] STATEMENT:  INSERT INTO users (username, password) VALUES ('kienboec', 'different')
+2021-02-20 17:50:21.275 CET [24136] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-20 17:56:32.953 CET [15216] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-20 17:56:41.147 CET [16224] ERROR:  syntax error at or near "WHERE" at character 62
+2021-02-20 17:56:41.147 CET [16224] STATEMENT:  INSERT INTO users (token) VALUES ('Basic kienboec-ppbToken') WHERE username = 'kienboec'
+2021-02-20 17:57:29.338 CET [2188] ERROR:  syntax error at or near "WHERE" at character 62
+2021-02-20 17:57:29.338 CET [2188] STATEMENT:  INSERT INTO users (token) VALUES ('Basic kienboec-ppbToken') WHERE username = 'kienboec'
+	;
+2021-02-20 17:58:48.961 CET [16224] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-20 19:01:43.536 CET [28896] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-20 19:10:13.017 CET [2188] ERROR:  syntax error at or near "(" at character 255
+2021-02-20 19:10:13.017 CET [2188] STATEMENT:  CREATE TABLE library (
+	id SERIAL PRIMARY KEY,
+	username VARCHAR(255) NOT NULL,
+	name VARCHAR(255),
+	url VARCHAR(255),
+	filetype VARCHAR(255),
+	title VARCHAR(255),
+	artist VARCHAR(255),
+	album VARCHAR(255),
+	genre VARCHAR(255),
+	path VARCHAR(255),
+	filesize INTEGER(50),
+	rating INTEGER(50),
+	length VARCHAR(255),
+	FOREIGN KEY (username) REFERENCES users (username)
+	);
+2021-02-20 19:15:39.586 CET [2188] ERROR:  insert or update on table "library" violates foreign key constraint "library_username_fkey"
+2021-02-20 19:15:39.586 CET [2188] DETAIL:  Key (username)=(kienboeck) is not present in table "users".
+2021-02-20 19:15:39.586 CET [2188] STATEMENT:  INSERT INTO library (username, name, url, rating) values ('kienboeck', 'Songname', 'https://www.youtube.com/watch?v=dQw4w9WgXcQ', 5);
+2021-02-20 19:20:08.103 CET [2188] ERROR:  syntax error at or near "where" at character 40
+2021-02-20 19:20:08.103 CET [2188] STATEMENT:  select Songname from user join library where token = 'Basic kienboec-ppbToken';
+2021-02-20 19:20:29.002 CET [2188] ERROR:  syntax error at or near "where" at character 41
+2021-02-20 19:20:29.002 CET [2188] STATEMENT:  select Songname from users join library where token = 'Basic kienboec-ppbToken';
+2021-02-20 19:21:05.030 CET [2188] ERROR:  syntax error at or near "where" at character 44
+2021-02-20 19:21:05.030 CET [2188] STATEMENT:  select libary.name from users join library where token = 'Basic kienboec-ppbToken';
+2021-02-20 19:21:30.818 CET [2188] ERROR:  syntax error at or near ")" at character 45
+2021-02-20 19:21:30.818 CET [2188] STATEMENT:  select library.name from (users join library) where token = 'Basic kienboec-ppbToken';
+2021-02-20 19:25:16.896 CET [2188] ERROR:  syntax error at or near "join" at character 21
+2021-02-20 19:25:16.896 CET [2188] STATEMENT:  DELETE FROM library join users on users.username = library.username where token = 'Basic kienboec-ppbToken';
+2021-02-20 19:25:30.358 CET [2188] ERROR:  syntax error at or near "inner" at character 21
+2021-02-20 19:25:30.358 CET [2188] STATEMENT:  DELETE FROM library inner join users on users.username = library.username where token = 'Basic kienboec-ppbToken';
+2021-02-20 19:25:58.795 CET [2188] ERROR:  syntax error at or near "inner" at character 21
+2021-02-20 19:25:58.795 CET [2188] STATEMENT:  DELETE FROM library inner join users on library.username = users.username where token = 'Basic kienboec-ppbToken';
+2021-02-20 19:26:20.555 CET [2188] ERROR:  syntax error at or near "l" at character 8
+2021-02-20 19:26:20.555 CET [2188] STATEMENT:  DELETE l FROM library l inner join users on library.username = users.username where token = 'Basic kienboec-ppbToken';
+2021-02-20 19:26:50.456 CET [2188] ERROR:  syntax error at or near "library" at character 8
+2021-02-20 19:26:50.456 CET [2188] STATEMENT:  DELETE library FROM library join users on library.username = users.username where token = 'Basic kienboec-ppbToken';
+2021-02-20 19:27:05.179 CET [2188] ERROR:  syntax error at or near "library" at character 8
+2021-02-20 19:27:05.179 CET [2188] STATEMENT:  DELETE library FROM (library join users on library.username = users.username) where token = 'Basic kienboec-ppbToken';
+2021-02-20 19:28:26.557 CET [2188] ERROR:  syntax error at or near "=" at character 42
+2021-02-20 19:28:26.557 CET [2188] STATEMENT:  DELETE FROM library USING users.username = library.username where token = 'Basic kienboec-ppbToken';
+2021-02-20 19:29:22.097 CET [2188] ERROR:  syntax error at or near "=" at character 42
+2021-02-20 19:29:22.097 CET [2188] STATEMENT:  DELETE FROM library USING users.username = library.username where token = 'Basic kienboec-ppbToken';
+2021-02-20 19:32:00.884 CET [2188] ERROR:  syntax error at or near "=" at character 42
+2021-02-20 19:32:00.884 CET [2188] STATEMENT:  DELETE FROM library USING users.username = library.username where token = 'Basic kienboec-ppbToken';
+2021-02-20 19:33:55.727 CET [2188] ERROR:  missing FROM-clause entry for table "libary" at character 56
+2021-02-20 19:33:55.727 CET [2188] STATEMENT:  DELETE FROM library USING users where users.username = libary.username AND token = 'Basic kienboec-ppbToken';
+2021-02-20 20:02:52.968 CET [10272] LOG:  server process (PID 2188) was terminated by exception 0xC000013A
+2021-02-20 20:02:52.968 CET [10272] DETAIL:  Failed process was running: select * from users;
+2021-02-20 20:02:52.968 CET [10272] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2021-02-20 20:02:52.968 CET [10272] LOG:  terminating any other active server processes
+2021-02-20 20:02:52.973 CET [9604] WARNING:  terminating connection because of crash of another server process
+2021-02-20 20:02:52.973 CET [9604] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2021-02-20 20:02:52.973 CET [9604] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2021-02-20 20:02:53.072 CET [10272] LOG:  all server processes terminated; reinitializing
+2021-02-20 20:02:53.131 CET [28936] LOG:  database system was interrupted; last known up at 2021-02-20 19:40:33 CET
+2021-02-20 20:02:53.942 CET [28936] LOG:  database system was not properly shut down; automatic recovery in progress
+2021-02-20 20:02:53.998 CET [28936] LOG:  redo starts at 0/16BB5D0
+2021-02-20 20:02:53.998 CET [28936] LOG:  invalid record length at 0/16BB6B0: wanted 24, got 0
+2021-02-20 20:02:53.998 CET [28936] LOG:  redo done at 0/16BB678
+2021-02-20 20:02:54.223 CET [10272] LOG:  database system is ready to accept connections
+2021-02-20 20:02:54.315 CET [10272] LOG:  worker process: logical replication launcher (PID 8532) was terminated by exception 0xC000013A
+2021-02-20 20:02:54.315 CET [10272] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2021-02-20 20:02:54.316 CET [10272] LOG:  terminating any other active server processes
+2021-02-20 20:02:54.323 CET [18868] WARNING:  terminating connection because of crash of another server process
+2021-02-20 20:02:54.323 CET [18868] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2021-02-20 20:02:54.323 CET [18868] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2021-02-20 20:02:54.332 CET [10272] LOG:  statistics collector process (PID 10396) was terminated by exception 0xC000013A
+2021-02-20 20:02:54.332 CET [10272] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2021-02-20 20:02:54.350 CET [10272] LOG:  all server processes terminated; reinitializing
+2021-02-20 20:02:54.403 CET [19196] LOG:  database system was interrupted; last known up at 2021-02-20 20:02:54 CET
+2021-02-20 20:02:54.863 CET [10272] LOG:  startup process (PID 19196) was terminated by exception 0xC000013A
+2021-02-20 20:02:54.863 CET [10272] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2021-02-20 20:02:54.863 CET [10272] LOG:  aborting startup due to startup process failure
 ^C

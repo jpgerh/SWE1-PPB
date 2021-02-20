@@ -1,18 +1,27 @@
 using NUnit.Framework;
+using System.Threading.Tasks;
 
 namespace SWE1_PPB.Test
 {
     public class Tests
     {
+
         [SetUp]
         public void Setup()
         {
         }
 
         [Test]
-        public void Test1()
+        public async Task RegisterNewUserAndLogin()
         {
-            Assert.Pass();
+            User user = new User();
+            string username = "testuser";
+            string password = "testpw";
+
+            bool success = await user.Register(username, password);
+            Assert.That(success);
+            string token = await user.Login(username, password);
+            Assert.That(token, Is.EqualTo($"Basic {username}-ppbToken"));
         }
     }
 }

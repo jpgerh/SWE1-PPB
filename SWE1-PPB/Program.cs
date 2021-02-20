@@ -7,33 +7,22 @@ namespace SWE1_PPB
 {
     class Program
     {
-        static async Task Main(string[] args)
+        static void Main(string[] args)
         {
             int port = 10001;
             string ipAddress = "127.0.0.1";
-            var connString = "Host=localhost;Username=postgres;Password=postgres";
+            DBHandler dBHandler = new DBHandler();
+            User user = new User();
 
-            Console.WriteLine("Establishing database connection...");
+            //string version = "SELECT version()";
+            //Console.WriteLine($"Using PostgreSQL version: {await dBHandler.ExecuteSQL(version)}\n");
 
-            await using var conn = new NpgsqlConnection(connString);
+            //string sql = "INSERT INTO users (username, password) values ('testuser', 'daniel')";
 
-            try
-            {
-                await conn.OpenAsync();
+            //string sql = "select password from users";
+            //Console.WriteLine($"Using PostgreSQL version: {await dBHandler.ExecuteSQL(sql)}\n");
 
-                Console.WriteLine("Connection established!");
-
-                var sql = "SELECT version()";
-
-                using var cmd = new NpgsqlCommand(sql, conn);
-
-                var version = cmd.ExecuteScalar().ToString();
-                Console.WriteLine($"PostgreSQL version: {version}\n");
-            } 
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message + ": Please check username and password.\n");
-            }
+            //await dBHandler.ExecuteInsertSQL(sql);
 
             if (args.Length != 0)
             {
@@ -41,12 +30,7 @@ namespace SWE1_PPB
                     port = Int32.Parse(args[0]);
             }
 
-            Server server = new Server(IPAddress.Parse(ipAddress), port, conn);
-
-
-
-
-
+            Server server = new Server(IPAddress.Parse(ipAddress), port);
 
         }
     }
