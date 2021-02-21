@@ -4,7 +4,9 @@
 	token VARCHAR(255),
 	name VARCHAR(255),
 	bio VARCHAR(255),
-	image VARCHAR(255)
+	image VARCHAR(255),
+	online BOOLEAN,
+	admin BOOLEAN
 );
 
 CREATE TABLE library (
@@ -25,9 +27,33 @@ CREATE TABLE library (
 	FOREIGN KEY (username) REFERENCES users (username)
 );
 
+CREATE TABLE tournamentscores (
+	tournamentid INTEGER,
+	username VARCHAR(255),
+	battlescore INTEGER,
+
+	PRIMARY KEY (tournamentid, username),
+	FOREIGN KEY (username) REFERENCES users (username)
+);
+
+CREATE TABLE playlist (
+	playlist_order INTEGER PRIMARY KEY,
+	library_id INTEGER NOT NULL,
+
+	FOREIGN KEY (library_id) REFERENCES library (id)
+);
+
+CREATE TABLE actions (
+	username VARCHAR(255) PRIMARY KEY,
+	action VARCHAR(255) NOT NULL
+);
+
+
 INSERT INTO library (username, name, url, rating) values ('kienboec', 'Songname', 'https://www.youtube.com/watch?v=dQw4w9WgXcQ', 5);
 INSERT INTO library (username, name, url, rating) values ('altenhof', 'Songname 2', 'https://www.youtube.com/watch?v=dQw4w9WgXcQ', 5);
 INSERT INTO library (username, name, url, rating) values ('kienboeck', 'Songname', 'https://www.youtube.com/watch?v=dQw4w9WgXcQ', 5);
 
 select library.name from (users join library on users.username = library.username) where token = 'Basic kienboec-ppbToken';
 DELETE FROM library USING users where users.username = library.username AND users.token = 'Basic kienboec-ppbToken';
+
+INSERT INTO actions VALUES ('altenhof', 'SSSSS');

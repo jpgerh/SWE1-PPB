@@ -13,6 +13,7 @@ namespace SWE1_PPB
             string ipAddress = "127.0.0.1";
             DBHandler dBHandler = new DBHandler();
             User user = new User();
+            BattleHandler battleHandler = new BattleHandler();
 
             //string version = "SELECT version()";
             //Console.WriteLine($"Using PostgreSQL version: {await dBHandler.ExecuteSQL(version)}\n");

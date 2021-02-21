@@ -1,1 +1,15 @@
 ﻿POSTHandler: -> lib and so on
+
+
+Eigenes Feature: 
+
+RSVLP beats anything, even though f.e. SSSSS would result in a draw overall
+z.B. RSVLP vs SSSSS
+
+	R -> S: P1 wins
+	S -> S: Draw
+	V -> S: P1 wins
+	L -> S: P2 wins
+	P -> S: P2 wins
+
+	would normally be draw -> now P1 wins

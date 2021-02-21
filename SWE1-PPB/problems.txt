@@ -1,1 +1,2 @@
 ﻿Bytestream abgebrochen weil Länge zu gering --> Länge auf 1024 erhöht;
+Online Status auch über Datenbank, weil sonst zu viel Extraaufwand

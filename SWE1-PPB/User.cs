@@ -12,9 +12,9 @@ namespace SWE1_PPB
         // add entry to db, answer with success state
         public async Task<bool> Register(string username, string password)
         {
-            string sql = $"INSERT INTO users (username, password) VALUES ('{username}', '{password}')";
+            string sql = $"INSERT INTO users (username, password, online, admin) VALUES ('{username}', '{password}', false, false)";
 
-            bool success = await dBHandler.ExecuteInsertSQL(sql);
+            bool success = await dBHandler.ExecuteInsertOrDeleteSQL(sql);
 
             if (!success)
             {
@@ -36,7 +36,7 @@ namespace SWE1_PPB
                 string token = $"Basic {username}-ppbToken";
                 string insert = $"UPDATE users SET token = '{token}' WHERE username = '{username}'";
 
-                bool success = await dBHandler.ExecuteInsertSQL(insert);
+                bool success = await dBHandler.ExecuteInsertOrDeleteSQL(insert);
 
                 if (success)
                 {
@@ -59,6 +59,17 @@ namespace SWE1_PPB
             else return false;
         }
 
+        public async Task<bool> verifyAdmin(string token)
+        {
+            string sql = $"SELECT COUNT(*) FROM users WHERE token = '{token}' AND admin = true";
+            string result = await dBHandler.ExecuteSingleSelectSQL(sql);
+
+            int count = Int32.Parse(result);
+
+            if (count == 1) return true;
+            else return false;
+        }
+
         // edits user data and updates the db
         public void editUser(string completePayload)
         {
@@ -66,7 +77,7 @@ namespace SWE1_PPB
         }
 
         // starts
-        public void startBattle()
+        public void startBattle(string token)
         {
 
         }

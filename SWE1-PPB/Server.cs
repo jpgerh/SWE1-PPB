@@ -96,8 +96,35 @@ namespace SWE1_PPB
                 case "/lib":
                     {
                         dynamic payloadJson = JObject.Parse(requestContext.Payload);
-                        MMC mmc = new MMC((string)payloadJson.Name, (string)payloadJson.Url, );
 
+                        MMC mmc = new MMC();
+
+                        string authorization;
+                        try
+                        {
+                            authorization = requestContext.HeaderValues["Authorization"];
+                            if (await user.verifyToken(authorization))
+                            {
+                                return $"{authorization}: Authorization successful.";
+
+
+                            }
+                            else
+                            {
+                                return $"{authorization}: Authorization failed.";
+                            }
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine(e.Message);
+                        }
+
+                        return "Could not get token.";
+
+                        break;
+                    }
+                case "/battles":
+                    {
                         bool success = true;
                         string authorization;
                         try
@@ -108,6 +135,8 @@ namespace SWE1_PPB
                             {
                                 if (await user.verifyToken(authorization))
                                 {
+                                    user.startBattle(authorization);
+
                                     return $"{authorization}: Authorization successful.";
 
 
@@ -120,7 +149,7 @@ namespace SWE1_PPB
                         }
                         catch (Exception e)
                         {
-                            success = false;
+                            Console.WriteLine(e.Message);
                         }
 
                         return "Could not get token.";
