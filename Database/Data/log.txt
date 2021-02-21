@@ -640,4 +640,312 @@
 2021-02-20 20:02:54.863 CET [10272] LOG:  startup process (PID 19196) was terminated by exception 0xC000013A
 2021-02-20 20:02:54.863 CET [10272] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
 2021-02-20 20:02:54.863 CET [10272] LOG:  aborting startup due to startup process failure
+^C2021-02-21 10:00:16.039 CET [24392] LOG:  listening on IPv6 address "::1", port 5432
+2021-02-21 10:00:16.039 CET [24392] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-02-21 10:00:16.640 CET [14308] LOG:  database system was interrupted; last known up at 2021-02-20 20:02:54 CET
+2021-02-21 10:00:35.048 CET [14308] LOG:  database system was not properly shut down; automatic recovery in progress
+2021-02-21 10:00:35.130 CET [14308] LOG:  invalid record length at 0/16BB720: wanted 24, got 0
+2021-02-21 10:00:35.130 CET [14308] LOG:  redo is not required
+2021-02-21 10:00:35.586 CET [24392] LOG:  database system is ready to accept connections
+2021-02-21 10:08:10.753 CET [1844] ERROR:  cannot drop table users because other objects depend on it
+2021-02-21 10:08:10.753 CET [1844] DETAIL:  constraint library_username_fkey on table library depends on table users
+2021-02-21 10:08:10.753 CET [1844] HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2021-02-21 10:08:10.753 CET [1844] STATEMENT:  drop table users;
+2021-02-21 10:10:25.488 CET [2932] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-21 10:10:25.488 CET [2932] DETAIL:  Key (username)=(kienboec) already exists.
+2021-02-21 10:10:25.488 CET [2932] STATEMENT:  INSERT INTO users (username, password) VALUES ('kienboec', 'daniel')
+2021-02-21 10:10:35.600 CET [2932] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-21 10:10:35.600 CET [2932] DETAIL:  Key (username)=(kienboec) already exists.
+2021-02-21 10:10:35.600 CET [2932] STATEMENT:  INSERT INTO users (username, password) VALUES ('kienboec', 'different')
+2021-02-21 10:27:07.875 CET [1844] ERROR:  syntax error at or near "order" at character 25
+2021-02-21 10:27:07.875 CET [1844] STATEMENT:  CREATE TABLE playlist (
+	order INTEGER PRIMARY KEY,
+	library_id INTEGER NOT NULL,
+	FOREIGN KEY (library_id) REFERENCES library (id)
+	);
+2021-02-21 10:39:32.351 CET [1840] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:23:45.096 CET [620] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:23:45.096 CET [20472] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:23:45.096 CET [14284] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:24:59.352 CET [23556] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:24:59.352 CET [29236] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:24:59.352 CET [24316] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:24:59.352 CET [23156] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:24:59.352 CET [24540] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:24:59.352 CET [21148] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:24:59.353 CET [25308] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:24:59.353 CET [24212] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:24:59.353 CET [25564] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:24:59.353 CET [1532] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:26:23.505 CET [20472] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:26:23.505 CET [22208] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:26:23.505 CET [2264] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:26:23.505 CET [6772] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:26:23.506 CET [8992] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:26:23.506 CET [26676] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:26:23.506 CET [19568] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:26:23.506 CET [11824] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:26:23.506 CET [10132] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:26:23.506 CET [20756] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:27:19.395 CET [4444] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:27:19.395 CET [27668] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:27:19.395 CET [28712] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:27:19.395 CET [19632] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:27:19.395 CET [28752] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:27:19.395 CET [20664] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:27:19.395 CET [22972] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:27:19.396 CET [1364] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:27:19.396 CET [6848] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:27:19.396 CET [9992] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:27:19.397 CET [20372] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:27:50.080 CET [17472] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:27:50.080 CET [7512] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:27:50.080 CET [19288] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:27:50.080 CET [23376] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:27:50.081 CET [7944] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:27:50.081 CET [6776] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:27:50.081 CET [10020] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:27:50.081 CET [25680] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:27:50.081 CET [7028] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:27:50.081 CET [20548] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:31:53.011 CET [18168] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:32:26.071 CET [8400] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:32:57.717 CET [18192] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:35:09.920 CET [22004] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:36:01.182 CET [26296] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:46:20.627 CET [6072] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:47:07.699 CET [22348] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:47:46.819 CET [24076] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:49:00.875 CET [15420] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:49:29.614 CET [20672] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:49:44.229 CET [23120] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:50:03.529 CET [8804] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:50:19.315 CET [16868] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:52:58.701 CET [26848] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:55:30.604 CET [15568] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:56:31.147 CET [20104] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:57:06.890 CET [26716] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:57:16.013 CET [28696] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:57:35.379 CET [27988] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:58:07.034 CET [28304] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:58:45.460 CET [25016] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:59:08.451 CET [2520] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 11:59:56.601 CET [3548] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 12:02:41.277 CET [9628] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 12:05:05.628 CET [13308] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 12:05:38.975 CET [29320] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 12:15:54.875 CET [13172] ERROR:  syntax error at or near "'username'" at character 50
+2021-02-21 12:15:54.875 CET [13172] STATEMENT:  SELECT Count(*) FROM users JOIN actions ON users.'username' = actions.'username' WHERE online = true
+2021-02-21 12:16:04.620 CET [13172] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 12:16:16.449 CET [24840] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 12:16:45.756 CET [25424] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 12:18:16.229 CET [22380] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 12:20:19.134 CET [24116] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 12:20:28.194 CET [12552] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 12:20:44.796 CET [1844] ERROR:  duplicate key value violates unique constraint "actions_pkey"
+2021-02-21 12:20:44.796 CET [1844] DETAIL:  Key (username)=(altenhof) already exists.
+2021-02-21 12:20:44.796 CET [1844] STATEMENT:  INSERT INTO actions VALUES ('altenhof', 'SSSSS');
+2021-02-21 12:21:13.182 CET [9716] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 12:27:07.822 CET [12080] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 12:27:19.046 CET [11208] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 12:27:37.729 CET [5832] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 15:50:30.126 CET [1844] ERROR:  table "scores" does not exist
+2021-02-21 15:50:30.126 CET [1844] STATEMENT:  drop table scores;
+2021-02-21 16:24:29.980 CET [8800] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 16:25:11.638 CET [16292] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 16:26:27.247 CET [2212] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 16:26:53.006 CET [11060] ERROR:  column "kienboec" does not exist at character 45
+2021-02-21 16:26:53.006 CET [11060] STATEMENT:  SELECT action FROM actions WHERE username = kienboec
+2021-02-21 16:26:53.196 CET [11060] ERROR:  column "altenhof" does not exist at character 45
+2021-02-21 16:26:53.196 CET [11060] STATEMENT:  SELECT action FROM actions WHERE username = altenhof
+2021-02-21 16:26:57.448 CET [11060] ERROR:  column "kienboec" does not exist at character 45
+2021-02-21 16:26:57.448 CET [11060] STATEMENT:  SELECT action FROM actions WHERE username = kienboec
+2021-02-21 16:26:57.475 CET [11060] ERROR:  column "altenhof" does not exist at character 45
+2021-02-21 16:26:57.475 CET [11060] STATEMENT:  SELECT action FROM actions WHERE username = altenhof
+2021-02-21 16:27:02.527 CET [11060] ERROR:  column "kienboec" does not exist at character 45
+2021-02-21 16:27:02.527 CET [11060] STATEMENT:  SELECT action FROM actions WHERE username = kienboec
+2021-02-21 16:27:02.553 CET [11060] ERROR:  column "altenhof" does not exist at character 45
+2021-02-21 16:27:02.553 CET [11060] STATEMENT:  SELECT action FROM actions WHERE username = altenhof
+2021-02-21 16:27:07.612 CET [11060] ERROR:  column "kienboec" does not exist at character 45
+2021-02-21 16:27:07.612 CET [11060] STATEMENT:  SELECT action FROM actions WHERE username = kienboec
+2021-02-21 16:27:07.636 CET [11060] ERROR:  column "altenhof" does not exist at character 45
+2021-02-21 16:27:07.636 CET [11060] STATEMENT:  SELECT action FROM actions WHERE username = altenhof
+2021-02-21 16:27:09.515 CET [11060] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 16:30:51.797 CET [29248] ERROR:  column "kienboec" does not exist at character 45
+2021-02-21 16:30:51.797 CET [29248] STATEMENT:  SELECT action FROM actions WHERE username = kienboec
+2021-02-21 16:30:51.950 CET [29248] ERROR:  column "altenhof" does not exist at character 45
+2021-02-21 16:30:51.950 CET [29248] STATEMENT:  SELECT action FROM actions WHERE username = altenhof
+2021-02-21 16:30:56.350 CET [29248] ERROR:  column "kienboec" does not exist at character 45
+2021-02-21 16:30:56.350 CET [29248] STATEMENT:  SELECT action FROM actions WHERE username = kienboec
+2021-02-21 16:30:56.383 CET [29248] ERROR:  column "altenhof" does not exist at character 45
+2021-02-21 16:30:56.383 CET [29248] STATEMENT:  SELECT action FROM actions WHERE username = altenhof
+2021-02-21 16:30:57.313 CET [29248] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 16:31:05.777 CET [19492] ERROR:  column "kienboec" does not exist at character 45
+2021-02-21 16:31:05.777 CET [19492] STATEMENT:  SELECT action FROM actions WHERE username = kienboec
+2021-02-21 16:31:05.899 CET [19492] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 16:31:16.904 CET [1628] ERROR:  column "kienboec" does not exist at character 45
+2021-02-21 16:31:16.904 CET [1628] STATEMENT:  SELECT action FROM actions WHERE username = kienboec
+2021-02-21 16:31:17.032 CET [1628] ERROR:  column "altenhof" does not exist at character 45
+2021-02-21 16:31:17.032 CET [1628] STATEMENT:  SELECT action FROM actions WHERE username = altenhof
+2021-02-21 16:31:20.964 CET [1628] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 16:31:35.514 CET [10060] ERROR:  column "kienboec" does not exist at character 45
+2021-02-21 16:31:35.514 CET [10060] STATEMENT:  SELECT action FROM actions WHERE username = kienboec
+2021-02-21 16:31:35.674 CET [10060] ERROR:  column "altenhof" does not exist at character 45
+2021-02-21 16:31:35.674 CET [10060] STATEMENT:  SELECT action FROM actions WHERE username = altenhof
+2021-02-21 16:31:39.985 CET [10060] ERROR:  column "kienboec" does not exist at character 45
+2021-02-21 16:31:39.985 CET [10060] STATEMENT:  SELECT action FROM actions WHERE username = kienboec
+2021-02-21 16:31:40.013 CET [10060] ERROR:  column "altenhof" does not exist at character 45
+2021-02-21 16:31:40.013 CET [10060] STATEMENT:  SELECT action FROM actions WHERE username = altenhof
+2021-02-21 16:31:41.859 CET [10060] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 16:35:24.007 CET [27016] ERROR:  column "kienboec" does not exist at character 45
+2021-02-21 16:35:24.007 CET [27016] STATEMENT:  SELECT action FROM actions WHERE username = kienboec
+2021-02-21 16:35:24.146 CET [27016] ERROR:  column "altenhof" does not exist at character 45
+2021-02-21 16:35:24.146 CET [27016] STATEMENT:  SELECT action FROM actions WHERE username = altenhof
+2021-02-21 16:35:25.722 CET [27016] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 16:36:04.364 CET [18492] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 16:38:10.435 CET [14212] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 16:42:35.402 CET [6792] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 16:45:19.160 CET [2812] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 16:48:08.371 CET [29248] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 16:49:09.740 CET [23956] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 16:52:02.766 CET [1844] ERROR:  syntax error at or near "*" at character 8
+2021-02-21 16:52:02.766 CET [1844] STATEMENT:  delete * from tournamentscores;
+2021-02-21 16:52:18.118 CET [14080] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 17:02:03.739 CET [17540] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 17:03:01.107 CET [23248] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 17:13:14.694 CET [24060] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 17:13:44.390 CET [988] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 17:13:58.029 CET [26400] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 17:15:50.115 CET [20064] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 17:17:00.348 CET [28980] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 17:22:59.741 CET [2108] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 17:29:41.863 CET [24392] LOG:  server process (PID 1844) was terminated by exception 0xC000013A
+2021-02-21 17:29:41.863 CET [24392] DETAIL:  Failed process was running: select * from users;
+2021-02-21 17:29:41.863 CET [24392] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2021-02-21 17:29:41.863 CET [24392] LOG:  terminating any other active server processes
+2021-02-21 17:29:41.867 CET [13076] WARNING:  terminating connection because of crash of another server process
+2021-02-21 17:29:41.867 CET [13076] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2021-02-21 17:29:41.867 CET [13076] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2021-02-21 17:29:41.892 CET [24392] LOG:  all server processes terminated; reinitializing
+2021-02-21 17:29:41.924 CET [2608] LOG:  database system was interrupted; last known up at 2021-02-21 17:25:36 CET
+2021-02-21 17:29:42.642 CET [2608] LOG:  database system was not properly shut down; automatic recovery in progress
+2021-02-21 17:29:42.682 CET [2608] LOG:  redo starts at 0/1780B38
+2021-02-21 17:29:42.682 CET [2608] LOG:  invalid record length at 0/1780C18: wanted 24, got 0
+2021-02-21 17:29:42.682 CET [2608] LOG:  redo done at 0/1780BE0
+2021-02-21 17:29:42.896 CET [24392] LOG:  database system is ready to accept connections
+2021-02-21 17:29:48.589 CET [24392] LOG:  statistics collector process (PID 21688) was terminated by exception 0xC000013A
+2021-02-21 17:29:48.589 CET [24392] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2021-02-21 17:29:48.591 CET [24392] LOG:  worker process: logical replication launcher (PID 9368) was terminated by exception 0xC000013A
+2021-02-21 17:29:48.591 CET [24392] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2021-02-21 17:29:48.591 CET [24392] LOG:  terminating any other active server processes
+2021-02-21 17:29:48.604 CET [24392] LOG:  all server processes terminated; reinitializing
+2021-02-21 17:29:48.633 CET [13808] LOG:  database system was interrupted; last known up at 2021-02-21 17:29:42 CET
+2021-02-21 17:29:48.875 CET [24392] LOG:  startup process (PID 13808) was terminated by exception 0xC000013A
+2021-02-21 17:29:48.875 CET [24392] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2021-02-21 17:29:48.875 CET [24392] LOG:  aborting startup due to startup process failure
 ^C
