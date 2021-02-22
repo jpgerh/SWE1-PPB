@@ -1,6 +1,7 @@
 ﻿using Npgsql;
 using System;
 using System.Net;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace SWE1_PPB
@@ -13,7 +14,9 @@ namespace SWE1_PPB
             string ipAddress = "127.0.0.1";
             DBHandler dBHandler = new DBHandler();
             User user = new User();
-            BattleHandler battleHandler = new BattleHandler();
+            BattleHandler battleHandler;
+            Thread battleThread = new Thread(() =>  battleHandler = new BattleHandler());
+            battleThread.Start();
 
             //string version = "SELECT version()";
             //Console.WriteLine($"Using PostgreSQL version: {await dBHandler.ExecuteSQL(version)}\n");

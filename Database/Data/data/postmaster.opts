@@ -1,1 +1,1 @@
-D:/Dropbox/FH Technikum/2020_WS/Source/SWE1/PPB/Database/App/PgSQL/bin/postgres.exe "-D" "D:/Dropbox/FH Technikum/2020_WS/Source/SWE1/PPB/Database/Data/data"
+D:/SWE1/Database/App/PgSQL/bin/postgres.exe "-D" "D:/SWE1/Database/Data/data"

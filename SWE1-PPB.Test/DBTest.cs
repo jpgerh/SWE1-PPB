@@ -3,13 +3,8 @@ using System.Threading.Tasks;
 
 namespace SWE1_PPB.Test
 {
-    public class Tests
+    public class DBTests
     {
-
-        [SetUp]
-        public void Setup()
-        {
-        }
 
         [Test]
         public async Task RegisterNewUserAndLogin()
@@ -23,5 +18,7 @@ namespace SWE1_PPB.Test
             string token = await user.Login(username, password);
             Assert.That(token, Is.EqualTo($"Basic {username}-ppbToken"));
         }
+
+        //public async Task TestSpecial
     }
 }

@@ -10,7 +10,7 @@ namespace SWE1_PPB
 {
     class RequestContext
     {
-        private string verbRessourceVersionPattern = @"([a-zA-Z]{3,6}) ([0-9a-zA-Z/]*) ([a-zA-Z0-9./]*)";
+        private string verbRessourceVersionPattern = @"([a-zA-Z]{3,6}) (.*) ([a-zA-Z0-9./]*)";
         private string headerRegexPattern = @"([a-zA-Z-]+): (.*)";
         private string httpVerb, ressource, httpVersion;
         private string payload = "";

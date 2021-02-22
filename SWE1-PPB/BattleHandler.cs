@@ -9,10 +9,9 @@ namespace SWE1_PPB
 {
     class BattleHandler
     {
-
         List<string> usernames = new List<string>();
         DBHandler dBHandler = new DBHandler();
-        int interval = 7500;
+        int interval = 1000;
         List<KeyValuePair<char, char>> effectiveness = new List<KeyValuePair<char, char>>()
         {
             new KeyValuePair<char, char>('R', 'S'),
@@ -48,7 +47,6 @@ namespace SWE1_PPB
             {
                 if (count >= 2) Battle();
             }
-            else Console.WriteLine("One or more users don't have actions declared.");
         }
 
         private async void Battle()
@@ -97,6 +95,43 @@ namespace SWE1_PPB
                         {
                             Console.WriteLine("\n#### " + P1 + " vs " + P2 + " ####");
 
+                            bool P1Special = false;
+                            bool P2Special = false;
+
+
+                            // check for RSVLP :O
+                            string stringP1Special = new string(actions[P1]);
+                            string stringP2Special = new string(actions[P2]);
+
+                            if (stringP1Special.Equals("RSVLP") && stringP2Special.Equals("RSVLP"))
+                            {
+                                Console.WriteLine("\nBoth " + P2 + " and " + P1 + " chose the special Action. Both are disqualified from the tournament.\n");
+                                Console.WriteLine("##################################");
+                                disqualifiedUsernames.Add(P1);
+                                disqualifiedUsernames.Add(P2);
+                                break;
+                            } 
+                            else if (stringP1Special.Equals("RSVLP"))
+                            {
+                                Console.WriteLine("\n" + P1 + " beats " + P2 + " by using the special action.\n");
+                                Console.WriteLine("##################################");
+                                battlescore[P1] = battlescore[P1] + 2;
+                                battlescore[P2] = battlescore[P1] - 2;
+                                roundscore[P1] = 0;
+                                roundscore[P2] = 0;
+                                break;
+                            }
+                            else if (stringP2Special.Equals("RSVLP"))
+                            {
+                                Console.WriteLine("\n" + P2 + " beats " + P1 + " by using the special action.\n");
+                                Console.WriteLine("##################################");
+                                battlescore[P2] = battlescore[P2] + 2;
+                                battlescore[P1] = battlescore[P1] - 2;
+                                roundscore[P1] = 0;
+                                roundscore[P2] = 0;
+                                break;
+                            }
+
                             for (int i = 0; i < 5; i++)
                             {
 
@@ -132,7 +167,7 @@ namespace SWE1_PPB
 
                             if (roundscore[P1] > roundscore[P2])
                             {
-                                Console.WriteLine("\n" + P1 + " beat " + P2 + ".\n");
+                                Console.WriteLine("\n" + P1 + " beats " + P2 + ".\n");
                                 Console.WriteLine("##################################");
                                 battlescore[P1]++;
                                 battlescore[P2]--;
@@ -141,7 +176,7 @@ namespace SWE1_PPB
                             }
                             else if (roundscore[P2] > roundscore[P1])
                             {
-                                Console.WriteLine("\n" + P2 + " beat " + P1 + ".\n");
+                                Console.WriteLine("\n" + P2 + " beats " + P1 + ".\n");
                                 Console.WriteLine("##################################");
                                 battlescore[P2]++;
                                 battlescore[P1]--;
@@ -182,6 +217,12 @@ namespace SWE1_PPB
                 string update = $"UPDATE users SET admin = true WHERE username = '{battlescore.Keys.ElementAt(0)}'";
                 await dBHandler.ExecuteInsertOrDeleteSQL(update);
 
+                string selectScore = $"SELECT score FROM stats WHERE username = '{battlescore.Keys.ElementAt(0)}'";
+                int score = Int32.Parse(await dBHandler.ExecuteSingleSelectSQL(selectScore)) + 1;
+
+                string updateStats = $"UPDATE stats SET score = {score} WHERE username = '{battlescore.Keys.ElementAt(0)}'";
+                await dBHandler.ExecuteInsertOrDeleteSQL(updateStats);
+
                 Console.WriteLine("\n" + battlescore.Keys.ElementAt(0) + " won and is now administrator.\n");
             }
 
@@ -190,6 +231,25 @@ namespace SWE1_PPB
 
             for (int i = 0; i < battlescore.Count; i++)
             {
+                if (i > 0)
+                {
+                    if (battlescore.Values.ElementAt(i) < battlescore.Values.ElementAt(0))
+                    {
+                        string selectScore = $"SELECT score FROM stats WHERE username = '{battlescore.Keys.ElementAt(i)}'";
+                        int score = Int32.Parse(await dBHandler.ExecuteSingleSelectSQL(selectScore)) - 1;
+
+                        string updateStats = $"UPDATE stats SET score = {score} WHERE username = '{battlescore.Keys.ElementAt(i)}'";
+                        await dBHandler.ExecuteInsertOrDeleteSQL(updateStats);
+                    }
+                    
+                }
+
+                string selectgamesPlayed = $"SELECT games_played FROM stats WHERE username = '{battlescore.Keys.ElementAt(i)}'";
+                int gamesPlayed = Int32.Parse(await dBHandler.ExecuteSingleSelectSQL(selectgamesPlayed)) + 1;
+
+                string updateGamesPlayed = $"UPDATE stats SET games_played = {gamesPlayed} WHERE username = '{battlescore.Keys.ElementAt(i)}'";
+                await dBHandler.ExecuteInsertOrDeleteSQL(updateGamesPlayed);
+
                 Console.WriteLine(battlescore.Keys.ElementAt(i) + " -> " + battlescore.Values.ElementAt(i) +  " points.");
 
                 string insert = $"INSERT INTO tournamentscores VALUES ('{tournamentID}', '{battlescore.Keys.ElementAt(i)}', '{battlescore.Values.ElementAt(i)}')";

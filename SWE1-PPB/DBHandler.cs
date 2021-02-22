@@ -1,6 +1,7 @@
 ﻿using Npgsql;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -67,6 +68,43 @@ namespace SWE1_PPB
                 //return "DB_ERROR";
             }
             return result;
+
+        }
+
+        public async Task<DataTable> ExecuteSQLGetDT(string sql)
+        {
+            DataTable dataTable = new DataTable();
+
+            try
+            {
+                await using var conn = new NpgsqlConnection(connString);
+                await conn.OpenAsync();
+
+                using NpgsqlCommand cmd = new NpgsqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = sql;
+                NpgsqlDataAdapter nda = new NpgsqlDataAdapter();
+                nda.SelectCommand = cmd;
+                nda.Fill(dataTable);
+
+                cmd.Dispose();
+                await conn.CloseAsync();
+
+
+            }
+            catch (NullReferenceException nre)
+            {
+                //return nre.Message;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message + ": Please check statement.\n");
+
+                //return "DB_ERROR";
+            }
+
+            return dataTable;
 
         }
 

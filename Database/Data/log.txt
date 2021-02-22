@@ -948,4 +948,582 @@
 2021-02-21 17:29:48.875 CET [24392] LOG:  startup process (PID 13808) was terminated by exception 0xC000013A
 2021-02-21 17:29:48.875 CET [24392] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
 2021-02-21 17:29:48.875 CET [24392] LOG:  aborting startup due to startup process failure
-^C
+^C2021-02-21 17:37:30.832 CET [7800] LOG:  listening on IPv6 address "::1", port 5432
+2021-02-21 17:37:30.832 CET [7800] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-02-21 17:37:30.951 CET [12612] LOG:  database system was interrupted; last known up at 2021-02-21 17:29:42 CET
+2021-02-21 17:37:32.005 CET [12612] LOG:  database system was not properly shut down; automatic recovery in progress
+2021-02-21 17:37:32.042 CET [12612] LOG:  invalid record length at 0/1780C88: wanted 24, got 0
+2021-02-21 17:37:32.042 CET [12612] LOG:  redo is not required
+2021-02-21 17:37:32.229 CET [7800] LOG:  database system is ready to accept connections
+2021-02-21 17:44:16.390 CET [27808] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 17:46:21.770 CET [8780] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 17:47:27.192 CET [25032] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 17:48:43.609 CET [11356] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 17:50:11.214 CET [18256] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 17:51:14.785 CET [24752] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 17:52:20.203 CET [12484] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 17:52:33.054 CET [20824] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 17:54:19.620 CET [368] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 17:55:00.955 CET [17772] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 17:55:52.967 CET [25172] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 17:57:02.428 CET [20980] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 18:01:07.915 CET [15280] ERROR:  syntax error at or near "INTO" at character 27
+2021-02-21 18:01:07.915 CET [15280] STATEMENT:  insert into actionsINSERT INTO actions VALUES ('altenhof', 'SSSSS');
+2021-02-21 18:01:46.494 CET [12360] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 18:02:56.225 CET [5736] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 18:05:31.959 CET [20900] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 18:19:35.465 CET [16684] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 18:20:26.883 CET [26936] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 18:25:32.618 CET [11568] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 18:26:15.085 CET [4360] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 18:28:15.598 CET [12156] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 18:39:59.413 CET [20016] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 18:41:15.694 CET [19708] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 18:44:53.065 CET [14420] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 18:56:30.849 CET [20388] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 18:57:33.026 CET [6072] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 18:58:17.930 CET [29100] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 19:02:45.219 CET [13772] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 19:03:49.479 CET [10780] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 19:05:44.467 CET [18300] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 19:08:11.526 CET [21140] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 19:17:42.353 CET [27588] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 19:18:29.158 CET [24616] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 20:39:59.637 CET [16260] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 20:42:47.895 CET [12396] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 20:43:59.308 CET [5376] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 20:44:33.174 CET [6140] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 20:45:25.904 CET [29936] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 20:46:02.395 CET [9044] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 21:02:07.420 CET [5644] LOG:  listening on IPv6 address "::1", port 5432
+2021-02-21 21:02:07.420 CET [5644] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-02-21 21:02:07.548 CET [18100] LOG:  database system was interrupted; last known up at 2021-02-21 19:07:33 CET
+2021-02-21 21:02:08.190 CET [18100] LOG:  database system was not properly shut down; automatic recovery in progress
+2021-02-21 21:02:08.221 CET [18100] LOG:  redo starts at 0/1794B50
+2021-02-21 21:02:08.221 CET [18100] LOG:  invalid record length at 0/1794C30: wanted 24, got 0
+2021-02-21 21:02:08.221 CET [18100] LOG:  redo done at 0/1794BF8
+2021-02-21 21:02:08.380 CET [5644] LOG:  database system is ready to accept connections
+2021-02-21 21:03:19.181 CET [13772] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 21:03:19.181 CET [17600] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 21:07:15.121 CET [18776] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 21:11:16.969 CET [6000] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 21:17:06.453 CET [15696] ERROR:  update or delete on table "library" violates foreign key constraint "playlist_library_id_fkey" on table "playlist"
+2021-02-21 21:17:06.453 CET [15696] DETAIL:  Key (id)=(1) is still referenced from table "playlist".
+2021-02-21 21:17:06.453 CET [15696] STATEMENT:  DELETE FROM library WHERE username = 'altenhof' AND name = 'Best_song_ever';
+2021-02-21 21:29:24.756 CET [6092] ERROR:  unterminated quoted string at or near "'Good_Mood_Song" at character 99
+2021-02-21 21:29:24.756 CET [6092] STATEMENT:  INSERT INTO playlist SELECT * FROM library WHERE library.username = 'kienboec' AND library.name = 'Good_Mood_Song
+2021-02-21 21:30:20.344 CET [6092] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 21:30:32.019 CET [15696] ERROR:  syntax error at or near "length" at character 1
+2021-02-21 21:30:32.019 CET [15696] STATEMENT:  length VARCHAR(255)
+	select * from playlist;
+2021-02-21 21:32:38.313 CET [17100] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 21:32:42.922 CET [10536] ERROR:  INSERT has more target columns than expressions at character 33
+2021-02-21 21:32:42.922 CET [10536] HINT:  The insertion source is a row expression containing the same number of columns expected by the INSERT. Did you accidentally use extra parentheses?
+2021-02-21 21:32:42.922 CET [10536] STATEMENT:  INSERT INTO playlist (username, name, url, filetype, title, artist, album, genre, path, filesize, rating, length) SELECT (username, name, url, filetype, title, artist, album, genre, path, filesize, rating, length) FROM library WHERE library.username = 'kienboec' AND library.name = 'Good_Mood_Song'
+2021-02-21 21:34:30.218 CET [10536] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 21:35:04.568 CET [14544] ERROR:  INSERT has more target columns than expressions at character 39
+2021-02-21 21:35:04.568 CET [14544] HINT:  The insertion source is a row expression containing the same number of columns expected by the INSERT. Did you accidentally use extra parentheses?
+2021-02-21 21:35:04.568 CET [14544] STATEMENT:  INSERT INTO playlist (playlist_order, username, name, url, filetype, title, artist, album, genre, path, filesize, rating, length) SELECT (1, username, name, url, filetype, title, artist, album, genre, path, filesize, rating, length) FROM library WHERE library.username = 'kienboec' AND library.name = 'Good_Mood_Song'
+2021-02-21 21:35:47.858 CET [14544] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 21:35:53.078 CET [19816] ERROR:  INSERT has more target columns than expressions at character 33
+2021-02-21 21:35:53.078 CET [19816] HINT:  The insertion source is a row expression containing the same number of columns expected by the INSERT. Did you accidentally use extra parentheses?
+2021-02-21 21:35:53.078 CET [19816] STATEMENT:  INSERT INTO playlist (username, name, url, filetype, title, artist, album, genre, path, filesize, rating, length) SELECT (username, name, url, filetype, title, artist, album, genre, path, filesize, rating, length) FROM library WHERE library.username = 'kienboec' AND library.name = 'Good_Mood_Song'
+2021-02-21 21:36:40.281 CET [19816] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 21:37:25.046 CET [19496] ERROR:  invalid reference to FROM-clause entry for table "playlist" at character 304
+2021-02-21 21:37:25.046 CET [19496] HINT:  There is an entry for table "playlist", but it cannot be referenced from this part of the query.
+2021-02-21 21:37:25.046 CET [19496] STATEMENT:  INSERT INTO playlist (username, name, url, filetype, title, artist, album, genre, path, filesize, rating, length) SELECT (username, name, url, filetype, title, artist, album, genre, path, filesize, rating, length) FROM library WHERE library.username = 'kienboec' AND library.name = 'Good_Mood_Song' AND playlist.order_number = '1'
+2021-02-21 21:38:33.320 CET [19496] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 21:38:54.430 CET [17596] ERROR:  syntax error at or near "SELECT" at character 142
+2021-02-21 21:38:54.430 CET [17596] STATEMENT:  INSERT INTO playlist (order_number, username, name, url, filetype, title, artist, album, genre, path, filesize, rating, length) VALUES ('1', SELECT (username, name, url, filetype, title, artist, album, genre, path, filesize, rating, length) FROM library WHERE library.username = 'kienboec' AND library.name = 'Good_Mood_Song'
+2021-02-21 21:39:07.810 CET [17596] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 21:39:11.774 CET [4640] ERROR:  syntax error at or near "SELECT" at character 142
+2021-02-21 21:39:11.774 CET [4640] STATEMENT:  INSERT INTO playlist (order_number, username, name, url, filetype, title, artist, album, genre, path, filesize, rating, length) VALUES ('1', SELECT (username, name, url, filetype, title, artist, album, genre, path, filesize, rating, length) FROM library WHERE library.username = 'kienboec' AND library.name = 'Good_Mood_Song')
+2021-02-21 21:39:39.424 CET [4640] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 21:39:52.760 CET [9336] ERROR:  column "order_number" of relation "playlist" does not exist at character 23
+2021-02-21 21:39:52.760 CET [9336] STATEMENT:  INSERT INTO playlist (order_number, username, name, url, filetype, title, artist, album, genre, path, filesize, rating, length) VALUES ('1', (SELECT (username, name, url, filetype, title, artist, album, genre, path, filesize, rating, length) FROM library WHERE library.username = 'kienboec' AND library.name = 'Good_Mood_Song'))
+2021-02-21 21:40:09.428 CET [9336] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 21:40:13.465 CET [10168] ERROR:  INSERT has more target columns than expressions at character 49
+2021-02-21 21:40:13.465 CET [10168] STATEMENT:  INSERT INTO playlist (playlist_order, username, name, url, filetype, title, artist, album, genre, path, filesize, rating, length) VALUES ('1', (SELECT (username, name, url, filetype, title, artist, album, genre, path, filesize, rating, length) FROM library WHERE library.username = 'kienboec' AND library.name = 'Good_Mood_Song'))
+2021-02-21 21:41:17.353 CET [10168] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 21:41:47.026 CET [1820] ERROR:  subquery must return only one column at character 144
+2021-02-21 21:41:47.026 CET [1820] STATEMENT:  INSERT INTO playlist (playlist_order, username, name, url, filetype, title, artist, album, genre, path, filesize, rating, length) VALUES ('1', (SELECT username, name, url, filetype, title, artist, album, genre, path, filesize, rating, length FROM library WHERE username = 'kienboec' AND name = 'Good_Mood_Song'))
+2021-02-21 21:43:13.878 CET [1820] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 21:46:27.108 CET [20092] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 21:52:06.142 CET [9020] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 21:54:27.786 CET [7124] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 22:02:37.364 CET [7084] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 22:05:04.017 CET [2312] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 22:06:19.129 CET [17504] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 22:19:32.398 CET [19996] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 22:21:44.519 CET [13692] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 22:21:50.084 CET [19948] ERROR:  syntax error at or near "*" at character 14
+2021-02-21 22:21:50.084 CET [19948] STATEMENT:  SELECT array(*) FROM users WHERE username = 'kienboec' AND token = 'Basic kienboec-ppbToken'
+2021-02-21 22:22:31.695 CET [19948] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 22:22:42.952 CET [21128] ERROR:  subquery must return only one column at character 8
+2021-02-21 22:22:42.952 CET [21128] STATEMENT:  SELECT array(SELECT * FROM users WHERE username = 'kienboec' AND token = 'Basic kienboec-ppbToken') as userdata 
+2021-02-21 22:24:38.840 CET [21128] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 22:25:01.785 CET [21184] ERROR:  syntax error at or near "," at character 102
+2021-02-21 22:25:01.785 CET [21184] STATEMENT:  SELECT array(SELECT name FROM users WHERE username = 'kienboec' AND token = 'Basic kienboec-ppbToken', SELECT bio FROM users WHERE username = 'kienboec' AND token = 'Basic kienboec-ppbToken',SELECT image FROM users WHERE username = 'kienboec' AND token = 'Basic kienboec-ppbToken') as userdata
+2021-02-21 22:27:02.493 CET [21184] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 22:27:06.700 CET [7236] ERROR:  syntax error at or near "," at character 104
+2021-02-21 22:27:06.700 CET [7236] STATEMENT:  SELECT array((SELECT name FROM users WHERE username = 'kienboec' AND token = 'Basic kienboec-ppbToken'), (SELECT bio FROM users WHERE username = 'kienboec' AND token = 'Basic kienboec-ppbToken'), (SELECT image FROM users WHERE username = 'kienboec' AND token = 'Basic kienboec-ppbToken')) as userdata
+2021-02-21 22:28:33.413 CET [7236] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 22:28:37.394 CET [5064] ERROR:  syntax error at or near "SELECT" at character 14
+2021-02-21 22:28:37.394 CET [5064] STATEMENT:  SELECT array[SELECT name FROM users WHERE username = 'kienboec' AND token = 'Basic kienboec-ppbToken', SELECT bio FROM users WHERE username = 'kienboec' AND token = 'Basic kienboec-ppbToken', SELECT image FROM users WHERE username = 'kienboec' AND token = 'Basic kienboec-ppbToken'] as userdata
+2021-02-21 22:28:53.426 CET [5064] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 22:28:56.911 CET [12068] ERROR:  syntax error at or near "," at character 102
+2021-02-21 22:28:56.911 CET [12068] STATEMENT:  SELECT array(SELECT name FROM users WHERE username = 'kienboec' AND token = 'Basic kienboec-ppbToken', SELECT bio FROM users WHERE username = 'kienboec' AND token = 'Basic kienboec-ppbToken', SELECT image FROM users WHERE username = 'kienboec' AND token = 'Basic kienboec-ppbToken') as userdata
+2021-02-21 22:31:17.359 CET [12068] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 22:31:23.948 CET [10088] ERROR:  syntax error at or near ";" at character 102
+2021-02-21 22:31:23.948 CET [10088] STATEMENT:  SELECT array(SELECT name FROM users WHERE username = 'kienboec' AND token = 'Basic kienboec-ppbToken'; SELECT bio FROM users WHERE username = 'kienboec' AND token = 'Basic kienboec-ppbToken'; SELECT image FROM users WHERE username = 'kienboec' AND token = 'Basic kienboec-ppbToken') as userdata
+2021-02-21 22:33:07.412 CET [17892] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 22:34:45.063 CET [8416] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 22:39:32.225 CET [6108] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 22:43:25.618 CET [15468] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 22:46:29.858 CET [20776] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 22:47:24.476 CET [4628] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 22:48:20.157 CET [20796] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 22:48:58.633 CET [6472] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 22:51:39.529 CET [12148] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 22:53:15.948 CET [5188] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 22:54:05.351 CET [19476] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 22:54:37.851 CET [6576] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 22:55:02.149 CET [10736] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 22:55:15.604 CET [20424] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 22:55:46.916 CET [10184] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 22:56:55.871 CET [21752] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 22:58:56.379 CET [21716] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 22:59:55.611 CET [21540] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 23:00:28.575 CET [22108] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 23:02:21.609 CET [19696] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 23:03:11.694 CET [20616] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 23:04:48.786 CET [21068] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 23:06:13.318 CET [21508] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 23:12:47.562 CET [18908] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 23:13:49.455 CET [6216] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 23:14:20.671 CET [3808] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 23:15:28.803 CET [21920] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 23:16:06.215 CET [1848] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 23:16:56.181 CET [7812] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 23:17:38.986 CET [10440] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 23:18:47.766 CET [7356] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 23:19:57.087 CET [22396] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 23:27:39.732 CET [19432] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 23:36:00.523 CET [15696] ERROR:  syntax error at or near "drpo" at character 1
+2021-02-21 23:36:00.523 CET [15696] STATEMENT:  drpo table stats;
+2021-02-21 23:38:25.108 CET [19848] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 23:52:43.730 CET [19372] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-21 23:57:17.129 CET [15696] ERROR:  update or delete on table "users" violates foreign key constraint "stats_username_fkey" on table "stats"
+2021-02-21 23:57:17.129 CET [15696] DETAIL:  Key (username)=(kienboec) is still referenced from table "stats".
+2021-02-21 23:57:17.129 CET [15696] STATEMENT:  delete from users;
+2021-02-21 23:59:29.154 CET [2652] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 00:06:11.300 CET [15696] ERROR:  duplicate key value violates unique constraint "actions_pkey"
+2021-02-22 00:06:11.300 CET [15696] DETAIL:  Key (username)=(kienboec) already exists.
+2021-02-22 00:06:11.300 CET [15696] STATEMENT:  INSERT INTO actions VALUES ('kienboec', 'RRRRR');
+2021-02-22 00:06:35.200 CET [8820] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 00:09:45.579 CET [15696] ERROR:  duplicate key value violates unique constraint "actions_pkey"
+2021-02-22 00:09:45.579 CET [15696] DETAIL:  Key (username)=(kienboec) already exists.
+2021-02-22 00:09:45.579 CET [15696] STATEMENT:  INSERT INTO actions VALUES ('kienboec', 'RRRRR');
+2021-02-22 00:10:09.926 CET [10596] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 00:10:58.411 CET [15696] ERROR:  relation "username" does not exist at character 15
+2021-02-22 00:10:58.411 CET [15696] STATEMENT:  select * from username order by score desc;
+2021-02-22 00:17:43.372 CET [6996] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 00:18:11.803 CET [3460] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 00:18:45.599 CET [17208] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 00:19:01.508 CET [22064] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 00:19:18.338 CET [21888] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 00:20:09.498 CET [2392] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 00:29:11.703 CET [4612] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 00:30:16.238 CET [19668] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 00:31:54.282 CET [20896] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 00:42:59.119 CET [18532] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 00:44:08.482 CET [12004] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 00:47:47.778 CET [5844] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 01:09:01.183 CET [18680] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 01:09:01.183 CET [8772] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 01:10:07.715 CET [13712] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 01:11:19.260 CET [21904] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 01:12:53.652 CET [2352] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 01:12:58.460 CET [19064] ERROR:  duplicate key value violates unique constraint "playlist_pkey"
+2021-02-22 01:12:58.460 CET [19064] DETAIL:  Key (playlist_order)=(1) already exists.
+2021-02-22 01:12:58.460 CET [19064] STATEMENT:  UPDATE playlist SET playlist_order = playlist_order - 1 WHERE playlist_order <= 3 AND playlist_order > 1
+2021-02-22 01:12:58.500 CET [19064] ERROR:  duplicate key value violates unique constraint "playlist_pkey"
+2021-02-22 01:12:58.500 CET [19064] DETAIL:  Key (playlist_order)=(3) already exists.
+2021-02-22 01:12:58.500 CET [19064] STATEMENT:  UPDATE playlist SET playlist_order = 3 WHERE playlist_order = 1
+2021-02-22 01:14:15.704 CET [15696] ERROR:  syntax error at or near "´drop" at character 1
+2021-02-22 01:14:15.704 CET [15696] STATEMENT:  ´drop table playlist;
+2021-02-22 01:21:52.250 CET [17952] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 01:24:08.707 CET [18176] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 01:26:04.310 CET [8724] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 01:26:52.498 CET [21192] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 01:27:53.946 CET [6564] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 01:28:33.001 CET [20208] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 01:29:46.567 CET [19404] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 01:36:18.036 CET [17544] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 01:37:10.390 CET [13580] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 01:39:03.662 CET [18300] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 01:41:52.630 CET [2888] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 01:42:59.013 CET [992] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 01:44:44.746 CET [21164] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 01:47:01.681 CET [15760] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 01:47:27.246 CET [15224] ERROR:  operator does not exist: integer =< integer at character 102
+2021-02-22 01:47:27.246 CET [15224] HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.
+2021-02-22 01:47:27.246 CET [15224] STATEMENT:  UPDATE playlist SET playlist_order = playlist_order + 1 WHERE playlist_order >= 1 AND playlist_order =< 3
+2021-02-22 01:48:17.419 CET [15224] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 01:48:23.847 CET [14676] ERROR:  operator does not exist: integer =< integer at character 102
+2021-02-22 01:48:23.847 CET [14676] HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.
+2021-02-22 01:48:23.847 CET [14676] STATEMENT:  UPDATE playlist SET playlist_order = playlist_order + 1 WHERE playlist_order >= 1 AND playlist_order =< 3
+2021-02-22 01:48:38.479 CET [14676] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 01:49:03.418 CET [936] ERROR:  operator does not exist: integer =< integer at character 78
+2021-02-22 01:49:03.418 CET [936] HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.
+2021-02-22 01:49:03.418 CET [936] STATEMENT:  UPDATE playlist SET playlist_order = playlist_order - 1 WHERE playlist_order =< 3 AND playlist_order >= 1
+2021-02-22 01:49:57.979 CET [936] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 01:49:57.979 CET [2660] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 01:52:59.950 CET [8820] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 01:52:59.951 CET [7236] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 01:53:22.722 CET [21920] ERROR:  operator does not exist: integer =< integer at character 79
+2021-02-22 01:53:22.722 CET [21920] HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.
+2021-02-22 01:53:22.722 CET [21920] STATEMENT:  UPDATE playlist SET playlist_order = playlist_order - 1 WHERE (playlist_order =< 3) AND (playlist_order > 1)
+2021-02-22 01:54:07.778 CET [21920] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 01:54:22.517 CET [21036] ERROR:  operator does not exist: integer =< integer at character 80
+2021-02-22 01:54:22.517 CET [21036] HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.
+2021-02-22 01:54:22.517 CET [21036] STATEMENT:  UPDATE playlist SET playlist_order = (playlist_order - 1) WHERE playlist_order =< 3 AND playlist_order > 1
+2021-02-22 01:55:55.513 CET [21036] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 02:07:57.934 CET [1728] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 02:10:59.468 CET [21952] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 02:13:07.773 CET [6724] ERROR:  relation "action" does not exist at character 22
+2021-02-22 02:13:07.773 CET [6724] STATEMENT:  SELECT COUNT(*) FROM action WHERE username = 'kienboec'
+2021-02-22 02:13:21.639 CET [6724] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 02:15:21.854 CET [18848] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 02:16:31.333 CET [15696] ERROR:  syntax error at or near "curl" at character 1
+2021-02-22 02:16:31.333 CET [15696] STATEMENT:  curl -X PUT http://localhost:10001/actions 
+	delete from actions;
+2021-02-22 02:17:07.591 CET [19460] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 02:17:16.065 CET [5420] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 02:19:46.021 CET [20548] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 02:21:31.268 CET [15696] ERROR:  update or delete on table "users" violates foreign key constraint "stats_username_fkey" on table "stats"
+2021-02-22 02:21:31.268 CET [15696] DETAIL:  Key (username)=(kienboec) is still referenced from table "stats".
+2021-02-22 02:21:31.268 CET [15696] STATEMENT:  delete from users;
+2021-02-22 02:21:51.481 CET [13580] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 02:21:51.481 CET [13580] DETAIL:  Key (username)=(kienboec) already exists.
+2021-02-22 02:21:51.481 CET [13580] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('kienboec', 'daniel', false, false)
+2021-02-22 02:21:51.519 CET [13580] ERROR:  duplicate key value violates unique constraint "stats_pkey"
+2021-02-22 02:21:51.519 CET [13580] DETAIL:  Key (username)=(kienboec) already exists.
+2021-02-22 02:21:51.519 CET [13580] STATEMENT:  INSERT INTO stats (username) VALUES ('kienboec')
+2021-02-22 02:21:51.798 CET [13580] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 02:21:51.798 CET [13580] DETAIL:  Key (username)=(kienboec) already exists.
+2021-02-22 02:21:51.798 CET [13580] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('kienboec', 'different', false, false)
+2021-02-22 02:21:51.825 CET [13580] ERROR:  duplicate key value violates unique constraint "stats_pkey"
+2021-02-22 02:21:51.825 CET [13580] DETAIL:  Key (username)=(kienboec) already exists.
+2021-02-22 02:21:51.825 CET [13580] STATEMENT:  INSERT INTO stats (username) VALUES ('kienboec')
+2021-02-22 02:22:24.733 CET [3704] ERROR:  operator does not exist: integer =< integer at character 80
+2021-02-22 02:22:24.733 CET [3704] HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.
+2021-02-22 02:22:24.733 CET [3704] STATEMENT:  UPDATE playlist SET playlist_order = (playlist_order - 1) WHERE playlist_order =< 4 AND playlist_order > 1
+2021-02-22 02:22:44.665 CET [13580] ERROR:  operator does not exist: integer =< integer at character 80
+2021-02-22 02:22:44.665 CET [13580] HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.
+2021-02-22 02:22:44.665 CET [13580] STATEMENT:  UPDATE playlist SET playlist_order = (playlist_order - 1) WHERE playlist_order =< 3 AND playlist_order > 1
+2021-02-22 02:27:16.336 CET [18524] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 02:27:52.683 CET [10592] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 02:27:52.683 CET [10592] DETAIL:  Key (username)=(kienboec) already exists.
+2021-02-22 02:27:52.683 CET [10592] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('kienboec', 'daniel', false, false)
+2021-02-22 02:27:52.722 CET [10592] ERROR:  duplicate key value violates unique constraint "stats_pkey"
+2021-02-22 02:27:52.722 CET [10592] DETAIL:  Key (username)=(kienboec) already exists.
+2021-02-22 02:27:52.722 CET [10592] STATEMENT:  INSERT INTO stats (username) VALUES ('kienboec')
+2021-02-22 02:27:52.998 CET [3372] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 02:27:52.998 CET [3372] DETAIL:  Key (username)=(kienboec) already exists.
+2021-02-22 02:27:52.998 CET [3372] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('kienboec', 'different', false, false)
+2021-02-22 02:27:53.027 CET [10592] ERROR:  duplicate key value violates unique constraint "stats_pkey"
+2021-02-22 02:27:53.027 CET [10592] DETAIL:  Key (username)=(kienboec) already exists.
+2021-02-22 02:27:53.027 CET [10592] STATEMENT:  INSERT INTO stats (username) VALUES ('kienboec')
+2021-02-22 02:29:30.885 CET [3372] ERROR:  operator does not exist: integer =< integer at character 80
+2021-02-22 02:29:30.885 CET [3372] HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.
+2021-02-22 02:29:30.885 CET [3372] STATEMENT:  UPDATE playlist SET playlist_order = (playlist_order - 1) WHERE playlist_order =< 4 AND playlist_order > 1
+2021-02-22 02:29:50.862 CET [10592] ERROR:  operator does not exist: integer =< integer at character 80
+2021-02-22 02:29:50.862 CET [10592] HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.
+2021-02-22 02:29:50.862 CET [10592] STATEMENT:  UPDATE playlist SET playlist_order = (playlist_order - 1) WHERE playlist_order =< 3 AND playlist_order > 1
+2021-02-22 02:32:04.232 CET [10592] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 02:32:04.233 CET [3372] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 02:39:25.683 CET [5832] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 02:39:58.098 CET [2156] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 02:39:58.098 CET [2156] DETAIL:  Key (username)=(kienboec) already exists.
+2021-02-22 02:39:58.098 CET [2156] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('kienboec', 'daniel', false, false)
+2021-02-22 02:39:58.142 CET [2156] ERROR:  duplicate key value violates unique constraint "stats_pkey"
+2021-02-22 02:39:58.142 CET [2156] DETAIL:  Key (username)=(kienboec) already exists.
+2021-02-22 02:39:58.142 CET [2156] STATEMENT:  INSERT INTO stats (username) VALUES ('kienboec')
+2021-02-22 02:39:58.409 CET [2156] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 02:39:58.409 CET [2156] DETAIL:  Key (username)=(kienboec) already exists.
+2021-02-22 02:39:58.409 CET [2156] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('kienboec', 'different', false, false)
+2021-02-22 02:39:58.436 CET [2156] ERROR:  duplicate key value violates unique constraint "stats_pkey"
+2021-02-22 02:39:58.436 CET [2156] DETAIL:  Key (username)=(kienboec) already exists.
+2021-02-22 02:39:58.436 CET [2156] STATEMENT:  INSERT INTO stats (username) VALUES ('kienboec')
+2021-02-22 02:40:31.371 CET [13560] ERROR:  operator does not exist: integer =< integer at character 80
+2021-02-22 02:40:31.371 CET [13560] HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.
+2021-02-22 02:40:31.371 CET [13560] STATEMENT:  UPDATE playlist SET playlist_order = (playlist_order - 1) WHERE playlist_order =< 4 AND playlist_order > 1
+2021-02-22 02:40:51.347 CET [2156] ERROR:  operator does not exist: integer =< integer at character 80
+2021-02-22 02:40:51.347 CET [2156] HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.
+2021-02-22 02:40:51.347 CET [2156] STATEMENT:  UPDATE playlist SET playlist_order = (playlist_order - 1) WHERE playlist_order =< 3 AND playlist_order > 1
+2021-02-22 02:44:23.310 CET [2156] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 02:44:23.310 CET [13560] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 02:50:50.679 CET [14892] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 02:50:50.679 CET [14892] DETAIL:  Key (username)=(kienboec) already exists.
+2021-02-22 02:50:50.679 CET [14892] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('kienboec', 'daniel', false, false)
+2021-02-22 02:50:50.719 CET [14892] ERROR:  duplicate key value violates unique constraint "stats_pkey"
+2021-02-22 02:50:50.719 CET [14892] DETAIL:  Key (username)=(kienboec) already exists.
+2021-02-22 02:50:50.719 CET [14892] STATEMENT:  INSERT INTO stats (username) VALUES ('kienboec')
+2021-02-22 02:50:50.990 CET [14892] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 02:50:50.990 CET [14892] DETAIL:  Key (username)=(kienboec) already exists.
+2021-02-22 02:50:50.990 CET [14892] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('kienboec', 'different', false, false)
+2021-02-22 02:50:51.017 CET [14892] ERROR:  duplicate key value violates unique constraint "stats_pkey"
+2021-02-22 02:50:51.017 CET [14892] DETAIL:  Key (username)=(kienboec) already exists.
+2021-02-22 02:50:51.017 CET [14892] STATEMENT:  INSERT INTO stats (username) VALUES ('kienboec')
+2021-02-22 02:51:23.923 CET [12988] ERROR:  operator does not exist: integer =< integer at character 80
+2021-02-22 02:51:23.923 CET [12988] HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.
+2021-02-22 02:51:23.923 CET [12988] STATEMENT:  UPDATE playlist SET playlist_order = (playlist_order - 1) WHERE playlist_order =< 4 AND playlist_order > 1
+2021-02-22 02:51:43.884 CET [14892] ERROR:  operator does not exist: integer =< integer at character 80
+2021-02-22 02:51:43.884 CET [14892] HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.
+2021-02-22 02:51:43.884 CET [14892] STATEMENT:  UPDATE playlist SET playlist_order = (playlist_order - 1) WHERE playlist_order =< 3 AND playlist_order > 1
+2021-02-22 02:53:39.387 CET [14892] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 02:53:39.387 CET [12988] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 02:54:10.071 CET [5368] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 02:55:14.286 CET [8276] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 02:55:14.286 CET [8276] DETAIL:  Key (username)=(kienboec) already exists.
+2021-02-22 02:55:14.286 CET [8276] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('kienboec', 'daniel', false, false)
+2021-02-22 02:55:14.329 CET [8276] ERROR:  duplicate key value violates unique constraint "stats_pkey"
+2021-02-22 02:55:14.329 CET [8276] DETAIL:  Key (username)=(kienboec) already exists.
+2021-02-22 02:55:14.329 CET [8276] STATEMENT:  INSERT INTO stats (username) VALUES ('kienboec')
+2021-02-22 02:55:14.608 CET [8276] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 02:55:14.608 CET [8276] DETAIL:  Key (username)=(kienboec) already exists.
+2021-02-22 02:55:14.608 CET [8276] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('kienboec', 'different', false, false)
+2021-02-22 02:55:14.634 CET [8276] ERROR:  duplicate key value violates unique constraint "stats_pkey"
+2021-02-22 02:55:14.634 CET [8276] DETAIL:  Key (username)=(kienboec) already exists.
+2021-02-22 02:55:14.634 CET [8276] STATEMENT:  INSERT INTO stats (username) VALUES ('kienboec')
+2021-02-22 02:55:47.430 CET [23116] ERROR:  operator does not exist: integer =< integer at character 80
+2021-02-22 02:55:47.430 CET [23116] HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.
+2021-02-22 02:55:47.430 CET [23116] STATEMENT:  UPDATE playlist SET playlist_order = (playlist_order - 1) WHERE playlist_order =< 4 AND playlist_order > 1
+2021-02-22 02:56:07.384 CET [8276] ERROR:  operator does not exist: integer =< integer at character 80
+2021-02-22 02:56:07.384 CET [8276] HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.
+2021-02-22 02:56:07.384 CET [8276] STATEMENT:  UPDATE playlist SET playlist_order = (playlist_order - 1) WHERE playlist_order =< 3 AND playlist_order > 1
+2021-02-22 02:56:30.270 CET [8276] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 02:56:30.271 CET [23116] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 02:58:28.704 CET [2856] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 02:59:13.157 CET [22916] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 02:59:47.241 CET [20248] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 03:01:35.388 CET [22392] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 03:02:01.137 CET [10832] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 03:02:26.410 CET [18772] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 03:03:00.382 CET [284] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 03:03:43.073 CET [4532] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 03:04:03.292 CET [21860] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 03:05:14.110 CET [15756] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 03:05:14.110 CET [15756] DETAIL:  Key (username)=(kienboec) already exists.
+2021-02-22 03:05:14.110 CET [15756] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('kienboec', 'daniel', false, false)
+2021-02-22 03:05:14.148 CET [15756] ERROR:  duplicate key value violates unique constraint "stats_pkey"
+2021-02-22 03:05:14.148 CET [15756] DETAIL:  Key (username)=(kienboec) already exists.
+2021-02-22 03:05:14.148 CET [15756] STATEMENT:  INSERT INTO stats (username) VALUES ('kienboec')
+2021-02-22 03:05:14.420 CET [15756] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 03:05:14.420 CET [15756] DETAIL:  Key (username)=(kienboec) already exists.
+2021-02-22 03:05:14.420 CET [15756] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('kienboec', 'different', false, false)
+2021-02-22 03:05:14.446 CET [15756] ERROR:  duplicate key value violates unique constraint "stats_pkey"
+2021-02-22 03:05:14.446 CET [15756] DETAIL:  Key (username)=(kienboec) already exists.
+2021-02-22 03:05:14.446 CET [15756] STATEMENT:  INSERT INTO stats (username) VALUES ('kienboec')
+2021-02-22 03:08:16.594 CET [15756] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 03:08:16.594 CET [17952] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 03:08:16.594 CET [17056] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 03:08:49.713 CET [10556] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 03:08:49.713 CET [10556] DETAIL:  Key (username)=(kienboec) already exists.
+2021-02-22 03:08:49.713 CET [10556] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('kienboec', 'daniel', false, false)
+2021-02-22 03:08:49.756 CET [10556] ERROR:  duplicate key value violates unique constraint "stats_pkey"
+2021-02-22 03:08:49.756 CET [10556] DETAIL:  Key (username)=(kienboec) already exists.
+2021-02-22 03:08:49.756 CET [10556] STATEMENT:  INSERT INTO stats (username) VALUES ('kienboec')
+2021-02-22 03:08:50.024 CET [10556] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 03:08:50.024 CET [10556] DETAIL:  Key (username)=(kienboec) already exists.
+2021-02-22 03:08:50.024 CET [10556] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('kienboec', 'different', false, false)
+2021-02-22 03:08:50.050 CET [10556] ERROR:  duplicate key value violates unique constraint "stats_pkey"
+2021-02-22 03:08:50.050 CET [10556] DETAIL:  Key (username)=(kienboec) already exists.
+2021-02-22 03:08:50.050 CET [10556] STATEMENT:  INSERT INTO stats (username) VALUES ('kienboec')
+2021-02-22 03:13:27.059 CET [10556] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 03:13:27.060 CET [22184] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 03:18:37.452 CET [22108] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 03:20:26.911 CET [5644] LOG:  received fast shutdown request
+2021-02-22 03:20:26.966 CET [8544] ERROR:  canceling statement due to user request
+2021-02-22 03:20:26.992 CET [5644] LOG:  aborting any active transactions
+2021-02-22 03:20:26.992 CET [5644] LOG:  worker process: logical replication launcher (PID 8544) exited with exit code 1
+2021-02-22 03:20:27.006 CET [2540] LOG:  shutting down
+2021-02-22 03:20:27.122 CET [5644] LOG:  database system is shut down

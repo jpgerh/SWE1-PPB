@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json.Linq;
+using Newtonsoft.Json.Linq;
 using Npgsql;
 using System;
 using System.Collections.Generic;
@@ -36,7 +36,7 @@ namespace SWE1_PPB
                 {
                     TcpClient client = tcpListener.AcceptTcpClient();
 
-                    Console.WriteLine("Client connected!");
+                    //Console.WriteLine("Client connected!");
 
                     // each client gets handled by a thread
                     Thread thread = new Thread(ClientHandler);
@@ -48,6 +48,297 @@ namespace SWE1_PPB
                 Console.Write(e.Message);
                 tcpListener.Stop();
             }
+        }
+
+        public async Task<string> DELETEHandler(RequestContext requestContext)
+        {
+            MMC mmc = new MMC();
+            User user = new User();
+
+            string ressource = requestContext.Ressource;
+            string subressource = ressource.Substring(ressource.IndexOf('/', ressource.IndexOf('/') + 1) + 1);
+            ressource = ressource.Substring(0, ressource.IndexOf('/', ressource.IndexOf('/') + 1));
+
+            switch (ressource)
+            {
+                case "/lib":
+                    {
+                        string authorization;
+                        try
+                        {
+                            authorization = requestContext.HeaderValues["Authorization"];
+                            if (await user.verifyToken(authorization))
+                            {
+                                await mmc.DeleteMMC(authorization, subressource);
+                                return $"{authorization}: Authorization successful. " + await mmc.DeleteMMC(authorization, subressource);
+                            }
+                            else
+                            {
+                                return $"{authorization}: Authorization failed.";
+                            }
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine(e.Message);
+                        }
+
+                        break;
+                    }
+            }
+
+            return "";
+
+        }
+
+        public async Task<string> PUTHandler(RequestContext requestContext)
+        {
+
+            User user = new User();
+            string ressource = requestContext.Ressource;
+            string subressource = "";
+            if (ressource.Contains("users"))
+            {
+                subressource = ressource.Substring(ressource.IndexOf('/', ressource.IndexOf('/') + 1) + 1);
+                ressource = ressource.Substring(0, ressource.IndexOf('/', ressource.IndexOf('/') + 1));
+            }
+
+            switch (ressource)
+            {
+                case "/users":
+                    {
+                        dynamic payloadJson = JObject.Parse(requestContext.Payload);
+                        string name = (string)payloadJson.Name ?? "";
+                        string bio = (string)payloadJson.Bio ?? "";
+                        string image = (string)payloadJson.Image ?? "";
+                        
+
+                        string authorization;
+                        try
+                        {
+                            authorization = requestContext.HeaderValues["Authorization"];
+                            if (await user.verifyToken(authorization))
+                            {
+                                return await user.editUser(authorization, subressource, name, bio, image);
+                            }
+                            else
+                            {
+                                return $"{authorization}: Authorization failed.";
+                            }
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine(e.Message);
+                        }
+
+                        break;
+                    }
+                case "/playlist":
+                    {
+                        MMC mmc = new MMC();
+                        string authorization;
+                        dynamic payloadJson = JObject.Parse(requestContext.Payload);
+                        int fromPosition = (int)(payloadJson.FromPosition ?? -1);
+                        int toPosition = (int)(payloadJson.ToPosition ?? -1);
+                        try
+                        {
+                            authorization = requestContext.HeaderValues["Authorization"];
+                            if (await user.verifyToken(authorization))
+                            {
+                                if (await user.verifyAdmin(authorization) && fromPosition != -1 && toPosition != -1)
+                                {
+                                    mmc.reorderPlaylist(fromPosition, toPosition);
+                                    return "Reorder successful.\n";
+                                        
+                                } 
+                                else
+                                {
+                                    return $"{authorization}: Reorder failed. User is not admin.\n";
+                                }
+                                
+                            }
+                            else
+                            {
+                                return $"{authorization}: Authorization failed.\n";
+                            }
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine(e.Message);
+                        }
+                        break;
+                    }
+                case "/actions":
+                    {
+                        string authorization;
+                        dynamic payloadJson = JObject.Parse(requestContext.Payload);
+                        string actions = (string)payloadJson.actions ?? "";
+                        try
+                        {
+                            authorization = requestContext.HeaderValues["Authorization"];
+                            if (await user.verifyToken(authorization))
+                            {
+                                return $"{authorization}: Authorization successful. " + await user.addAction(authorization, actions);
+                            }
+                            else
+                            {
+                                return $"{authorization}: Authorization failed.";
+                            }
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine(e.Message);
+                        }
+                        break;
+                    }
+            }
+
+
+            return "";
+        }
+
+        public async Task<string> GETHandler(RequestContext requestContext)
+        {
+            User user = new User();
+            string ressource = requestContext.Ressource;
+            string subressource = "";
+            if (ressource.Contains("users"))
+            {
+                subressource = ressource.Substring(ressource.IndexOf('/', ressource.IndexOf('/') + 1) + 1);
+                ressource = ressource.Substring(0, ressource.IndexOf('/', ressource.IndexOf('/') + 1));
+            }
+
+            switch (ressource)
+            {
+                case "/users":
+                    {
+                        string authorization;
+                        try
+                        {
+                            authorization = requestContext.HeaderValues["Authorization"];
+                            if (await user.verifyToken(authorization))
+                            {
+                                return await user.getUserData(authorization, subressource);
+                            }
+                            else
+                            {
+                                return $"{authorization}: Authorization failed.";
+                            }
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine(e.Message);
+                        }
+
+                        break;
+                    }
+                case "/stats":
+                    {
+                        //Console.WriteLine("stats");
+                        string authorization;
+                        try
+                        {
+                            authorization = requestContext.HeaderValues["Authorization"];
+                            if (await user.verifyToken(authorization))
+                            {
+                                return await user.getUserStats(authorization);
+                            }
+                            else
+                            {
+                                return $"{authorization}: Authorization failed.";
+                            }
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine(e.Message);
+                        }
+
+                        break;
+                    }
+                case "/score":
+                    {
+                        string authorization;
+                        try
+                        {
+                            authorization = requestContext.HeaderValues["Authorization"];
+                            if (await user.verifyToken(authorization))
+                            {
+                                return await user.getScoreboard(authorization);
+                            }
+                            else
+                            {
+                                return $"{authorization}: Authorization failed.";
+                            }
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine(e.Message);
+                        }
+
+                        break;
+                    }
+                case "/playlist":
+                    {
+                        MMC mmc = new MMC();
+                        try
+                        {
+
+                            return await mmc.getPlaylist();
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine(e.Message);
+                        }
+
+                        break;
+                    }
+                case "/actions":
+                    {
+                        string authorization;
+                        try
+                        {
+                            authorization = requestContext.HeaderValues["Authorization"];
+                            if (await user.verifyToken(authorization))
+                            {
+                                return await user.getAction(authorization);
+                            }
+                            else
+                            {
+                                return $"{authorization}: Authorization failed.";
+                            }
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine(e.Message);
+                        }
+
+                        break;
+                    }
+                case "/lib":
+                    {
+                        MMC mmc = new MMC();
+                        string authorization;
+                        try
+                        {
+                            authorization = requestContext.HeaderValues["Authorization"];
+                            if (await user.verifyToken(authorization))
+                            {
+                                return await mmc.getLibrary(authorization);
+                            }
+                            else
+                            {
+                                return $"{authorization}: Authorization failed.";
+                            }
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine(e.Message);
+                        }
+
+                        break;
+                    }
+            }
+
+            return "";
         }
 
         public async Task<string> POSTHandler(RequestContext requestContext)
@@ -97,7 +388,8 @@ namespace SWE1_PPB
                     {
                         dynamic payloadJson = JObject.Parse(requestContext.Payload);
 
-                        MMC mmc = new MMC();
+                        MMC mmc = new MMC((string)payloadJson.Name ?? "", (string)payloadJson.Url ?? "", (string)payloadJson.Filetype ?? "", (string)payloadJson.Title ?? "", (string)payloadJson.Artist ?? "", 
+                            (string)payloadJson.Album ?? "", (string)payloadJson.Genre ?? "", (string)payloadJson.Path ?? "", (int)(payloadJson.Filesize ?? 0), (int)(payloadJson.Rating ?? 0), (string)payloadJson.Length ?? "");
 
                         string authorization;
                         try
@@ -105,13 +397,12 @@ namespace SWE1_PPB
                             authorization = requestContext.HeaderValues["Authorization"];
                             if (await user.verifyToken(authorization))
                             {
-                                return $"{authorization}: Authorization successful.";
-
-
+                                
+                                return $"{authorization}: Authorization successful. " + await mmc.AddMMC(authorization) + "\n";
                             }
                             else
                             {
-                                return $"{authorization}: Authorization failed.";
+                                return $"{authorization}: Authorization failed.\n";
                             }
                         }
                         catch (Exception e)
@@ -125,26 +416,49 @@ namespace SWE1_PPB
                     }
                 case "/battles":
                     {
-                        bool success = true;
                         string authorization;
                         try
                         {
                             authorization = requestContext.HeaderValues["Authorization"];
 
-                            if (success)
+                            if (await user.verifyToken(authorization))
                             {
-                                if (await user.verifyToken(authorization))
-                                {
-                                    user.startBattle(authorization);
+                                user.setOnline(authorization);
+                                return $"{authorization}: Authorization successful.\n";
+                            }
+                            else
+                            {
+                                return $"{authorization}: Authorization failed.\n";
+                            }
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine(e.Message);
+                        }
 
-                                    return $"{authorization}: Authorization successful.";
+                        return "Could not get token.";
 
+                        break;
+                    }
+                case "/playlist":
+                    {
 
-                                }
-                                else
-                                {
-                                    return $"{authorization}: Authorization failed.";
-                                }
+                        dynamic payloadJson = JObject.Parse(requestContext.Payload);
+                        string songname = (string)payloadJson.Name;
+                        MMC mmc = new MMC();
+                        string authorization;
+
+                        try
+                        {
+                            authorization = requestContext.HeaderValues["Authorization"];
+
+                            if (await user.verifyToken(authorization))
+                            {
+                                return $"{authorization}: Authorization successful. " + await mmc.AddSongToPlaylist(authorization, songname);
+                            }
+                            else
+                            {
+                                return $"{authorization}: Authorization failed.\n";
                             }
                         }
                         catch (Exception e)
@@ -163,7 +477,7 @@ namespace SWE1_PPB
 
         public async void ClientHandler(Object obj)
         {
-            Console.WriteLine(String.Format("{0} active connection/s.\n", ++clientCount));
+            //Console.WriteLine(String.Format("{0} active connection/s.\n", ++clientCount));
 
             TcpClient client = (TcpClient)obj;
             // Buffer for reading data
@@ -193,68 +507,21 @@ namespace SWE1_PPB
                     //dynamic payloadJson = JObject.Parse(requestContext.Payload);
 
                     // print Request context
-                    requestContext.printRequest();
+                    //requestContext.printRequest();
 
                     switch (requestContext.HttpVerb)
                     {
                         case "GET":
-                            /*//Console.WriteLine("switch: GET\n");
-                            if (Regex.Matches(ressource, "/").Count == 2)
-                            {
-                                try
-                                {
-                                    //requestAnswer = messages[Int32.Parse(ressource.Substring(ressource.LastIndexOf("/") + 1)) - 1];
-                                }
-                                catch (Exception e)
-                                {
-                                    requestAnswer = "Requested ressource does not exist.\n";
-                                }
-                            }
-                            else
-                            {
-                                //requestAnswer = generatePrintAllMessages(requestAnswer);
-                            }
-
-                            if (requestAnswer.Equals("")) requestAnswer = "No messages found.\n";
-                            */
+                            requestAnswer = await GETHandler(requestContext);
                             break;
                         case "POST":
-                            //Console.WriteLine("switch: POST\n");
-
                             requestAnswer = await POSTHandler(requestContext);
                             break;
-
                         case "PUT":
-                            /*//Console.WriteLine("switch: PUT\n");
-
-                            try
-                            {
-                                //messages[Int32.Parse(ressource.Substring(ressource.LastIndexOf("/") + 1))] = requestContext.Payload;
-                                requestAnswer = "Message updated.\n";
-
-                                //requestAnswer = generatePrintAllMessages(requestAnswer);
-                            }
-                            catch (Exception e)
-                            {
-                                requestAnswer = "Requested ressource does not exist.\n";
-                            }
-                            */
+                            requestAnswer = await PUTHandler(requestContext);
                             break;
                         case "DELETE":
-                            /*//Console.WriteLine("switch: DELETE\n");
-
-                            try
-                            {
-                                //messages.Remove(Int32.Parse(ressource.Substring(ressource.LastIndexOf("/") + 1)));
-                                requestAnswer = "Message removed.\n";
-
-                                //requestAnswer = generatePrintAllMessages(requestAnswer);
-                            }
-                            catch (Exception e)
-                            {
-                                requestAnswer = "Requested ressource does not exist.\n";
-                            }
-                            */
+                            requestAnswer = await DELETEHandler(requestContext);
                             break;
                     }
 
@@ -262,15 +529,16 @@ namespace SWE1_PPB
 
                     // Send back a response.
                     stream.Write(msg, 0, msg.Length);
-                    Console.WriteLine("\nAnswered:\n" + requestAnswer + "\n");
+                    Thread.CurrentThread.Abort();
+                    //Console.WriteLine("\nAnswered:\n" + requestAnswer + "\n");
 
                 }
 
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.Message);
-                Console.WriteLine(String.Format("{0} active connection/s.\n", --clientCount));
+                //Console.WriteLine(e.Message);
+                //Console.WriteLine(String.Format("{0} active connection/s.\n", --clientCount));
                 client.Close();
             }
             
