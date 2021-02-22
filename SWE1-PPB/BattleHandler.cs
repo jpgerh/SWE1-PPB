@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace SWE1_PPB
 {
-    class BattleHandler
+    public class BattleHandler
     {
         List<string> usernames = new List<string>();
         DBHandler dBHandler = new DBHandler();

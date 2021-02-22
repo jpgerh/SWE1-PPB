@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SWE1_PPB
 {
-    class DBHandler
+    public class DBHandler
     {
         string connString = "Host=localhost;Username=postgres;Password=postgres";
 

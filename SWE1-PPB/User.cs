@@ -15,11 +15,35 @@ namespace SWE1_PPB
         // add entry to db, answer with success state
         public async Task<bool> Register(string username, string password)
         {
-            string sql = $"INSERT INTO users (username, password, online, admin) VALUES ('{username}', '{password}', false, false)";
-            bool success1 = await dBHandler.ExecuteInsertOrDeleteSQL(sql);
+            string selectCountUsers = $"SELECT COUNT(*) FROM users WHERE username = '{username}'";
+            int countUsers = Int32.Parse(await dBHandler.ExecuteSingleSelectSQL(selectCountUsers));
 
-            string insert = $"INSERT INTO stats (username) VALUES ('{username}')";
-            bool success2 = await dBHandler.ExecuteInsertOrDeleteSQL(insert);
+            bool success1 = false;
+
+            if (countUsers == 0) 
+            {
+                string sql = $"INSERT INTO users (username, password, online, admin) VALUES ('{username}', '{password}', false, false)";
+                success1 = await dBHandler.ExecuteInsertOrDeleteSQL(sql);
+            } 
+            else
+            {
+                success1 = true;
+            }
+
+            string selectCountStats = $"SELECT COUNT(*) FROM stats WHERE username = '{username}'";
+            int countStats = Int32.Parse(await dBHandler.ExecuteSingleSelectSQL(selectCountStats));
+
+            bool success2 = false;
+
+            if (countStats == 0)
+            {
+                string insert = $"INSERT INTO stats (username) VALUES ('{username}')";
+                success2 = await dBHandler.ExecuteInsertOrDeleteSQL(insert);
+            } 
+            else
+            {
+                success2 = true;
+            }
 
             if (success1 && success2)
             {
@@ -80,8 +104,6 @@ namespace SWE1_PPB
         {
             string countSQL = $"SELECT COUNT(*) FROM users WHERE token = '{token}' AND username = '{username}'";
             int count = Int32.Parse(await dBHandler.ExecuteSingleSelectSQL(countSQL));
-
-            Console.WriteLine(count.ToString());
 
             if (count >= 1)
             {
@@ -206,10 +228,24 @@ namespace SWE1_PPB
             
             if (!invalid)
             {
-                string insert = $"INSERT INTO actions VALUES ('{username}', '{actions}')";
-                await dBHandler.ExecuteInsertOrDeleteSQL(insert);
+                string selectCount = $"SELECT COUNT(*) FROM actions WHERE username = '{username}'";
+                int count = Int32.Parse(await dBHandler.ExecuteSingleSelectSQL(selectCount));
 
-                return "Added actions successfully.\n";
+                if (count >= 1)
+                {
+                    string update = $"UPDATE actions SET action = '{actions}' WHERE username = '{username}'";
+                    await dBHandler.ExecuteInsertOrDeleteSQL(update);
+
+                    return "Updated actions successfully.\n";
+                } 
+                else
+                {
+                    string insert = $"INSERT INTO actions VALUES ('{username}', '{actions}')";
+                    await dBHandler.ExecuteInsertOrDeleteSQL(insert);
+
+                    return "Added actions successfully.\n";
+                }
+
 
             } else
             {

@@ -1527,3 +1527,785 @@
 2021-02-22 03:20:26.992 CET [5644] LOG:  worker process: logical replication launcher (PID 8544) exited with exit code 1
 2021-02-22 03:20:27.006 CET [2540] LOG:  shutting down
 2021-02-22 03:20:27.122 CET [5644] LOG:  database system is shut down
+2021-02-22 03:23:06.059 CET [22636] LOG:  listening on IPv6 address "::1", port 5432
+2021-02-22 03:23:06.060 CET [22636] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-02-22 03:23:06.182 CET [14208] LOG:  database system was shut down at 2021-02-22 03:20:27 CET
+2021-02-22 03:23:06.222 CET [22636] LOG:  database system is ready to accept connections
+2021-02-22 03:33:48.673 CET [4708] ERROR:  relation "scores" does not exist at character 15
+2021-02-22 03:33:48.673 CET [4708] STATEMENT:  select * from scores;
+2021-02-22 03:33:51.567 CET [4708] ERROR:  relation "scoreboard" does not exist at character 15
+2021-02-22 03:33:51.567 CET [4708] STATEMENT:  select * from scoreboard;
+2021-02-22 03:39:39.170 CET [8228] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 03:39:39.170 CET [8228] DETAIL:  Key (username)=(testuser1) already exists.
+2021-02-22 03:39:39.170 CET [8228] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser1', 'testpw2', false, false)
+2021-02-22 03:39:39.174 CET [8228] ERROR:  duplicate key value violates unique constraint "stats_pkey"
+2021-02-22 03:39:39.174 CET [8228] DETAIL:  Key (username)=(testuser1) already exists.
+2021-02-22 03:39:39.174 CET [8228] STATEMENT:  INSERT INTO stats (username) VALUES ('testuser1')
+2021-02-22 03:39:39.188 CET [8228] ERROR:  duplicate key value violates unique constraint "actions_pkey"
+2021-02-22 03:39:39.188 CET [8228] DETAIL:  Key (username)=(testuser1) already exists.
+2021-02-22 03:39:39.188 CET [8228] STATEMENT:  INSERT INTO actions VALUES ('testuser1', 'RRRRR')
+2021-02-22 03:39:54.401 CET [8228] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 03:39:54.401 CET [22152] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 03:40:30.180 CET [19708] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 03:40:30.180 CET [19708] DETAIL:  Key (username)=(testuser1) already exists.
+2021-02-22 03:40:30.180 CET [19708] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser1', 'testpw2', false, false)
+2021-02-22 03:40:30.187 CET [19708] ERROR:  duplicate key value violates unique constraint "stats_pkey"
+2021-02-22 03:40:30.187 CET [19708] DETAIL:  Key (username)=(testuser1) already exists.
+2021-02-22 03:40:30.187 CET [19708] STATEMENT:  INSERT INTO stats (username) VALUES ('testuser1')
+2021-02-22 03:40:30.188 CET [19708] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 03:40:30.188 CET [19708] DETAIL:  Key (username)=(testuser1) already exists.
+2021-02-22 03:40:30.188 CET [19708] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser1', 'testpw2', false, false)
+2021-02-22 03:40:30.188 CET [19708] ERROR:  duplicate key value violates unique constraint "stats_pkey"
+2021-02-22 03:40:30.188 CET [19708] DETAIL:  Key (username)=(testuser1) already exists.
+2021-02-22 03:40:30.188 CET [19708] STATEMENT:  INSERT INTO stats (username) VALUES ('testuser1')
+2021-02-22 03:40:30.205 CET [19708] ERROR:  duplicate key value violates unique constraint "actions_pkey"
+2021-02-22 03:40:30.205 CET [19708] DETAIL:  Key (username)=(testuser1) already exists.
+2021-02-22 03:40:30.205 CET [19708] STATEMENT:  INSERT INTO actions VALUES ('testuser1', 'SSSSS')
+2021-02-22 03:40:30.205 CET [19708] ERROR:  duplicate key value violates unique constraint "actions_pkey"
+2021-02-22 03:40:30.205 CET [19708] DETAIL:  Key (username)=(testuser1) already exists.
+2021-02-22 03:40:30.205 CET [19708] STATEMENT:  INSERT INTO actions VALUES ('testuser1', 'RRRRR')
+2021-02-22 03:40:45.462 CET [19708] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 03:40:45.462 CET [17164] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 03:41:13.519 CET [5536] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 03:41:13.519 CET [5536] DETAIL:  Key (username)=(testuser1) already exists.
+2021-02-22 03:41:13.519 CET [5536] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser1', 'testpw2', false, false)
+2021-02-22 03:41:13.528 CET [5536] ERROR:  duplicate key value violates unique constraint "stats_pkey"
+2021-02-22 03:41:13.528 CET [5536] DETAIL:  Key (username)=(testuser1) already exists.
+2021-02-22 03:41:13.528 CET [5536] STATEMENT:  INSERT INTO stats (username) VALUES ('testuser1')
+2021-02-22 03:41:13.528 CET [5536] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 03:41:13.528 CET [5536] DETAIL:  Key (username)=(testuser1) already exists.
+2021-02-22 03:41:13.528 CET [5536] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser1', 'testpw2', false, false)
+2021-02-22 03:41:13.529 CET [5536] ERROR:  duplicate key value violates unique constraint "stats_pkey"
+2021-02-22 03:41:13.529 CET [5536] DETAIL:  Key (username)=(testuser1) already exists.
+2021-02-22 03:41:13.529 CET [5536] STATEMENT:  INSERT INTO stats (username) VALUES ('testuser1')
+2021-02-22 03:41:13.541 CET [5536] ERROR:  duplicate key value violates unique constraint "actions_pkey"
+2021-02-22 03:41:13.541 CET [5536] DETAIL:  Key (username)=(testuser1) already exists.
+2021-02-22 03:41:13.541 CET [5536] STATEMENT:  INSERT INTO actions VALUES ('testuser1', 'SSSSS')
+2021-02-22 03:41:13.542 CET [5536] ERROR:  duplicate key value violates unique constraint "actions_pkey"
+2021-02-22 03:41:13.542 CET [5536] DETAIL:  Key (username)=(testuser1) already exists.
+2021-02-22 03:41:13.542 CET [5536] STATEMENT:  INSERT INTO actions VALUES ('testuser1', 'RRRRR')
+2021-02-22 03:41:13.815 CET [5536] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 03:41:13.815 CET [11360] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 03:42:03.805 CET [18992] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 03:42:03.805 CET [18992] DETAIL:  Key (username)=(testuser1) already exists.
+2021-02-22 03:42:03.805 CET [18992] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser1', 'testpw2', false, false)
+2021-02-22 03:42:03.812 CET [18992] ERROR:  duplicate key value violates unique constraint "stats_pkey"
+2021-02-22 03:42:03.812 CET [18992] DETAIL:  Key (username)=(testuser1) already exists.
+2021-02-22 03:42:03.812 CET [18992] STATEMENT:  INSERT INTO stats (username) VALUES ('testuser1')
+2021-02-22 03:42:03.813 CET [18992] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 03:42:03.813 CET [18992] DETAIL:  Key (username)=(testuser1) already exists.
+2021-02-22 03:42:03.813 CET [18992] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser1', 'testpw2', false, false)
+2021-02-22 03:42:03.813 CET [18992] ERROR:  duplicate key value violates unique constraint "stats_pkey"
+2021-02-22 03:42:03.813 CET [18992] DETAIL:  Key (username)=(testuser1) already exists.
+2021-02-22 03:42:03.813 CET [18992] STATEMENT:  INSERT INTO stats (username) VALUES ('testuser1')
+2021-02-22 03:42:03.823 CET [18992] ERROR:  duplicate key value violates unique constraint "actions_pkey"
+2021-02-22 03:42:03.823 CET [18992] DETAIL:  Key (username)=(testuser1) already exists.
+2021-02-22 03:42:03.823 CET [18992] STATEMENT:  INSERT INTO actions VALUES ('testuser1', 'SSSSS')
+2021-02-22 03:42:03.824 CET [18992] ERROR:  duplicate key value violates unique constraint "actions_pkey"
+2021-02-22 03:42:03.824 CET [18992] DETAIL:  Key (username)=(testuser1) already exists.
+2021-02-22 03:42:03.824 CET [18992] STATEMENT:  INSERT INTO actions VALUES ('testuser1', 'RRRRR')
+2021-02-22 03:42:03.875 CET [1768] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 03:42:03.875 CET [1768] DETAIL:  Key (username)=(testuser) already exists.
+2021-02-22 03:42:03.875 CET [1768] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser', 'testpw', false, false)
+2021-02-22 03:42:03.876 CET [18992] ERROR:  duplicate key value violates unique constraint "stats_pkey"
+2021-02-22 03:42:03.876 CET [18992] DETAIL:  Key (username)=(testuser) already exists.
+2021-02-22 03:42:03.876 CET [18992] STATEMENT:  INSERT INTO stats (username) VALUES ('testuser')
+2021-02-22 03:42:04.053 CET [18992] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 03:42:04.053 CET [1768] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 03:43:14.908 CET [21704] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 03:43:14.908 CET [21704] DETAIL:  Key (username)=(testuser1) already exists.
+2021-02-22 03:43:14.908 CET [21704] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser1', 'testpw1', false, false)
+2021-02-22 03:43:14.917 CET [21704] ERROR:  duplicate key value violates unique constraint "stats_pkey"
+2021-02-22 03:43:14.917 CET [21704] DETAIL:  Key (username)=(testuser1) already exists.
+2021-02-22 03:43:14.917 CET [21704] STATEMENT:  INSERT INTO stats (username) VALUES ('testuser1')
+2021-02-22 03:43:14.937 CET [21704] ERROR:  duplicate key value violates unique constraint "actions_pkey"
+2021-02-22 03:43:14.937 CET [21704] DETAIL:  Key (username)=(testuser1) already exists.
+2021-02-22 03:43:14.937 CET [21704] STATEMENT:  INSERT INTO actions VALUES ('testuser1', 'SSSSS')
+2021-02-22 03:43:15.008 CET [20092] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 03:43:15.008 CET [20092] DETAIL:  Key (username)=(testuser) already exists.
+2021-02-22 03:43:15.008 CET [20092] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser', 'testpw', false, false)
+2021-02-22 03:43:15.008 CET [20092] ERROR:  duplicate key value violates unique constraint "stats_pkey"
+2021-02-22 03:43:15.008 CET [20092] DETAIL:  Key (username)=(testuser) already exists.
+2021-02-22 03:43:15.008 CET [20092] STATEMENT:  INSERT INTO stats (username) VALUES ('testuser')
+2021-02-22 03:43:15.179 CET [21704] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 03:43:15.179 CET [20092] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 03:43:30.791 CET [5172] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 03:43:34.986 CET [22508] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 03:43:34.986 CET [22508] DETAIL:  Key (username)=(testuser1) already exists.
+2021-02-22 03:43:34.986 CET [22508] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser1', 'testpw1', false, false)
+2021-02-22 03:43:34.993 CET [22508] ERROR:  duplicate key value violates unique constraint "stats_pkey"
+2021-02-22 03:43:34.993 CET [22508] DETAIL:  Key (username)=(testuser1) already exists.
+2021-02-22 03:43:34.993 CET [22508] STATEMENT:  INSERT INTO stats (username) VALUES ('testuser1')
+2021-02-22 03:43:34.994 CET [22508] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 03:43:34.994 CET [22508] DETAIL:  Key (username)=(testuser2) already exists.
+2021-02-22 03:43:34.994 CET [22508] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser2', 'testpw2', false, false)
+2021-02-22 03:43:34.994 CET [22508] ERROR:  duplicate key value violates unique constraint "stats_pkey"
+2021-02-22 03:43:34.994 CET [22508] DETAIL:  Key (username)=(testuser2) already exists.
+2021-02-22 03:43:34.994 CET [22508] STATEMENT:  INSERT INTO stats (username) VALUES ('testuser2')
+2021-02-22 03:46:14.281 CET [9428] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 03:46:16.933 CET [22508] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 03:46:16.933 CET [4764] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 03:46:16.933 CET [9280] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 03:46:21.962 CET [22084] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 03:46:21.962 CET [22084] DETAIL:  Key (username)=(testuser1) already exists.
+2021-02-22 03:46:21.962 CET [22084] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser1', 'testpw1', false, false)
+2021-02-22 03:46:21.970 CET [22084] ERROR:  duplicate key value violates unique constraint "stats_pkey"
+2021-02-22 03:46:21.970 CET [22084] DETAIL:  Key (username)=(testuser1) already exists.
+2021-02-22 03:46:21.970 CET [22084] STATEMENT:  INSERT INTO stats (username) VALUES ('testuser1')
+2021-02-22 03:46:21.970 CET [22084] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 03:46:21.970 CET [22084] DETAIL:  Key (username)=(testuser2) already exists.
+2021-02-22 03:46:21.970 CET [22084] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser2', 'testpw2', false, false)
+2021-02-22 03:46:21.971 CET [22084] ERROR:  duplicate key value violates unique constraint "stats_pkey"
+2021-02-22 03:46:21.971 CET [22084] DETAIL:  Key (username)=(testuser2) already exists.
+2021-02-22 03:46:21.971 CET [22084] STATEMENT:  INSERT INTO stats (username) VALUES ('testuser2')
+2021-02-22 03:46:21.982 CET [22084] ERROR:  duplicate key value violates unique constraint "actions_pkey"
+2021-02-22 03:46:21.982 CET [22084] DETAIL:  Key (username)=(testuser1) already exists.
+2021-02-22 03:46:21.982 CET [22084] STATEMENT:  INSERT INTO actions VALUES ('testuser1', 'SSSSS')
+2021-02-22 03:46:21.982 CET [22084] ERROR:  duplicate key value violates unique constraint "actions_pkey"
+2021-02-22 03:46:21.982 CET [22084] DETAIL:  Key (username)=(testuser2) already exists.
+2021-02-22 03:46:21.982 CET [22084] STATEMENT:  INSERT INTO actions VALUES ('testuser2', 'RRRRR')
+2021-02-22 03:46:37.032 CET [23460] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 03:46:37.032 CET [23460] DETAIL:  Key (username)=(testuser) already exists.
+2021-02-22 03:46:37.032 CET [23460] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser', 'testpw', false, false)
+2021-02-22 03:46:37.032 CET [22084] ERROR:  duplicate key value violates unique constraint "stats_pkey"
+2021-02-22 03:46:37.032 CET [22084] DETAIL:  Key (username)=(testuser) already exists.
+2021-02-22 03:46:37.032 CET [22084] STATEMENT:  INSERT INTO stats (username) VALUES ('testuser')
+2021-02-22 03:46:37.207 CET [23460] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 03:46:37.207 CET [22084] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 03:46:37.207 CET [8440] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 03:50:02.388 CET [23064] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 03:50:02.388 CET [16292] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 03:50:02.388 CET [16992] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 03:51:49.004 CET [9224] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 03:51:49.004 CET [20888] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 03:51:49.004 CET [22684] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 03:54:44.941 CET [17840] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 03:54:44.941 CET [17840] DETAIL:  Key (username)=(testuser1) already exists.
+2021-02-22 03:54:44.941 CET [17840] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser1', 'testpw1', false, false)
+2021-02-22 03:54:44.948 CET [17840] ERROR:  duplicate key value violates unique constraint "stats_pkey"
+2021-02-22 03:54:44.948 CET [17840] DETAIL:  Key (username)=(testuser1) already exists.
+2021-02-22 03:54:44.948 CET [17840] STATEMENT:  INSERT INTO stats (username) VALUES ('testuser1')
+2021-02-22 03:54:44.949 CET [17840] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 03:54:44.949 CET [17840] DETAIL:  Key (username)=(testuser2) already exists.
+2021-02-22 03:54:44.949 CET [17840] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser2', 'testpw2', false, false)
+2021-02-22 03:54:44.949 CET [17840] ERROR:  duplicate key value violates unique constraint "stats_pkey"
+2021-02-22 03:54:44.949 CET [17840] DETAIL:  Key (username)=(testuser2) already exists.
+2021-02-22 03:54:44.949 CET [17840] STATEMENT:  INSERT INTO stats (username) VALUES ('testuser2')
+2021-02-22 03:55:00.037 CET [17840] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 03:55:00.037 CET [17840] DETAIL:  Key (username)=(testuser) already exists.
+2021-02-22 03:55:00.037 CET [17840] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser', 'testpw', false, false)
+2021-02-22 03:55:00.038 CET [22696] ERROR:  duplicate key value violates unique constraint "stats_pkey"
+2021-02-22 03:55:00.038 CET [22696] DETAIL:  Key (username)=(testuser) already exists.
+2021-02-22 03:55:00.038 CET [22696] STATEMENT:  INSERT INTO stats (username) VALUES ('testuser')
+2021-02-22 03:55:00.213 CET [17840] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 03:55:00.213 CET [22696] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 03:55:00.213 CET [20572] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 04:01:56.183 CET [18240] ERROR:  relation "tournamentscore" does not exist at character 13
+2021-02-22 04:01:56.183 CET [18240] STATEMENT:  DELETE FROM tournamentscore
+2021-02-22 04:01:56.190 CET [18240] ERROR:  update or delete on table "users" violates foreign key constraint "tournamentscores_username_fkey" on table "tournamentscores"
+2021-02-22 04:01:56.190 CET [18240] DETAIL:  Key (username)=(testuser1) is still referenced from table "tournamentscores".
+2021-02-22 04:01:56.190 CET [18240] STATEMENT:  DELETE FROM users
+2021-02-22 04:01:56.220 CET [18240] ERROR:  duplicate key value violates unique constraint "actions_pkey"
+2021-02-22 04:01:56.220 CET [18240] DETAIL:  Key (username)=(testuser3) already exists.
+2021-02-22 04:01:56.220 CET [18240] STATEMENT:  INSERT INTO actions VALUES ('testuser3', 'RSVLP')
+2021-02-22 04:02:11.310 CET [16100] ERROR:  relation "tournamentscore" does not exist at character 13
+2021-02-22 04:02:11.310 CET [16100] STATEMENT:  DELETE FROM tournamentscore
+2021-02-22 04:02:11.311 CET [18240] ERROR:  update or delete on table "users" violates foreign key constraint "tournamentscores_username_fkey" on table "tournamentscores"
+2021-02-22 04:02:11.311 CET [18240] DETAIL:  Key (username)=(testuser1) is still referenced from table "tournamentscores".
+2021-02-22 04:02:11.311 CET [18240] STATEMENT:  DELETE FROM users
+2021-02-22 04:02:11.314 CET [2068] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:02:11.314 CET [2068] DETAIL:  Key (username)=(testuser1) already exists.
+2021-02-22 04:02:11.314 CET [2068] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser1', 'testpw1', false, false)
+2021-02-22 04:02:11.319 CET [18240] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:02:11.319 CET [18240] DETAIL:  Key (username)=(testuser2) already exists.
+2021-02-22 04:02:11.319 CET [18240] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser2', 'testpw2', false, false)
+2021-02-22 04:02:29.357 CET [16100] ERROR:  relation "tournamentscore" does not exist at character 13
+2021-02-22 04:02:29.357 CET [16100] STATEMENT:  DELETE FROM tournamentscore
+2021-02-22 04:02:29.359 CET [18240] ERROR:  update or delete on table "users" violates foreign key constraint "tournamentscores_username_fkey" on table "tournamentscores"
+2021-02-22 04:02:29.359 CET [18240] DETAIL:  Key (username)=(testuser1) is still referenced from table "tournamentscores".
+2021-02-22 04:02:29.359 CET [18240] STATEMENT:  DELETE FROM users
+2021-02-22 04:02:29.360 CET [2068] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:02:29.360 CET [2068] DETAIL:  Key (username)=(testuser) already exists.
+2021-02-22 04:02:29.360 CET [2068] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser', 'testpw', false, false)
+2021-02-22 04:02:29.509 CET [18240] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 04:02:29.509 CET [2068] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 04:02:29.509 CET [16100] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 04:03:41.166 CET [5468] ERROR:  relation "tournamentscore" does not exist at character 13
+2021-02-22 04:03:41.166 CET [5468] STATEMENT:  DELETE FROM tournamentscore
+2021-02-22 04:03:41.173 CET [5468] ERROR:  update or delete on table "users" violates foreign key constraint "tournamentscores_username_fkey" on table "tournamentscores"
+2021-02-22 04:03:41.173 CET [5468] DETAIL:  Key (username)=(testuser1) is still referenced from table "tournamentscores".
+2021-02-22 04:03:41.173 CET [5468] STATEMENT:  DELETE FROM users
+2021-02-22 04:03:41.176 CET [5468] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:03:41.176 CET [5468] DETAIL:  Key (username)=(testuser3) already exists.
+2021-02-22 04:03:41.176 CET [5468] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser3', 'testpw3', false, false)
+2021-02-22 04:03:41.185 CET [5468] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:03:41.185 CET [5468] DETAIL:  Key (username)=(testuser4) already exists.
+2021-02-22 04:03:41.185 CET [5468] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser4', 'testpw4', false, false)
+2021-02-22 04:03:41.199 CET [5468] ERROR:  duplicate key value violates unique constraint "actions_pkey"
+2021-02-22 04:03:41.199 CET [5468] DETAIL:  Key (username)=(testuser3) already exists.
+2021-02-22 04:03:41.199 CET [5468] STATEMENT:  INSERT INTO actions VALUES ('testuser3', 'RSVLP')
+2021-02-22 04:03:56.289 CET [18248] ERROR:  relation "tournamentscore" does not exist at character 13
+2021-02-22 04:03:56.289 CET [18248] STATEMENT:  DELETE FROM tournamentscore
+2021-02-22 04:03:56.290 CET [5468] ERROR:  update or delete on table "users" violates foreign key constraint "tournamentscores_username_fkey" on table "tournamentscores"
+2021-02-22 04:03:56.290 CET [5468] DETAIL:  Key (username)=(testuser1) is still referenced from table "tournamentscores".
+2021-02-22 04:03:56.290 CET [5468] STATEMENT:  DELETE FROM users
+2021-02-22 04:03:56.292 CET [6224] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:03:56.292 CET [6224] DETAIL:  Key (username)=(testuser1) already exists.
+2021-02-22 04:03:56.292 CET [6224] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser1', 'testpw1', false, false)
+2021-02-22 04:03:56.294 CET [5468] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:03:56.294 CET [5468] DETAIL:  Key (username)=(testuser2) already exists.
+2021-02-22 04:03:56.294 CET [5468] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser2', 'testpw2', false, false)
+2021-02-22 04:04:14.339 CET [6224] ERROR:  relation "tournamentscore" does not exist at character 13
+2021-02-22 04:04:14.339 CET [6224] STATEMENT:  DELETE FROM tournamentscore
+2021-02-22 04:04:14.340 CET [5468] ERROR:  update or delete on table "users" violates foreign key constraint "tournamentscores_username_fkey" on table "tournamentscores"
+2021-02-22 04:04:14.340 CET [5468] DETAIL:  Key (username)=(testuser1) is still referenced from table "tournamentscores".
+2021-02-22 04:04:14.340 CET [5468] STATEMENT:  DELETE FROM users
+2021-02-22 04:04:14.342 CET [18248] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:04:14.342 CET [18248] DETAIL:  Key (username)=(testuser) already exists.
+2021-02-22 04:04:14.342 CET [18248] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser', 'testpw', false, false)
+2021-02-22 04:04:14.506 CET [18248] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 04:04:14.507 CET [5468] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 04:04:14.507 CET [6224] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 04:05:44.520 CET [15716] ERROR:  relation "tournamentscore" does not exist at character 13
+2021-02-22 04:05:44.520 CET [15716] STATEMENT:  DELETE FROM tournamentscore
+2021-02-22 04:05:44.528 CET [15716] ERROR:  update or delete on table "users" violates foreign key constraint "tournamentscores_username_fkey" on table "tournamentscores"
+2021-02-22 04:05:44.528 CET [15716] DETAIL:  Key (username)=(testuser1) is still referenced from table "tournamentscores".
+2021-02-22 04:05:44.528 CET [15716] STATEMENT:  DELETE FROM users
+2021-02-22 04:05:44.533 CET [15716] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:05:44.533 CET [15716] DETAIL:  Key (username)=(testuser1) already exists.
+2021-02-22 04:05:44.533 CET [15716] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser1', 'testpw1', false, false)
+2021-02-22 04:05:44.536 CET [15716] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:05:44.536 CET [15716] DETAIL:  Key (username)=(testuser2) already exists.
+2021-02-22 04:05:44.536 CET [15716] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser2', 'testpw2', false, false)
+2021-02-22 04:06:02.635 CET [15716] ERROR:  relation "tournamentscore" does not exist at character 13
+2021-02-22 04:06:02.635 CET [15716] STATEMENT:  DELETE FROM tournamentscore
+2021-02-22 04:06:02.636 CET [10472] ERROR:  update or delete on table "users" violates foreign key constraint "tournamentscores_username_fkey" on table "tournamentscores"
+2021-02-22 04:06:02.636 CET [10472] DETAIL:  Key (username)=(testuser2) is still referenced from table "tournamentscores".
+2021-02-22 04:06:02.636 CET [10472] STATEMENT:  DELETE FROM users
+2021-02-22 04:06:02.639 CET [22236] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:06:02.639 CET [22236] DETAIL:  Key (username)=(testuser1) already exists.
+2021-02-22 04:06:02.639 CET [22236] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser1', 'testpw1', false, false)
+2021-02-22 04:06:02.653 CET [10472] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:06:02.653 CET [10472] DETAIL:  Key (username)=(testuser2) already exists.
+2021-02-22 04:06:02.653 CET [10472] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser2', 'testpw2', false, false)
+2021-02-22 04:06:20.684 CET [10472] ERROR:  relation "tournamentscore" does not exist at character 13
+2021-02-22 04:06:20.684 CET [10472] STATEMENT:  DELETE FROM tournamentscore
+2021-02-22 04:06:20.685 CET [22236] ERROR:  update or delete on table "users" violates foreign key constraint "tournamentscores_username_fkey" on table "tournamentscores"
+2021-02-22 04:06:20.685 CET [22236] DETAIL:  Key (username)=(testuser1) is still referenced from table "tournamentscores".
+2021-02-22 04:06:20.685 CET [22236] STATEMENT:  DELETE FROM users
+2021-02-22 04:06:20.686 CET [15716] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:06:20.686 CET [15716] DETAIL:  Key (username)=(testuser) already exists.
+2021-02-22 04:06:20.686 CET [15716] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser', 'testpw', false, false)
+2021-02-22 04:06:20.868 CET [10472] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 04:06:20.869 CET [15716] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 04:06:20.869 CET [22236] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 04:09:10.786 CET [6048] ERROR:  relation "tournamentscore" does not exist at character 13
+2021-02-22 04:09:10.786 CET [6048] STATEMENT:  DELETE FROM tournamentscore
+2021-02-22 04:09:10.792 CET [6048] ERROR:  update or delete on table "users" violates foreign key constraint "tournamentscores_username_fkey" on table "tournamentscores"
+2021-02-22 04:09:10.792 CET [6048] DETAIL:  Key (username)=(testuser1) is still referenced from table "tournamentscores".
+2021-02-22 04:09:10.792 CET [6048] STATEMENT:  DELETE FROM users
+2021-02-22 04:09:10.795 CET [6048] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:09:10.795 CET [6048] DETAIL:  Key (username)=(testuser) already exists.
+2021-02-22 04:09:10.795 CET [6048] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser', 'testpw', false, false)
+2021-02-22 04:09:56.261 CET [16020] ERROR:  relation "tournamentscore" does not exist at character 13
+2021-02-22 04:09:56.261 CET [16020] STATEMENT:  DELETE FROM tournamentscore
+2021-02-22 04:09:56.269 CET [16020] ERROR:  update or delete on table "users" violates foreign key constraint "tournamentscores_username_fkey" on table "tournamentscores"
+2021-02-22 04:09:56.269 CET [16020] DETAIL:  Key (username)=(testuser1) is still referenced from table "tournamentscores".
+2021-02-22 04:09:56.269 CET [16020] STATEMENT:  DELETE FROM users
+2021-02-22 04:09:56.273 CET [16020] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:09:56.273 CET [16020] DETAIL:  Key (username)=(testuser1) already exists.
+2021-02-22 04:09:56.273 CET [16020] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser1', 'testpw1', false, false)
+2021-02-22 04:09:56.285 CET [16020] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:09:56.285 CET [16020] DETAIL:  Key (username)=(testuser2) already exists.
+2021-02-22 04:09:56.285 CET [16020] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser2', 'testpw2', false, false)
+2021-02-22 04:10:14.346 CET [16508] ERROR:  relation "tournamentscore" does not exist at character 13
+2021-02-22 04:10:14.346 CET [16508] STATEMENT:  DELETE FROM tournamentscore
+2021-02-22 04:10:14.347 CET [16020] ERROR:  update or delete on table "users" violates foreign key constraint "tournamentscores_username_fkey" on table "tournamentscores"
+2021-02-22 04:10:14.347 CET [16020] DETAIL:  Key (username)=(testuser2) is still referenced from table "tournamentscores".
+2021-02-22 04:10:14.347 CET [16020] STATEMENT:  DELETE FROM users
+2021-02-22 04:10:14.349 CET [8728] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:10:14.349 CET [8728] DETAIL:  Key (username)=(testuser1) already exists.
+2021-02-22 04:10:14.349 CET [8728] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser1', 'testpw1', false, false)
+2021-02-22 04:10:14.368 CET [16020] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:10:14.368 CET [16020] DETAIL:  Key (username)=(testuser2) already exists.
+2021-02-22 04:10:14.368 CET [16020] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser2', 'testpw2', false, false)
+2021-02-22 04:10:32.401 CET [16020] ERROR:  relation "tournamentscore" does not exist at character 13
+2021-02-22 04:10:32.401 CET [16020] STATEMENT:  DELETE FROM tournamentscore
+2021-02-22 04:10:32.403 CET [16508] ERROR:  update or delete on table "users" violates foreign key constraint "tournamentscores_username_fkey" on table "tournamentscores"
+2021-02-22 04:10:32.403 CET [16508] DETAIL:  Key (username)=(testuser2) is still referenced from table "tournamentscores".
+2021-02-22 04:10:32.403 CET [16508] STATEMENT:  DELETE FROM users
+2021-02-22 04:10:32.404 CET [8728] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:10:32.404 CET [8728] DETAIL:  Key (username)=(testuser) already exists.
+2021-02-22 04:10:32.404 CET [8728] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser', 'testpw', false, false)
+2021-02-22 04:10:32.602 CET [16020] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 04:10:32.602 CET [16508] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 04:10:32.603 CET [8728] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 04:11:10.771 CET [21836] ERROR:  relation "tournamentscore" does not exist at character 13
+2021-02-22 04:11:10.771 CET [21836] STATEMENT:  DELETE FROM tournamentscore
+2021-02-22 04:11:10.777 CET [21836] ERROR:  update or delete on table "users" violates foreign key constraint "tournamentscores_username_fkey" on table "tournamentscores"
+2021-02-22 04:11:10.777 CET [21836] DETAIL:  Key (username)=(testuser2) is still referenced from table "tournamentscores".
+2021-02-22 04:11:10.777 CET [21836] STATEMENT:  DELETE FROM users
+2021-02-22 04:11:10.781 CET [21836] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:11:10.781 CET [21836] DETAIL:  Key (username)=(testuser) already exists.
+2021-02-22 04:11:10.781 CET [21836] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser', 'testpw', false, false)
+2021-02-22 04:12:03.419 CET [8276] ERROR:  relation "tournamentscore" does not exist at character 13
+2021-02-22 04:12:03.419 CET [8276] STATEMENT:  DELETE FROM tournamentscore
+2021-02-22 04:12:03.428 CET [8276] ERROR:  update or delete on table "users" violates foreign key constraint "tournamentscores_username_fkey" on table "tournamentscores"
+2021-02-22 04:12:03.428 CET [8276] DETAIL:  Key (username)=(testuser2) is still referenced from table "tournamentscores".
+2021-02-22 04:12:03.428 CET [8276] STATEMENT:  DELETE FROM users
+2021-02-22 04:12:03.433 CET [8276] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:12:03.433 CET [8276] DETAIL:  Key (username)=(testuser1) already exists.
+2021-02-22 04:12:03.433 CET [8276] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser1', 'testpw1', false, false)
+2021-02-22 04:12:03.444 CET [8276] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:12:03.444 CET [8276] DETAIL:  Key (username)=(testuser2) already exists.
+2021-02-22 04:12:03.444 CET [8276] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser2', 'testpw2', false, false)
+2021-02-22 04:12:21.495 CET [19668] ERROR:  relation "tournamentscore" does not exist at character 13
+2021-02-22 04:12:21.495 CET [19668] STATEMENT:  DELETE FROM tournamentscore
+2021-02-22 04:12:21.497 CET [15552] ERROR:  update or delete on table "users" violates foreign key constraint "tournamentscores_username_fkey" on table "tournamentscores"
+2021-02-22 04:12:21.497 CET [15552] DETAIL:  Key (username)=(testuser1) is still referenced from table "tournamentscores".
+2021-02-22 04:12:21.497 CET [15552] STATEMENT:  DELETE FROM users
+2021-02-22 04:12:21.499 CET [8276] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:12:21.499 CET [8276] DETAIL:  Key (username)=(testuser1) already exists.
+2021-02-22 04:12:21.499 CET [8276] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser1', 'testpw1', false, false)
+2021-02-22 04:12:21.519 CET [15552] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:12:21.519 CET [15552] DETAIL:  Key (username)=(testuser2) already exists.
+2021-02-22 04:12:21.519 CET [15552] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser2', 'testpw2', false, false)
+2021-02-22 04:12:39.547 CET [15552] ERROR:  relation "tournamentscore" does not exist at character 13
+2021-02-22 04:12:39.547 CET [15552] STATEMENT:  DELETE FROM tournamentscore
+2021-02-22 04:12:39.548 CET [19668] ERROR:  update or delete on table "users" violates foreign key constraint "tournamentscores_username_fkey" on table "tournamentscores"
+2021-02-22 04:12:39.548 CET [19668] DETAIL:  Key (username)=(testuser2) is still referenced from table "tournamentscores".
+2021-02-22 04:12:39.548 CET [19668] STATEMENT:  DELETE FROM users
+2021-02-22 04:12:39.549 CET [8276] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:12:39.549 CET [8276] DETAIL:  Key (username)=(testuser) already exists.
+2021-02-22 04:12:39.549 CET [8276] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser', 'testpw', false, false)
+2021-02-22 04:12:39.694 CET [15552] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 04:12:39.694 CET [8276] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 04:12:39.694 CET [19668] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 04:14:13.440 CET [14100] ERROR:  relation "tournamentscore" does not exist at character 13
+2021-02-22 04:14:13.440 CET [14100] STATEMENT:  DELETE FROM tournamentscore
+2021-02-22 04:14:13.447 CET [14100] ERROR:  update or delete on table "users" violates foreign key constraint "tournamentscores_username_fkey" on table "tournamentscores"
+2021-02-22 04:14:13.447 CET [14100] DETAIL:  Key (username)=(testuser2) is still referenced from table "tournamentscores".
+2021-02-22 04:14:13.447 CET [14100] STATEMENT:  DELETE FROM users
+2021-02-22 04:14:13.453 CET [14100] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:14:13.453 CET [14100] DETAIL:  Key (username)=(testuser1) already exists.
+2021-02-22 04:14:13.453 CET [14100] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser1', 'testpw1', false, false)
+2021-02-22 04:14:13.460 CET [14100] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:14:13.460 CET [14100] DETAIL:  Key (username)=(testuser2) already exists.
+2021-02-22 04:14:13.460 CET [14100] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser2', 'testpw2', false, false)
+2021-02-22 04:14:31.506 CET [3492] ERROR:  relation "tournamentscore" does not exist at character 13
+2021-02-22 04:14:31.506 CET [3492] STATEMENT:  DELETE FROM tournamentscore
+2021-02-22 04:14:31.509 CET [14716] ERROR:  update or delete on table "users" violates foreign key constraint "tournamentscores_username_fkey" on table "tournamentscores"
+2021-02-22 04:14:31.509 CET [14716] DETAIL:  Key (username)=(testuser1) is still referenced from table "tournamentscores".
+2021-02-22 04:14:31.509 CET [14716] STATEMENT:  DELETE FROM users
+2021-02-22 04:14:31.510 CET [14100] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:14:31.510 CET [14100] DETAIL:  Key (username)=(testuser1) already exists.
+2021-02-22 04:14:31.510 CET [14100] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser1', 'testpw1', false, false)
+2021-02-22 04:14:31.527 CET [14716] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:14:31.527 CET [14716] DETAIL:  Key (username)=(testuser2) already exists.
+2021-02-22 04:14:31.527 CET [14716] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser2', 'testpw2', false, false)
+2021-02-22 04:14:49.540 CET [14100] ERROR:  relation "tournamentscore" does not exist at character 13
+2021-02-22 04:14:49.540 CET [14100] STATEMENT:  DELETE FROM tournamentscore
+2021-02-22 04:14:49.542 CET [3492] ERROR:  update or delete on table "users" violates foreign key constraint "tournamentscores_username_fkey" on table "tournamentscores"
+2021-02-22 04:14:49.542 CET [3492] DETAIL:  Key (username)=(testuser2) is still referenced from table "tournamentscores".
+2021-02-22 04:14:49.542 CET [3492] STATEMENT:  DELETE FROM users
+2021-02-22 04:14:49.545 CET [14716] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:14:49.545 CET [14716] DETAIL:  Key (username)=(testuser1) already exists.
+2021-02-22 04:14:49.545 CET [14716] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser1', 'testpw1', false, false)
+2021-02-22 04:14:49.560 CET [3492] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:14:49.560 CET [3492] DETAIL:  Key (username)=(testuser2) already exists.
+2021-02-22 04:14:49.560 CET [3492] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser2', 'testpw2', false, false)
+2021-02-22 04:15:07.594 CET [3492] ERROR:  relation "tournamentscore" does not exist at character 13
+2021-02-22 04:15:07.594 CET [3492] STATEMENT:  DELETE FROM tournamentscore
+2021-02-22 04:15:07.596 CET [14716] ERROR:  update or delete on table "users" violates foreign key constraint "tournamentscores_username_fkey" on table "tournamentscores"
+2021-02-22 04:15:07.596 CET [14716] DETAIL:  Key (username)=(testuser1) is still referenced from table "tournamentscores".
+2021-02-22 04:15:07.596 CET [14716] STATEMENT:  DELETE FROM users
+2021-02-22 04:15:07.597 CET [14100] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:15:07.597 CET [14100] DETAIL:  Key (username)=(testuser) already exists.
+2021-02-22 04:15:07.597 CET [14100] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser', 'testpw', false, false)
+2021-02-22 04:15:07.762 CET [3492] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 04:15:07.762 CET [14100] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 04:15:07.762 CET [14716] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 04:15:45.578 CET [14004] ERROR:  relation "tournamentscore" does not exist at character 13
+2021-02-22 04:15:45.578 CET [14004] STATEMENT:  DELETE FROM tournamentscore
+2021-02-22 04:15:45.585 CET [14004] ERROR:  update or delete on table "users" violates foreign key constraint "tournamentscores_username_fkey" on table "tournamentscores"
+2021-02-22 04:15:45.585 CET [14004] DETAIL:  Key (username)=(testuser1) is still referenced from table "tournamentscores".
+2021-02-22 04:15:45.585 CET [14004] STATEMENT:  DELETE FROM users
+2021-02-22 04:15:45.588 CET [14004] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:15:45.588 CET [14004] DETAIL:  Key (username)=(testuser1) already exists.
+2021-02-22 04:15:45.588 CET [14004] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser1', 'testpw1', false, false)
+2021-02-22 04:15:45.602 CET [14004] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:15:45.602 CET [14004] DETAIL:  Key (username)=(testuser2) already exists.
+2021-02-22 04:15:45.602 CET [14004] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser2', 'testpw2', false, false)
+2021-02-22 04:16:03.661 CET [23412] ERROR:  relation "tournamentscore" does not exist at character 13
+2021-02-22 04:16:03.661 CET [23412] STATEMENT:  DELETE FROM tournamentscore
+2021-02-22 04:16:03.664 CET [9664] ERROR:  update or delete on table "users" violates foreign key constraint "tournamentscores_username_fkey" on table "tournamentscores"
+2021-02-22 04:16:03.664 CET [9664] DETAIL:  Key (username)=(testuser1) is still referenced from table "tournamentscores".
+2021-02-22 04:16:03.664 CET [9664] STATEMENT:  DELETE FROM users
+2021-02-22 04:16:03.666 CET [14004] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:16:03.666 CET [14004] DETAIL:  Key (username)=(testuser1) already exists.
+2021-02-22 04:16:03.666 CET [14004] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser1', 'testpw1', false, false)
+2021-02-22 04:16:03.685 CET [9664] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:16:03.685 CET [9664] DETAIL:  Key (username)=(testuser2) already exists.
+2021-02-22 04:16:03.685 CET [9664] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser2', 'testpw2', false, false)
+2021-02-22 04:16:21.706 CET [9664] ERROR:  relation "tournamentscore" does not exist at character 13
+2021-02-22 04:16:21.706 CET [9664] STATEMENT:  DELETE FROM tournamentscore
+2021-02-22 04:16:21.708 CET [23412] ERROR:  update or delete on table "users" violates foreign key constraint "tournamentscores_username_fkey" on table "tournamentscores"
+2021-02-22 04:16:21.708 CET [23412] DETAIL:  Key (username)=(testuser1) is still referenced from table "tournamentscores".
+2021-02-22 04:16:21.708 CET [23412] STATEMENT:  DELETE FROM users
+2021-02-22 04:16:21.710 CET [14004] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:16:21.710 CET [14004] DETAIL:  Key (username)=(testuser1) already exists.
+2021-02-22 04:16:21.710 CET [14004] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser1', 'testpw1', false, false)
+2021-02-22 04:16:21.727 CET [23412] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:16:21.727 CET [23412] DETAIL:  Key (username)=(testuser2) already exists.
+2021-02-22 04:16:21.727 CET [23412] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser2', 'testpw2', false, false)
+2021-02-22 04:16:39.743 CET [14004] ERROR:  relation "tournamentscore" does not exist at character 13
+2021-02-22 04:16:39.743 CET [14004] STATEMENT:  DELETE FROM tournamentscore
+2021-02-22 04:16:39.744 CET [23412] ERROR:  update or delete on table "users" violates foreign key constraint "tournamentscores_username_fkey" on table "tournamentscores"
+2021-02-22 04:16:39.744 CET [23412] DETAIL:  Key (username)=(testuser2) is still referenced from table "tournamentscores".
+2021-02-22 04:16:39.744 CET [23412] STATEMENT:  DELETE FROM users
+2021-02-22 04:16:39.747 CET [9664] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:16:39.747 CET [9664] DETAIL:  Key (username)=(testuser1) already exists.
+2021-02-22 04:16:39.747 CET [9664] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser1', 'testpw1', false, false)
+2021-02-22 04:16:39.760 CET [23412] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:16:39.760 CET [23412] DETAIL:  Key (username)=(testuser2) already exists.
+2021-02-22 04:16:39.760 CET [23412] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser2', 'testpw2', false, false)
+2021-02-22 04:16:57.793 CET [14004] ERROR:  relation "tournamentscore" does not exist at character 13
+2021-02-22 04:16:57.793 CET [14004] STATEMENT:  DELETE FROM tournamentscore
+2021-02-22 04:16:57.794 CET [9664] ERROR:  update or delete on table "users" violates foreign key constraint "tournamentscores_username_fkey" on table "tournamentscores"
+2021-02-22 04:16:57.794 CET [9664] DETAIL:  Key (username)=(testuser2) is still referenced from table "tournamentscores".
+2021-02-22 04:16:57.794 CET [9664] STATEMENT:  DELETE FROM users
+2021-02-22 04:16:57.795 CET [23412] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:16:57.795 CET [23412] DETAIL:  Key (username)=(testuser) already exists.
+2021-02-22 04:16:57.795 CET [23412] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser', 'testpw', false, false)
+2021-02-22 04:16:57.945 CET [14004] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 04:16:57.945 CET [9664] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 04:16:57.945 CET [23412] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 04:20:35.317 CET [2324] ERROR:  relation "tournamentscore" does not exist at character 13
+2021-02-22 04:20:35.317 CET [2324] STATEMENT:  DELETE FROM tournamentscore
+2021-02-22 04:20:35.324 CET [2324] ERROR:  update or delete on table "users" violates foreign key constraint "tournamentscores_username_fkey" on table "tournamentscores"
+2021-02-22 04:20:35.324 CET [2324] DETAIL:  Key (username)=(testuser2) is still referenced from table "tournamentscores".
+2021-02-22 04:20:35.324 CET [2324] STATEMENT:  DELETE FROM users
+2021-02-22 04:20:35.327 CET [2324] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:20:35.327 CET [2324] DETAIL:  Key (username)=(testuser) already exists.
+2021-02-22 04:20:35.327 CET [2324] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser', 'testpw', false, false)
+2021-02-22 04:20:35.354 CET [2324] ERROR:  relation "tournamentscore" does not exist at character 13
+2021-02-22 04:20:35.354 CET [2324] STATEMENT:  DELETE FROM tournamentscore
+2021-02-22 04:20:35.355 CET [2324] ERROR:  update or delete on table "users" violates foreign key constraint "tournamentscores_username_fkey" on table "tournamentscores"
+2021-02-22 04:20:35.355 CET [2324] DETAIL:  Key (username)=(testuser2) is still referenced from table "tournamentscores".
+2021-02-22 04:20:35.355 CET [2324] STATEMENT:  DELETE FROM users
+2021-02-22 04:20:35.356 CET [2324] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:20:35.356 CET [2324] DETAIL:  Key (username)=(testuser) already exists.
+2021-02-22 04:20:35.356 CET [2324] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser', 'testpw', false, false)
+2021-02-22 04:23:23.853 CET [5192] ERROR:  relation "tournamentscore" does not exist at character 13
+2021-02-22 04:23:23.853 CET [5192] STATEMENT:  DELETE FROM tournamentscore
+2021-02-22 04:23:23.860 CET [5192] ERROR:  update or delete on table "users" violates foreign key constraint "tournamentscores_username_fkey" on table "tournamentscores"
+2021-02-22 04:23:23.860 CET [5192] DETAIL:  Key (username)=(testuser2) is still referenced from table "tournamentscores".
+2021-02-22 04:23:23.860 CET [5192] STATEMENT:  DELETE FROM users
+2021-02-22 04:23:23.863 CET [5192] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:23:23.863 CET [5192] DETAIL:  Key (username)=(testuser) already exists.
+2021-02-22 04:23:23.863 CET [5192] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser', 'testpw', false, false)
+2021-02-22 04:28:42.435 CET [2516] ERROR:  relation "tournamentscore" does not exist at character 13
+2021-02-22 04:28:42.435 CET [2516] STATEMENT:  DELETE FROM tournamentscore
+2021-02-22 04:28:42.442 CET [2516] ERROR:  update or delete on table "users" violates foreign key constraint "tournamentscores_username_fkey" on table "tournamentscores"
+2021-02-22 04:28:42.442 CET [2516] DETAIL:  Key (username)=(testuser2) is still referenced from table "tournamentscores".
+2021-02-22 04:28:42.442 CET [2516] STATEMENT:  DELETE FROM users
+2021-02-22 04:28:42.445 CET [2516] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:28:42.445 CET [2516] DETAIL:  Key (username)=(testuser1) already exists.
+2021-02-22 04:28:42.445 CET [2516] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser1', 'testpw1', false, false)
+2021-02-22 04:28:42.459 CET [2516] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:28:42.459 CET [2516] DETAIL:  Key (username)=(testuser2) already exists.
+2021-02-22 04:28:42.459 CET [2516] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser2', 'testpw2', false, false)
+2021-02-22 04:29:00.539 CET [18608] ERROR:  relation "tournamentscore" does not exist at character 13
+2021-02-22 04:29:00.539 CET [18608] STATEMENT:  DELETE FROM tournamentscore
+2021-02-22 04:29:00.541 CET [2516] ERROR:  update or delete on table "users" violates foreign key constraint "tournamentscores_username_fkey" on table "tournamentscores"
+2021-02-22 04:29:00.541 CET [2516] DETAIL:  Key (username)=(testuser2) is still referenced from table "tournamentscores".
+2021-02-22 04:29:00.541 CET [2516] STATEMENT:  DELETE FROM users
+2021-02-22 04:29:00.543 CET [4120] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:29:00.543 CET [4120] DETAIL:  Key (username)=(testuser1) already exists.
+2021-02-22 04:29:00.543 CET [4120] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser1', 'testpw1', false, false)
+2021-02-22 04:29:00.559 CET [2516] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:29:00.559 CET [2516] DETAIL:  Key (username)=(testuser2) already exists.
+2021-02-22 04:29:00.559 CET [2516] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser2', 'testpw2', false, false)
+2021-02-22 04:29:18.589 CET [2516] ERROR:  relation "tournamentscore" does not exist at character 13
+2021-02-22 04:29:18.589 CET [2516] STATEMENT:  DELETE FROM tournamentscore
+2021-02-22 04:29:18.591 CET [4120] ERROR:  update or delete on table "users" violates foreign key constraint "tournamentscores_username_fkey" on table "tournamentscores"
+2021-02-22 04:29:18.591 CET [4120] DETAIL:  Key (username)=(testuser1) is still referenced from table "tournamentscores".
+2021-02-22 04:29:18.591 CET [4120] STATEMENT:  DELETE FROM users
+2021-02-22 04:29:18.593 CET [18608] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:29:18.593 CET [18608] DETAIL:  Key (username)=(testuser1) already exists.
+2021-02-22 04:29:18.593 CET [18608] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser1', 'testpw1', false, false)
+2021-02-22 04:29:18.609 CET [4120] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:29:18.609 CET [4120] DETAIL:  Key (username)=(testuser2) already exists.
+2021-02-22 04:29:18.609 CET [4120] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser2', 'testpw2', false, false)
+2021-02-22 04:29:36.632 CET [18608] ERROR:  relation "tournamentscore" does not exist at character 13
+2021-02-22 04:29:36.632 CET [18608] STATEMENT:  DELETE FROM tournamentscore
+2021-02-22 04:29:36.633 CET [4120] ERROR:  update or delete on table "users" violates foreign key constraint "tournamentscores_username_fkey" on table "tournamentscores"
+2021-02-22 04:29:36.633 CET [4120] DETAIL:  Key (username)=(testuser2) is still referenced from table "tournamentscores".
+2021-02-22 04:29:36.633 CET [4120] STATEMENT:  DELETE FROM users
+2021-02-22 04:29:36.635 CET [2516] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:29:36.635 CET [2516] DETAIL:  Key (username)=(testuser1) already exists.
+2021-02-22 04:29:36.635 CET [2516] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser1', 'testpw1', false, false)
+2021-02-22 04:29:36.650 CET [4120] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:29:36.650 CET [4120] DETAIL:  Key (username)=(testuser2) already exists.
+2021-02-22 04:29:36.650 CET [4120] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser2', 'testpw2', false, false)
+2021-02-22 04:29:54.676 CET [2516] ERROR:  relation "tournamentscore" does not exist at character 13
+2021-02-22 04:29:54.676 CET [2516] STATEMENT:  DELETE FROM tournamentscore
+2021-02-22 04:29:54.677 CET [18608] ERROR:  update or delete on table "users" violates foreign key constraint "tournamentscores_username_fkey" on table "tournamentscores"
+2021-02-22 04:29:54.677 CET [18608] DETAIL:  Key (username)=(testuser1) is still referenced from table "tournamentscores".
+2021-02-22 04:29:54.677 CET [18608] STATEMENT:  DELETE FROM users
+2021-02-22 04:29:54.678 CET [4120] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:29:54.678 CET [4120] DETAIL:  Key (username)=(testuser) already exists.
+2021-02-22 04:29:54.678 CET [4120] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser', 'testpw', false, false)
+2021-02-22 04:29:54.705 CET [2516] ERROR:  relation "tournamentscore" does not exist at character 13
+2021-02-22 04:29:54.705 CET [2516] STATEMENT:  DELETE FROM tournamentscore
+2021-02-22 04:29:54.706 CET [18608] ERROR:  update or delete on table "users" violates foreign key constraint "tournamentscores_username_fkey" on table "tournamentscores"
+2021-02-22 04:29:54.706 CET [18608] DETAIL:  Key (username)=(testuser1) is still referenced from table "tournamentscores".
+2021-02-22 04:29:54.706 CET [18608] STATEMENT:  DELETE FROM users
+2021-02-22 04:29:54.706 CET [4120] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:29:54.706 CET [4120] DETAIL:  Key (username)=(testuser) already exists.
+2021-02-22 04:29:54.706 CET [4120] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser', 'testpw', false, false)
+2021-02-22 04:29:54.712 CET [18608] ERROR:  relation "tournamentscore" does not exist at character 13
+2021-02-22 04:29:54.712 CET [18608] STATEMENT:  DELETE FROM tournamentscore
+2021-02-22 04:29:54.713 CET [4120] ERROR:  update or delete on table "users" violates foreign key constraint "tournamentscores_username_fkey" on table "tournamentscores"
+2021-02-22 04:29:54.713 CET [4120] DETAIL:  Key (username)=(testuser1) is still referenced from table "tournamentscores".
+2021-02-22 04:29:54.713 CET [4120] STATEMENT:  DELETE FROM users
+2021-02-22 04:29:54.714 CET [2516] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:29:54.714 CET [2516] DETAIL:  Key (username)=(testuser) already exists.
+2021-02-22 04:29:54.714 CET [2516] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser', 'testpw', false, false)
+2021-02-22 04:29:54.720 CET [2516] ERROR:  relation "tournamentscore" does not exist at character 13
+2021-02-22 04:29:54.720 CET [2516] STATEMENT:  DELETE FROM tournamentscore
+2021-02-22 04:29:54.721 CET [18608] ERROR:  update or delete on table "users" violates foreign key constraint "tournamentscores_username_fkey" on table "tournamentscores"
+2021-02-22 04:29:54.721 CET [18608] DETAIL:  Key (username)=(testuser1) is still referenced from table "tournamentscores".
+2021-02-22 04:29:54.721 CET [18608] STATEMENT:  DELETE FROM users
+2021-02-22 04:29:54.721 CET [4120] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:29:54.721 CET [4120] DETAIL:  Key (username)=(testuser) already exists.
+2021-02-22 04:29:54.721 CET [4120] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser', 'testpw', false, false)
+2021-02-22 04:29:54.878 CET [2516] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 04:29:54.878 CET [4120] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 04:29:54.878 CET [18608] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 04:31:36.441 CET [22860] ERROR:  relation "tournamentscore" does not exist at character 13
+2021-02-22 04:31:36.441 CET [22860] STATEMENT:  DELETE FROM tournamentscore
+2021-02-22 04:31:36.447 CET [22860] ERROR:  update or delete on table "users" violates foreign key constraint "tournamentscores_username_fkey" on table "tournamentscores"
+2021-02-22 04:31:36.447 CET [22860] DETAIL:  Key (username)=(testuser1) is still referenced from table "tournamentscores".
+2021-02-22 04:31:36.447 CET [22860] STATEMENT:  DELETE FROM users
+2021-02-22 04:31:36.450 CET [22860] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:31:36.450 CET [22860] DETAIL:  Key (username)=(testuser) already exists.
+2021-02-22 04:31:36.450 CET [22860] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser', 'testpw', false, false)
+2021-02-22 04:33:32.362 CET [23524] ERROR:  relation "tournamentscore" does not exist at character 13
+2021-02-22 04:33:32.362 CET [23524] STATEMENT:  DELETE FROM tournamentscore
+2021-02-22 04:33:32.369 CET [23524] ERROR:  update or delete on table "users" violates foreign key constraint "tournamentscores_username_fkey" on table "tournamentscores"
+2021-02-22 04:33:32.369 CET [23524] DETAIL:  Key (username)=(testuser1) is still referenced from table "tournamentscores".
+2021-02-22 04:33:32.369 CET [23524] STATEMENT:  DELETE FROM users
+2021-02-22 04:33:32.373 CET [23524] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:33:32.373 CET [23524] DETAIL:  Key (username)=(testuser) already exists.
+2021-02-22 04:33:32.373 CET [23524] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser', 'testpw', false, false)
+2021-02-22 04:35:09.242 CET [10612] ERROR:  relation "tournamentscore" does not exist at character 13
+2021-02-22 04:35:09.242 CET [10612] STATEMENT:  DELETE FROM tournamentscore
+2021-02-22 04:35:09.248 CET [10612] ERROR:  update or delete on table "users" violates foreign key constraint "tournamentscores_username_fkey" on table "tournamentscores"
+2021-02-22 04:35:09.248 CET [10612] DETAIL:  Key (username)=(testuser1) is still referenced from table "tournamentscores".
+2021-02-22 04:35:09.248 CET [10612] STATEMENT:  DELETE FROM users
+2021-02-22 04:35:09.252 CET [10612] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:35:09.252 CET [10612] DETAIL:  Key (username)=(testuser) already exists.
+2021-02-22 04:35:09.252 CET [10612] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser', 'testpw', false, false)
+2021-02-22 04:37:00.308 CET [20592] ERROR:  relation "tournamentscore" does not exist at character 13
+2021-02-22 04:37:00.308 CET [20592] STATEMENT:  DELETE FROM tournamentscore
+2021-02-22 04:37:00.316 CET [20592] ERROR:  update or delete on table "users" violates foreign key constraint "tournamentscores_username_fkey" on table "tournamentscores"
+2021-02-22 04:37:00.316 CET [20592] DETAIL:  Key (username)=(testuser1) is still referenced from table "tournamentscores".
+2021-02-22 04:37:00.316 CET [20592] STATEMENT:  DELETE FROM users
+2021-02-22 04:37:00.320 CET [20592] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:37:00.320 CET [20592] DETAIL:  Key (username)=(testuser) already exists.
+2021-02-22 04:37:00.320 CET [20592] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser', 'testpw', false, false)
+2021-02-22 04:37:00.336 CET [20592] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:37:00.336 CET [20592] DETAIL:  Key (username)=(testuser) already exists.
+2021-02-22 04:37:00.336 CET [20592] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser', 'testpw', false, false)
+2021-02-22 04:37:00.336 CET [20592] ERROR:  duplicate key value violates unique constraint "stats_pkey"
+2021-02-22 04:37:00.336 CET [20592] DETAIL:  Key (username)=(testuser) already exists.
+2021-02-22 04:37:00.336 CET [20592] STATEMENT:  INSERT INTO stats (username) VALUES ('testuser')
+2021-02-22 04:37:20.566 CET [20596] ERROR:  relation "tournamentscore" does not exist at character 13
+2021-02-22 04:37:20.566 CET [20596] STATEMENT:  DELETE FROM tournamentscore
+2021-02-22 04:37:20.574 CET [20596] ERROR:  update or delete on table "users" violates foreign key constraint "tournamentscores_username_fkey" on table "tournamentscores"
+2021-02-22 04:37:20.574 CET [20596] DETAIL:  Key (username)=(testuser1) is still referenced from table "tournamentscores".
+2021-02-22 04:37:20.574 CET [20596] STATEMENT:  DELETE FROM users
+2021-02-22 04:37:20.578 CET [20596] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:37:20.578 CET [20596] DETAIL:  Key (username)=(testuser) already exists.
+2021-02-22 04:37:20.578 CET [20596] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser', 'testpw', false, false)
+2021-02-22 04:37:20.592 CET [20596] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:37:20.592 CET [20596] DETAIL:  Key (username)=(testuser) already exists.
+2021-02-22 04:37:20.592 CET [20596] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('testuser', 'testpw', false, false)
+2021-02-22 04:37:20.593 CET [20596] ERROR:  duplicate key value violates unique constraint "stats_pkey"
+2021-02-22 04:37:20.593 CET [20596] DETAIL:  Key (username)=(testuser) already exists.
+2021-02-22 04:37:20.593 CET [20596] STATEMENT:  INSERT INTO stats (username) VALUES ('testuser')
+2021-02-22 04:40:07.653 CET [1384] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 04:40:32.767 CET [18708] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 04:40:44.356 CET [22636] LOG:  server process (PID 9152) was terminated by exception 0xC000013A
+2021-02-22 04:40:44.356 CET [22636] DETAIL:  Failed process was running: SELECT Count(*) FROM users JOIN actions ON users.username = actions.username WHERE online = true
+2021-02-22 04:40:44.356 CET [22636] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2021-02-22 04:40:44.356 CET [22636] LOG:  terminating any other active server processes
+2021-02-22 04:40:44.375 CET [22880] WARNING:  terminating connection because of crash of another server process
+2021-02-22 04:40:44.375 CET [22880] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2021-02-22 04:40:44.375 CET [22880] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2021-02-22 04:40:44.379 CET [22636] LOG:  statistics collector process (PID 21156) was terminated by exception 0xC000013A
+2021-02-22 04:40:44.379 CET [22636] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2021-02-22 04:40:44.389 CET [22636] LOG:  all server processes terminated; reinitializing
+2021-02-22 04:40:44.419 CET [7036] LOG:  database system was interrupted; last known up at 2021-02-22 04:38:08 CET
+2021-02-22 04:40:44.555 CET [21196] FATAL:  the database system is in recovery mode
+2021-02-22 04:40:44.910 CET [7036] LOG:  database system was not properly shut down; automatic recovery in progress
+2021-02-22 04:40:44.937 CET [7036] LOG:  redo starts at 0/1961EA8
+2021-02-22 04:40:44.947 CET [7036] LOG:  invalid record length at 0/19695E8: wanted 24, got 0
+2021-02-22 04:40:44.947 CET [7036] LOG:  redo done at 0/19695B0
+2021-02-22 04:40:44.955 CET [7036] LOG:  last completed transaction was at log time 2021-02-22 04:40:22.898742+01
+2021-02-22 04:40:45.436 CET [22636] LOG:  database system is ready to accept connections
+2021-02-22 04:40:50.609 CET [22636] LOG:  received fast shutdown request
+2021-02-22 04:40:50.655 CET [22636] LOG:  aborting any active transactions
+2021-02-22 04:40:50.669 CET [22636] LOG:  worker process: logical replication launcher (PID 13484) exited with exit code 1
+2021-02-22 04:40:50.683 CET [16708] LOG:  shutting down
+2021-02-22 04:40:50.859 CET [22636] LOG:  database system is shut down
+2021-02-22 04:41:08.052 CET [3272] LOG:  listening on IPv6 address "::1", port 5432
+2021-02-22 04:41:08.052 CET [3272] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-02-22 04:41:08.292 CET [2776] LOG:  database system was shut down at 2021-02-22 04:40:50 CET
+2021-02-22 04:41:08.337 CET [3272] LOG:  database system is ready to accept connections
+2021-02-22 04:41:25.412 CET [23076] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 04:42:32.331 CET [23012] ERROR:  insert or update on table "stats" violates foreign key constraint "stats_username_fkey"
+2021-02-22 04:42:32.331 CET [23012] DETAIL:  Key (username)=(admin) is not present in table "users".
+2021-02-22 04:42:32.331 CET [23012] STATEMENT:  INSERT INTO stats (username) VALUES ('admin')
+2021-02-22 04:42:33.555 CET [23012] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 04:42:33.556 CET [15380] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 04:42:33.556 CET [10652] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 04:42:33.556 CET [22220] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 04:42:33.556 CET [16764] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 04:42:50.667 CET [23264] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 04:42:50.667 CET [3940] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 04:42:50.668 CET [23012] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 04:43:24.188 CET [5864] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:43:24.188 CET [5864] DETAIL:  Key (username)=(kienboec) already exists.
+2021-02-22 04:43:24.188 CET [5864] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('kienboec', 'daniel', false, false)
+2021-02-22 04:43:24.232 CET [23484] ERROR:  duplicate key value violates unique constraint "stats_pkey"
+2021-02-22 04:43:24.232 CET [23484] DETAIL:  Key (username)=(kienboec) already exists.
+2021-02-22 04:43:24.232 CET [23484] STATEMENT:  INSERT INTO stats (username) VALUES ('kienboec')
+2021-02-22 04:43:24.547 CET [23484] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:43:24.547 CET [23484] DETAIL:  Key (username)=(kienboec) already exists.
+2021-02-22 04:43:24.547 CET [23484] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('kienboec', 'different', false, false)
+2021-02-22 04:43:24.574 CET [21048] ERROR:  duplicate key value violates unique constraint "stats_pkey"
+2021-02-22 04:43:24.574 CET [21048] DETAIL:  Key (username)=(kienboec) already exists.
+2021-02-22 04:43:24.574 CET [21048] STATEMENT:  INSERT INTO stats (username) VALUES ('kienboec')
+2021-02-22 04:43:29.268 CET [5864] ERROR:  duplicate key value violates unique constraint "actions_pkey"
+2021-02-22 04:43:29.268 CET [5864] DETAIL:  Key (username)=(kienboec) already exists.
+2021-02-22 04:43:29.268 CET [5864] STATEMENT:  INSERT INTO actions VALUES ('kienboec', 'RRRRR')
+2021-02-22 04:43:30.177 CET [21048] ERROR:  duplicate key value violates unique constraint "actions_pkey"
+2021-02-22 04:43:30.177 CET [21048] DETAIL:  Key (username)=(kienboec) already exists.
+2021-02-22 04:43:30.177 CET [21048] STATEMENT:  INSERT INTO actions VALUES ('kienboec', 'RRRRR')
+2021-02-22 04:43:31.916 CET [5864] ERROR:  duplicate key value violates unique constraint "actions_pkey"
+2021-02-22 04:43:31.916 CET [5864] DETAIL:  Key (username)=(altenhof) already exists.
+2021-02-22 04:43:31.916 CET [5864] STATEMENT:  INSERT INTO actions VALUES ('altenhof', 'SSSSS')
+2021-02-22 04:43:32.634 CET [23484] ERROR:  more than one row returned by a subquery used as an expression
+2021-02-22 04:43:32.634 CET [23484] STATEMENT:  INSERT INTO playlist (playlist_order, username, name, url, filetype, title, artist, album, genre, path, filesize, rating, length) VALUES ('14', (SELECT username FROM library WHERE username = 'altenhof' AND name = 'Super_Mario_song'), (SELECT name FROM library WHERE username = 'altenhof' AND name = 'Super_Mario_song'), (SELECT url FROM library WHERE username = 'altenhof' AND name = 'Super_Mario_song'), (SELECT filetype FROM library WHERE username = 'altenhof' AND name = 'Super_Mario_song'), (SELECT title FROM library WHERE username = 'altenhof' AND name = 'Super_Mario_song'), (SELECT artist FROM library WHERE username = 'altenhof' AND name = 'Super_Mario_song'), (SELECT album FROM library WHERE username = 'altenhof' AND name = 'Super_Mario_song'), (SELECT genre FROM library WHERE username = 'altenhof' AND name = 'Super_Mario_song'), (SELECT path FROM library WHERE username = 'altenhof' AND name = 'Super_Mario_song'), (SELECT filesize FROM library WHERE username = 'altenhof' AND name = 'Super_Mario_song'), (SELECT rating FROM library WHERE username = 'altenhof' AND name = 'Super_Mario_song'), (SELECT length FROM library WHERE username = 'altenhof' AND name = 'Super_Mario_song'))
+2021-02-22 04:43:32.897 CET [21048] ERROR:  more than one row returned by a subquery used as an expression
+2021-02-22 04:43:32.897 CET [21048] STATEMENT:  INSERT INTO playlist (playlist_order, username, name, url, filetype, title, artist, album, genre, path, filesize, rating, length) VALUES ('14', (SELECT username FROM library WHERE username = 'altenhof' AND name = 'Super_Mario_song'), (SELECT name FROM library WHERE username = 'altenhof' AND name = 'Super_Mario_song'), (SELECT url FROM library WHERE username = 'altenhof' AND name = 'Super_Mario_song'), (SELECT filetype FROM library WHERE username = 'altenhof' AND name = 'Super_Mario_song'), (SELECT title FROM library WHERE username = 'altenhof' AND name = 'Super_Mario_song'), (SELECT artist FROM library WHERE username = 'altenhof' AND name = 'Super_Mario_song'), (SELECT album FROM library WHERE username = 'altenhof' AND name = 'Super_Mario_song'), (SELECT genre FROM library WHERE username = 'altenhof' AND name = 'Super_Mario_song'), (SELECT path FROM library WHERE username = 'altenhof' AND name = 'Super_Mario_song'), (SELECT filesize FROM library WHERE username = 'altenhof' AND name = 'Super_Mario_song'), (SELECT rating FROM library WHERE username = 'altenhof' AND name = 'Super_Mario_song'), (SELECT length FROM library WHERE username = 'altenhof' AND name = 'Super_Mario_song'))
+2021-02-22 04:43:33.161 CET [5864] ERROR:  more than one row returned by a subquery used as an expression
+2021-02-22 04:43:33.161 CET [5864] STATEMENT:  INSERT INTO playlist (playlist_order, username, name, url, filetype, title, artist, album, genre, path, filesize, rating, length) VALUES ('14', (SELECT username FROM library WHERE username = 'altenhof' AND name = 'Super_Mario_song'), (SELECT name FROM library WHERE username = 'altenhof' AND name = 'Super_Mario_song'), (SELECT url FROM library WHERE username = 'altenhof' AND name = 'Super_Mario_song'), (SELECT filetype FROM library WHERE username = 'altenhof' AND name = 'Super_Mario_song'), (SELECT title FROM library WHERE username = 'altenhof' AND name = 'Super_Mario_song'), (SELECT artist FROM library WHERE username = 'altenhof' AND name = 'Super_Mario_song'), (SELECT album FROM library WHERE username = 'altenhof' AND name = 'Super_Mario_song'), (SELECT genre FROM library WHERE username = 'altenhof' AND name = 'Super_Mario_song'), (SELECT path FROM library WHERE username = 'altenhof' AND name = 'Super_Mario_song'), (SELECT filesize FROM library WHERE username = 'altenhof' AND name = 'Super_Mario_song'), (SELECT rating FROM library WHERE username = 'altenhof' AND name = 'Super_Mario_song'), (SELECT length FROM library WHERE username = 'altenhof' AND name = 'Super_Mario_song'))
+2021-02-22 04:43:33.429 CET [23484] ERROR:  more than one row returned by a subquery used as an expression
+2021-02-22 04:43:33.429 CET [23484] STATEMENT:  INSERT INTO playlist (playlist_order, username, name, url, filetype, title, artist, album, genre, path, filesize, rating, length) VALUES ('14', (SELECT username FROM library WHERE username = 'kienboec' AND name = 'Good_Mood_Song'), (SELECT name FROM library WHERE username = 'kienboec' AND name = 'Good_Mood_Song'), (SELECT url FROM library WHERE username = 'kienboec' AND name = 'Good_Mood_Song'), (SELECT filetype FROM library WHERE username = 'kienboec' AND name = 'Good_Mood_Song'), (SELECT title FROM library WHERE username = 'kienboec' AND name = 'Good_Mood_Song'), (SELECT artist FROM library WHERE username = 'kienboec' AND name = 'Good_Mood_Song'), (SELECT album FROM library WHERE username = 'kienboec' AND name = 'Good_Mood_Song'), (SELECT genre FROM library WHERE username = 'kienboec' AND name = 'Good_Mood_Song'), (SELECT path FROM library WHERE username = 'kienboec' AND name = 'Good_Mood_Song'), (SELECT filesize FROM library WHERE username = 'kienboec' AND name = 'Good_Mood_Song'), (SELECT rating FROM library WHERE username = 'kienboec' AND name = 'Good_Mood_Song'), (SELECT length FROM library WHERE username = 'kienboec' AND name = 'Good_Mood_Song'))
+2021-02-22 04:43:33.697 CET [5864] ERROR:  more than one row returned by a subquery used as an expression
+2021-02-22 04:43:33.697 CET [5864] STATEMENT:  INSERT INTO playlist (playlist_order, username, name, url, filetype, title, artist, album, genre, path, filesize, rating, length) VALUES ('14', (SELECT username FROM library WHERE username = 'kienboec' AND name = 'Good_Mood_Song'), (SELECT name FROM library WHERE username = 'kienboec' AND name = 'Good_Mood_Song'), (SELECT url FROM library WHERE username = 'kienboec' AND name = 'Good_Mood_Song'), (SELECT filetype FROM library WHERE username = 'kienboec' AND name = 'Good_Mood_Song'), (SELECT title FROM library WHERE username = 'kienboec' AND name = 'Good_Mood_Song'), (SELECT artist FROM library WHERE username = 'kienboec' AND name = 'Good_Mood_Song'), (SELECT album FROM library WHERE username = 'kienboec' AND name = 'Good_Mood_Song'), (SELECT genre FROM library WHERE username = 'kienboec' AND name = 'Good_Mood_Song'), (SELECT path FROM library WHERE username = 'kienboec' AND name = 'Good_Mood_Song'), (SELECT filesize FROM library WHERE username = 'kienboec' AND name = 'Good_Mood_Song'), (SELECT rating FROM library WHERE username = 'kienboec' AND name = 'Good_Mood_Song'), (SELECT length FROM library WHERE username = 'kienboec' AND name = 'Good_Mood_Song'))
+2021-02-22 04:43:50.770 CET [23484] ERROR:  duplicate key value violates unique constraint "actions_pkey"
+2021-02-22 04:43:50.770 CET [23484] DETAIL:  Key (username)=(altenhof) already exists.
+2021-02-22 04:43:50.770 CET [23484] STATEMENT:  INSERT INTO actions VALUES ('altenhof', 'RRRRR')
+2021-02-22 04:43:52.115 CET [5864] ERROR:  duplicate key value violates unique constraint "actions_pkey"
+2021-02-22 04:43:52.115 CET [5864] DETAIL:  Key (username)=(altenhof) already exists.
+2021-02-22 04:43:52.115 CET [5864] STATEMENT:  INSERT INTO actions VALUES ('altenhof', 'RRRRR')
+2021-02-22 04:43:53.165 CET [23484] ERROR:  duplicate key value violates unique constraint "actions_pkey"
+2021-02-22 04:43:53.165 CET [23484] DETAIL:  Key (username)=(altenhof) already exists.
+2021-02-22 04:43:53.165 CET [23484] STATEMENT:  INSERT INTO actions VALUES ('altenhof', 'RRRRR')
+2021-02-22 04:43:57.971 CET [23484] ERROR:  duplicate key value violates unique constraint "actions_pkey"
+2021-02-22 04:43:57.971 CET [23484] DETAIL:  Key (username)=(altenhof) already exists.
+2021-02-22 04:43:57.971 CET [23484] STATEMENT:  INSERT INTO actions VALUES ('altenhof', 'RRRRR')
+2021-02-22 04:46:28.721 CET [21048] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 04:46:28.721 CET [5864] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 04:46:28.721 CET [23484] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 04:49:48.300 CET [9252] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:49:48.300 CET [9252] DETAIL:  Key (username)=(kienboec) already exists.
+2021-02-22 04:49:48.300 CET [9252] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('kienboec', 'daniel', false, false)
+2021-02-22 04:49:48.339 CET [9252] ERROR:  duplicate key value violates unique constraint "stats_pkey"
+2021-02-22 04:49:48.339 CET [9252] DETAIL:  Key (username)=(kienboec) already exists.
+2021-02-22 04:49:48.339 CET [9252] STATEMENT:  INSERT INTO stats (username) VALUES ('kienboec')
+2021-02-22 04:49:48.613 CET [9252] ERROR:  duplicate key value violates unique constraint "users_pkey"
+2021-02-22 04:49:48.613 CET [9252] DETAIL:  Key (username)=(kienboec) already exists.
+2021-02-22 04:49:48.613 CET [9252] STATEMENT:  INSERT INTO users (username, password, online, admin) VALUES ('kienboec', 'different', false, false)
+2021-02-22 04:49:48.642 CET [9252] ERROR:  duplicate key value violates unique constraint "stats_pkey"
+2021-02-22 04:49:48.642 CET [9252] DETAIL:  Key (username)=(kienboec) already exists.
+2021-02-22 04:49:48.642 CET [9252] STATEMENT:  INSERT INTO stats (username) VALUES ('kienboec')
+2021-02-22 04:53:25.687 CET [9252] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 04:53:25.687 CET [23436] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-02-22 05:01:43.968 CET [16680] ERROR:  canceling statement due to user request
+2021-02-22 05:01:43.968 CET [3272] LOG:  received fast shutdown request
+2021-02-22 05:01:44.003 CET [3272] LOG:  aborting any active transactions
+2021-02-22 05:01:44.003 CET [3272] LOG:  worker process: logical replication launcher (PID 16680) exited with exit code 1
+2021-02-22 05:01:44.005 CET [22968] LOG:  shutting down
+2021-02-22 05:01:44.180 CET [3272] LOG:  database system is shut down
